@@ -1,0 +1,38 @@
+[
+  {
+    "group": "Hong Kong",
+    "name": "TVB Jade",
+    "url": "http://r.jdshipin.com/qrfbg",
+    "note": "1080p H.264 - browser safe"
+  },
+  {
+    "group": "Sports",
+    "name": "ESPN",
+    "url": "http://85.237.89.160:9590/usa-s/ESPN-HD/index.m3u8",
+    "note": "720p59.94 H.264 - better than the HEVC 1080p copy for browser playback"
+  },
+  {
+    "group": "Sports",
+    "name": "ESPN 2",
+    "url": "http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8",
+    "note": "720p59.94 H.264"
+  },
+  {
+    "group": "Sports",
+    "name": "NBA TV",
+    "url": "http://23.237.104.106:8080/USA_NBA/index.m3u8",
+    "note": "1080p59.94 H.264 - live cable channel"
+  },
+  {
+    "group": "US Cable",
+    "name": "CNN International",
+    "url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8",
+    "note": "1080p50 H.264 5.6 Mbps - most stable feed found"
+  },
+  {
+    "group": "UK",
+    "name": "BBC News",
+    "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/mobile_wifi_main_hd_abr_v2.m3u8",
+    "note": "720p H.264 - BBC official HLS"
+  }
+]
