@@ -1,0 +1,1150 @@
+{
+  "groups": [
+    {
+      "name": "Hong Kong",
+      "channels": [
+        {
+          "name": "HOY TV 77",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "url": "https://fast.hidns.vip/163189/hoy",
+          "note": "1080p | H.264",
+          "logo": "https://epg.112114.xyz/logo/HOY TV.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "RTHK TV 31",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.71 Mbps",
+          "url": "https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream5/streamPlaylist.m3u8",
+          "note": "1080p | H.264 | 5.7 Mbps",
+          "logo": "https://epg.112114.xyz/logo/RTHK TV 31 (1080p) [Geo-blocked].png",
+          "codec": "H.264"
+        },
+        {
+          "name": "RTHK TV 32",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "url": "https://fast.hidns.vip/163189/rthk32",
+          "note": "1080p | H.264",
+          "logo": "https://epg.112114.xyz/logo/RTHK32.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TVB Jade",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.26 Mbps",
+          "url": "https://cdn3.indevs.in/stream/tvb/fct/stream_0.php?u=admin&p=69fe3eb1f0b037bc2479cb4fbd56551848343f071f939422ef250f04f68b4cee&uid=",
+          "note": "1080p | H.264 | 4.3 Mbps",
+          "logo": "https://epg.112114.xyz/logo/翡翠台.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TVB Jade (HEVC)",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.00 Mbps",
+          "url": "https://10.fast.hidns.vip/163189/fct/video/index.php",
+          "note": "1080p | HEVC | 5.0 Mbps",
+          "logo": "https://epg.112114.xyz/logo/TVB翡翠台 1080P.png",
+          "codec": "HEVC"
+        },
+        {
+          "name": "TVB Jade North America",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "url": "https://cdn6.cc.cd/163189/j1",
+          "note": "1080p | H.264",
+          "logo": "https://epg.112114.xyz/logo/翡翠台北美版.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TVB News",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "url": "https://cdn6.cc.cd/163189/wxxw",
+          "note": "1080p | H.264",
+          "logo": "https://epg.112114.xyz/logo/無線新聞.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TVB Pearl",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.00 Mbps",
+          "url": "https://10.fast.hidns.vip/163189/mzt/video/index.php",
+          "note": "1080p | HEVC | 5.0 Mbps",
+          "logo": "https://epg.112114.xyz/logo/明珠台.png",
+          "codec": "HEVC"
+        },
+        {
+          "name": "ViuTV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.60 Mbps",
+          "url": "https://10.fast.hidns.vip/163189/viu/video/index.php",
+          "note": "1080p | H.264 | 4.6 Mbps",
+          "logo": "https://epg.112114.xyz/logo/VIUTV.png",
+          "codec": "H.264"
+        }
+      ]
+    },
+    {
+      "name": "New York",
+      "channels": [
+        {
+          "name": "ABC 7 WABC (New York)",
+          "url": "https://d3ip9j8kiqtf8w.cloudfront.net/out/v1/9adf1cf1816e45b2a90e98e6cf436fa8/ADHOC-WABC-02-cmaf-manifest/ADHOC-WABC-02-index.m3u8",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "codec": "H.264",
+          "note": "1080p | H.264 | ABC 7 New York live O&O"
+        },
+        {
+          "name": "CBS 2 New York (live)",
+          "url": "https://newyo9h67ea3.airspace-cdn.cbsivideo.com/live/manifest.m3u8",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "codec": "H.264",
+          "note": "720p | H.264 | WCBS-TV live O&O"
+        },
+        {
+          "name": "CBS News New York (WCBS 2)",
+          "url": "https://jmp2.uk/plu-5dc48170e280c80009a861ab.m3u8",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "codec": "H.264",
+          "note": "720p | H.264 | CBS New York news service (Pluto feed)"
+        },
+        {
+          "name": "Fox 5 WNYW (New York)",
+          "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-wnyw-lgus/playlist.m3u8",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "codec": "H.264",
+          "note": "720p | H.264 | live local Fox O&O"
+        },
+        {
+          "name": "News 12 New York",
+          "url": "https://jmp2.uk/plu-5fff49cfb5cd4f0007c2b0dc.m3u8",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "codec": "H.264",
+          "note": "720p | H.264 | News 12 New York (Pluto feed)"
+        }
+      ]
+    },
+    {
+      "name": "US Cable",
+      "channels": [
+        {
+          "name": "AccuWeather NOW",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.86 Mbps",
+          "url": "https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/ts-us-w2-n1/playlist/amg00684-accuweather-accuweather-plex/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95a168e6da1e3011c932813fa83439fd501b282825b834a8071a2169990f0dada438ae42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b197afd94ea1faa30a55698d47fb824d86447ae59e40c4a38d6b/82/1920x1080_7619040/index.m3u8",
+          "note": "1080p | H.264 | 5.9 Mbps",
+          "logo": "https://i.imgur.com/M8wbVYK.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bloomberg Originals",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.00 Mbps",
+          "url": "https://live-qt-primary.akamaized.net/qt/Channel-QT-TX-AWS-virginia-2/Source-QT-10M-2-sn9jy9-BP-07-02-oNnPi5xc6sq_live.m3u8",
+          "note": "1080p | H.264 | 3.0 Mbps",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bloomberg Originals SD",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.28 Mbps",
+          "url": "https://86fdc85a.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/89a8b7f4-d269-46ae-9342-cf47df91651b/0.m3u8",
+          "note": "1080p | H.264 | 5.3 Mbps",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bloomberg TV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.16 Mbps",
+          "url": "http://23.237.104.106:8080/USA_BLOOMBERG/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 3.2 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bounce",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 6.15 Mbps",
+          "url": "http://23.237.104.106:8080/USA_BOUNCE/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 6.2 Mbps",
+          "logo": "https://m.media-amazon.com/images/I/718bHckb8eL.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bounce XL",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.87 Mbps",
+          "url": "https://amg01438-ewscrippscompan-bouncexl-tablo-6s9me.amagi.tv/ts-us-w2-n1/playlist/amg01438-ewscrippscompan-bouncexl-tablo/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95516d16ba0e2011c932813fa83439fd501b3d3d55a8317d376f4469d93a1deda4582e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09ead6ccf5ac2c07d846320889e4c9e3a2600f01ceb0b990252b8/105/1920x1080_5058864/index.m3u8",
+          "note": "1080p | H.264 | 4.9 Mbps",
+          "logo": "https://i.imgur.com/GzxgSkc.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Cheddar News",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 7.00 Mbps",
+          "url": "https://hls.livecdn.io/cheddar.com/cheddar/cheddar.com/cheddarTS_1080p/chunks.m3u8",
+          "note": "1080p | H.264 | 7.0 Mbps",
+          "logo": "https://i.imgur.com/tuP9GW8.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Cinemax (United States) West",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 8.40 Mbps",
+          "url": "http://23.237.104.106:8080/USA_CINEMAX_WEST/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 8.4 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Cinemax Classics",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 8.80 Mbps",
+          "url": "http://23.237.104.106:8080/USA_5STARMAX/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 8.8 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Cinemax_Classics_Logo.png/960px-Cinemax_Classics_Logo.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "CNN (HEVC)",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 0.95 Mbps",
+          "url": "http://212.5.144.156:8080/cnn/tracks-v1a1/mono.m3u8",
+          "note": "1080p | HEVC | 0.9 Mbps",
+          "codec": "HEVC"
+        },
+        {
+          "name": "CNN International",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.64 Mbps",
+          "url": "https://d3bp6dwmpbdajl.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/512f1a27-b86d-4411-8b3d-19c840c7173b/0.m3u8",
+          "note": "1080p | H.264 | 5.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "CNN Originals",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.54 Mbps",
+          "url": "https://amg01918-cnnus-amg01918c2-vizio-us-9192.playouts.now.amagi.tv/ts-us-w2-n2/playlist/amg01918-cnnus-cnnoriginals-vizious/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95a46df39a7b7011c932813fa83439fd501b385d10a83168427f5149f92f788d344d6e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eaf69cf5ac3c07d846310082552d0ddb5bd99bf540e7b8a1a77/120/1920x1080_4715744/index.m3u8",
+          "note": "1080p | H.264 | 4.5 Mbps",
+          "logo": "https://provider-static.plex.tv/epg/cms/production/f351d697-1e1f-4e7d-86c7-5995698e593f/CNN_Originals_ChannelLogo_Dark_1500x1000_2025_-_Grace_Hartwig.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPN",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 0.90 Mbps",
+          "url": "http://212.5.144.156:8080/espn/tracks-v1a1/mono.m3u8",
+          "note": "1080p | HEVC | 0.9 Mbps",
+          "codec": "HEVC"
+        },
+        {
+          "name": "Grit Xtra",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.87 Mbps",
+          "url": "https://amg01438-ewscrippscompan-gritxtra-tablo-3nzsr.amagi.tv/ts-us-w2-n2/playlist/amg01438-ewscrippscompan-gritxtra-tablo/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95546de3df4e3011c932813fa83439fd501e987d75d8340d37ef8179fc0a388db13d4e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eaa6dcf5ac2c07d84638652e5323315ae6d00aadbf1bd654829/174/1920x1080_5058864/index.m3u8",
+          "note": "1080p | H.264 | 4.9 Mbps",
+          "logo": "https://provider-static.plex.tv/epg/cms/production/dbbb9bca-0b08-43b5-a0e7-715df9a6dbfd/_ChannelLogo_1500x1000.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "History",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 1.04 Mbps",
+          "url": "http://212.5.144.156:8080/history/tracks-v1a1/mono.m3u8",
+          "note": "1080p | HEVC | 1.0 Mbps",
+          "codec": "HEVC"
+        },
+        {
+          "name": "History Hit",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://lds-timeline-rakuten.amagi.tv/1080p-cc/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/ulHoqlP.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "HLN",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.04 Mbps",
+          "url": "http://23.237.104.106:8080/USA_HLN/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 4.0 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/HLN_%28TV_network%29_2017_logo.svg/960px-HLN_%28TV_network%29_2017_logo.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "IFC",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.54 Mbps",
+          "url": "http://23.237.104.106:8080/USA_IFC/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 5.5 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "MTV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.84 Mbps",
+          "url": "http://23.237.104.106:8080/USA_MTV/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 3.8 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "MTV Live",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.98 Mbps",
+          "url": "http://23.237.104.106:8080/USA_MTV_LIVE/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 4.0 Mbps",
+          "logo": "https://i.imgur.com/3UByLqb.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Newsmax 2",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.54 Mbps",
+          "url": "https://amg00217-newsmax-newsmax-zeasn-022k9.amagi.tv/playlist1080P.m3u8",
+          "note": "1080p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/iE1izWq.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Newsmax TV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.38 Mbps",
+          "url": "https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/3.m3u8",
+          "note": "1080p | H.264 | 5.4 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "OWN",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 8.72 Mbps",
+          "url": "http://23.237.104.106:8080/USA_OWN/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 8.7 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Pac-12 Insider",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://pac12-firetv.amagi.tv/1080p-en-cc/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/736QREy.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Paramount Network",
+          "url": "http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080",
+          "codec": "H.264",
+          "note": "1080p | H.264 | Paramount carriage"
+        },
+        {
+          "name": "PBS",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.58 Mbps",
+          "url": "https://pbs.lls.cdn.pbs.org/est/index_1080p.m3u8",
+          "note": "1080p | H.264 | 4.6 Mbps",
+          "logo": "https://i.imgur.com/8c8isLj.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Antiques Roadshow",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://amg00953-pbsusa-antiroadshow-xumo-x6ud5.amagi.tv/1080p-cc/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/U9CYaok.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Nature",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://d3mr43kyql7wgk.cloudfront.net/1080p-vtt/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/Brry7cZ.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Travel",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://d3hqevbyoxtkoi.cloudfront.net/1080p-vtt/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/A6GXhta.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Revolt",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.56 Mbps",
+          "url": "http://23.237.104.106:8080/USA_REVOLT/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 3.6 Mbps",
+          "logo": "https://i.imgur.com/eaYnGpH.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Starz",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 8.69 Mbps",
+          "url": "http://23.237.104.106:8080/USA_STARZ_WEST/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 8.7 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Starz Comedy",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 6.74 Mbps",
+          "url": "http://23.237.104.106:8080/USA_STARZ_COMEDY/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 6.7 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "SYFY",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.76 Mbps",
+          "url": "http://23.237.104.106:8080/USA_SYFY/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 4.8 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "TNT",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 1.03 Mbps",
+          "url": "http://212.5.144.156/tnt/tracks-v1a1/mono.m3u8",
+          "note": "1080p | HEVC | 1.0 Mbps",
+          "codec": "HEVC"
+        },
+        {
+          "name": "A&E",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "http://23.239.31.26:8989/aande/index.m3u8",
+          "note": "720p | H.264",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "AMC",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "http://23.239.31.26:8989/amc/index.m3u8",
+          "note": "720p | H.264",
+          "codec": "H.264"
+        },
+        {
+          "name": "AXS TV",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "http://23.239.31.26:8989/axstv/index.m3u8",
+          "note": "720p | H.264",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AXS_TV_logo.svg/960px-AXS_TV_logo.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Throwbacks",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/61326275b3c86a00078e4833/3321280/playlist.m3u8?sid=1beb9779-d618-11f1-9363-76bec15de22f&deviceId=95627070-6fa8-488d-afe8-0b322300eacd&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiIxYmViOTc3OS1kNjE4LTExZjEtOTM2My03NmJlYzE1ZGUyMmYiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiOTU2MjcwNzAtNmZhOC00ODhkLWFmZTgtMGIzMjIzMDBlYWNkIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6Ijk1NjI3MDcwLTZmYTgtNDg4ZC1hZmU4LTBiMzIyMzAwZWFjZCIsImZ3VmNJRDJDb3BwYSI6Ijk1NjI3MDcwLTZmYTgtNDg4ZC1hZmU4LTBiMzIyMzAwZWFjZCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiOTU2MjcwNzAtNmZhOC00ODhkLWFmZTgtMGIzMjIzMDBlYWNkIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU1MzQ0NjExNywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk9UVTJNamN3TnpBdE5tWmhPQzAwT0Roa0xXRm1aVGd0TUdJek1qSXpNREJsWVdOayIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2Mzk4NDYsImlhdCI6MTc5MzU1MzQ0NiwianRpIjoiNTg1Y2EwMDUtNzFmYy00MzNiLWJkYTUtYWE3Y2FkMTY4OGNlIn0.uARtPEzFCvZfySItmTgAWxC66rYIwQ--MdOamg5qpjw",
+          "note": "720p | H.264",
+          "logo": "https://images.pluto.tv/channels/61326275b3c86a00078e4833/colorLogoPNG_1759340015358.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Visionaries",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/663946c1b18d700008d9c168/3321280/playlist.m3u8?sid=8bded222-d663-11f1-be2a-5a96277d92a5&deviceId=969ba6ac-b835-4d65-adaa-66b5bd4ae613&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4YmRlZDIyMi1kNjYzLTExZjEtYmUyYS01YTk2Mjc3ZDkyYTUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiOTY5YmE2YWMtYjgzNS00ZDY1LWFkYWEtNjZiNWJkNGFlNjEzIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6Ijk2OWJhNmFjLWI4MzUtNGQ2NS1hZGFhLTY2YjViZDRhZTYxMyIsImZ3VmNJRDJDb3BwYSI6Ijk2OWJhNmFjLWI4MzUtNGQ2NS1hZGFhLTY2YjViZDRhZTYxMyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiOTY5YmE2YWMtYjgzNS00ZDY1LWFkYWEtNjZiNWJkNGFlNjEzIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0NjE5MywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk9UWTVZbUUyWVdNdFlqZ3pOUzAwWkRZMUxXRmtZV0V0TmpaaU5XSmtOR0ZsTmpFeiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDYsImlhdCI6MTc5MzU4NTg0NiwianRpIjoiMzAwZjVhYTYtODhkYi00NTA4LWFlN2MtN2I3NzBmZmU4NmVlIn0.SWYUMHAv8gcwlaEy-RlPbawbVhc9Ls2UhCxoSezWLII",
+          "note": "720p | H.264",
+          "logo": "https://images.pluto.tv/channels/663946c1b18d700008d9c168/colorLogoPNG_1759338795452.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bloomberg TV Live Event",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.20 Mbps",
+          "url": "https://live-prod-us-event-primary.global.ssl.fastly.net/evt/Channel-USEvt-AWS-virginia-2/Source-USEvt-10000-1-sdlg9j-BP-HD-4-W7WyphVQipuJ_live.m3u8",
+          "note": "720p | H.264 | 1.2 Mbps",
+          "logo": "https://i.imgur.com/OuogLHx.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bloomberg TV Politics Live Event",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.20 Mbps",
+          "url": "https://live-prod-us-politics-primary.global.ssl.fastly.net/pol/Channel-POL-AWS-virginia-2/Source-Pol-10000-1-slq1r5-BP-HD-4-O7Kj6FMgIYSk_live.m3u8",
+          "note": "720p | H.264 | 1.2 Mbps",
+          "logo": "https://i.imgur.com/OuogLHx.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Bravo",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.11 Mbps",
+          "url": "http://41.205.93.154/BRAVO/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.1 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Cinemax Hits",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.55 Mbps",
+          "url": "http://23.237.104.106:8080/USA_MOREMAX/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 3.5 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Cinemax_Hits_Logo.png/960px-Cinemax_Hits_Logo.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "CNN",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.36 Mbps",
+          "url": "https://tvsen6.aynaott.com/cnn/tracks-v1a1/mono.ts.m3u8",
+          "note": "720p | H.264 | 1.4 Mbps",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Discovery Channel",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.07 Mbps",
+          "url": "http://212.5.144.156:8080/discovery/tracks-v1a1/mono.m3u8",
+          "note": "720p | HEVC | 1.1 Mbps",
+          "codec": "HEVC"
+        },
+        {
+          "name": "Discovery Turbo (United States)",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 6.32 Mbps",
+          "url": "http://41.205.93.154/ESPNNEWS/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 6.3 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Discovery_Turbo_2025.svg/1920px-Discovery_Turbo_2025.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPN (United States) HD",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 5.80 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 5.8 Mbps",
+          "logo": "https://imgx.fubo.tv/station_logos/espn-hd_c.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPN 2",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.22 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-2-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.2 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPNU",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.65 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-U-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Hallmark Movies & More",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 5.00 Mbps",
+          "url": "https://dbrb49pjoymg4.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/7ee49462-15c1-4a51-a210-9fccee8a9ebe/5.m3u8",
+          "note": "720p | H.264 | 5.0 Mbps",
+          "logo": "https://provider-static.plex.tv/epg/cms/production/29af70d1-d3ba-4a16-bc4d-bd99e7e7def4/hallmark-movies-and-more_color.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Justice Central.TV",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.47 Mbps",
+          "url": "https://a-cdn.klowdtv.com/live2/justicecentral_720p/chunks.m3u8",
+          "note": "720p | H.264 | 3.5 Mbps",
+          "logo": "https://i.imgur.com/peuHszg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "MTV Biggest Pop",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5d14fd1a252d35decbc4080c/3321280/playlist.m3u8?sid=fc49b83e-d631-11f1-a6b2-da8314d9ecf5&deviceId=10395842-2486-4a05-ae94-cb95ec79d41d&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmYzQ5YjgzZS1kNjMxLTExZjEtYTZiMi1kYTgzMTRkOWVjZjUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMTAzOTU4NDItMjQ4Ni00YTA1LWFlOTQtY2I5NWVjNzlkNDFkIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjEwMzk1ODQyLTI0ODYtNGEwNS1hZTk0LWNiOTVlYzc5ZDQxZCIsImZ3VmNJRDJDb3BwYSI6IjEwMzk1ODQyLTI0ODYtNGEwNS1hZTk0LWNiOTVlYzc5ZDQxZCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMTAzOTU4NDItMjQ4Ni00YTA1LWFlOTQtY2I5NWVjNzlkNDFkIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1OTk2MiwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1UQXpPVFU0TkRJdE1qUTROaTAwWVRBMUxXRmxPVFF0WTJJNU5XVmpOemxrTkRGayIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NjAsImlhdCI6MTc5MzU2NDU2MCwianRpIjoiNTQwODQ2MjgtNDc0My00NmIxLTljN2UtZDQ4Yjc3NzM1MjYxIn0.q3WxhDAbOQKLER-jHIYgyE2fJFUruk8KDSa3AEiwiCg",
+          "note": "720p | H.264",
+          "logo": "https://images.pluto.tv/channels/6047fbdbbb776a0007e7f2ff/colorLogoPNG.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Nickelodeon",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "http://198.58.104.90:8989/nickelodeon/index.m3u8",
+          "note": "720p | H.264",
+          "codec": "H.264"
+        },
+        {
+          "name": "Nickelodeon Pluto TV",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca673e0d0bd6c2689c94ce3/3321280/playlist.m3u8?sid=6ebcb6e4-d64a-11f1-a12d-8213719433ca&deviceId=a5ba9250-e609-49e9-b343-748787545a9b&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2ZWJjYjZlNC1kNjRhLTExZjEtYTEyZC04MjEzNzE5NDMzY2EiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiYTViYTkyNTAtZTYwOS00OWU5LWIzNDMtNzQ4Nzg3NTQ1YTliIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImE1YmE5MjUwLWU2MDktNDllOS1iMzQzLTc0ODc4NzU0NWE5YiIsImZ3VmNJRDJDb3BwYSI6ImE1YmE5MjUwLWU2MDktNDllOS1iMzQzLTc0ODc4NzU0NWE5YiIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiYTViYTkyNTAtZTYwOS00OWU5LWIzNDMtNzQ4Nzg3NTQ1YTliIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU3NTA1OTg5OCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOllUVmlZVGt5TlRBdFpUWXdPUzAwT1dVNUxXSXpORE10TnpRNE56ZzNOVFExWVRsaSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NjE0NTksImlhdCI6MTc5MzU3NTA1OSwianRpIjoiNGM4NGM5MGUtMGJmMy00NGYzLThhZDItOTRiZTEzMDgwNTllIn0.9gDPC4Hz0gjhG4_1OcmQaTvuUatvQ04EDgRs455uu7A",
+          "note": "720p | H.264",
+          "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoPNG.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Kids",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est_2.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/fg8c9WK.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Kids Alaska",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://livestream.pbskids.org/out/v1/94b88ad58fc14f84a9382341f1c00b82/akst_2.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/ambc9le.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Kids Hawaii",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://livestream.pbskids.org/out/v1/aa31792fee094b24b09045483f04d150/hast_2.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/ambc9le.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Kids Mountain",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://livestream.pbskids.org/out/v1/3fe3030a2c8045a3932f4289d9eba3e6/mst_2.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/ambc9le.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS Kids Pacific",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://livestream.pbskids.org/out/v1/11f2e6b73eaa4887b3746cb863960e79/pst_2.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "logo": "https://i.imgur.com/ambc9le.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS KMOS-TV",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.44 Mbps",
+          "url": "https://hls-kmosdt.lls.cdn.pbs.org/hls/live/index_720.m3u8",
+          "note": "720p | H.264 | 3.4 Mbps",
+          "logo": "https://i.imgur.com/8c8isLj.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "PBS WJXT",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 5.16 Mbps",
+          "url": "https://dai.google.com/linear/hls/pa/event/RDmbn03GRCOLNG1eetEKhg/stream/8c642f23-31f0-41ee-aba3-d445d45a2d76:ATL/variant/c4c6e5d82ab61cf6c6dfaaaf865ae08b/bandwidth/5359200.m3u8",
+          "note": "720p | H.264 | 5.2 Mbps",
+          "logo": "https://i.imgur.com/8c8isLj.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Showtime Family Zone",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.17 Mbps",
+          "url": "http://23.237.104.106:8080/USA_SHOWTIME_FAMILY/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.2 Mbps",
+          "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Showtime_Family_Zone.svg/960px-Showtime_Family_Zone.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Stadium",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.44 Mbps",
+          "url": "https://wurl120sports.global.transmit.live/us-east-1-a/manifest/679a907dce42a042c23ace37/2cf88cc2-68d8-4424-a74c-74a0a56427b0/v1/stadium_gracenote/samsung_us/latest/main/hls/video-avc1.64001F-mp4a.40.2-2.m3u8?h=720&sessionStart=1793597946981&tlSession=G9WbImhTHyIapCizYpdcthnRBjFDEcTkSJzFh1kZbTNEF6WBEIIMiH3u1BtlfZT4CKS1U0h-1YY_dRbOL-uEj6yiJnwBhscBuwyywFWD5vTdqS0xbPfweCJ2ohibvV9ARtTaO_psOSB4KOZuHkh3Z1zef23D2IyKeKv1BS8qkTq5ec-k5EXaWUpEe9VD9Ut7nAlCMNRZKKDTiPomLLp6slgbr_o73LL8XLjEeI_bMKoDXPVM4jLlQWA8hQQIEENbWslh3LfMfmuEzgj0gQTzgnOseYp45Oz1rqGyLPu2ZPHbPGFvQh391BYfX_7vY-V6LvOMMiKeIXp_&tlSessionVer=2&uid=__USER_ID__&w=1280",
+          "note": "720p | H.264 | 3.4 Mbps",
+          "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Stadium_%28sports_network%29_logo.svg/960px-Stadium_%28sports_network%29_logo.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "Starz Kids & Family",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.57 Mbps",
+          "url": "http://23.237.104.106:8080/USA_STARZ_FAMILY/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 3.6 Mbps",
+          "logo": "https://i.imgur.com/eE9FzEP.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TBS",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8",
+          "note": "720p | H.264",
+          "codec": "H.264"
+        },
+        {
+          "name": "TBS West",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://turnerlive.warnermediacdn.com/hls/live/2023174/tbswest/slate/VIDEO_0_3564000.m3u8",
+          "note": "720p | H.264",
+          "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/TBS_2020.svg/960px-TBS_2020.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TNT (United States) West",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8",
+          "note": "720p | H.264",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "truTV",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.71 Mbps",
+          "url": "http://23.237.104.106:8080/USA_TRUTV/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 1.7 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "truTV West",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8",
+          "note": "720p | H.264",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Cinema",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/58af4c093a41ca9d4ecabe96/3321280/playlist.m3u8?sid=8be66c43-d663-11f1-915a-9246bf69f363&deviceId=b109e59a-a707-416a-82b3-884e0b057f03&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4YmU2NmM0My1kNjYzLTExZjEtOTE1YS05MjQ2YmY2OWYzNjMiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiYjEwOWU1OWEtYTcwNy00MTZhLTgyYjMtODg0ZTBiMDU3ZjAzIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImIxMDllNTlhLWE3MDctNDE2YS04MmIzLTg4NGUwYjA1N2YwMyIsImZ3VmNJRDJDb3BwYSI6ImIxMDllNTlhLWE3MDctNDE2YS04MmIzLTg4NGUwYjA1N2YwMyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiYjEwOWU1OWEtYTcwNy00MTZhLTgyYjMtODg0ZTBiMDU3ZjAzIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0NjI0MywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOllqRXdPV1UxT1dFdFlUY3dOeTAwTVRaaExUZ3lZak10T0RnMFpUQmlNRFUzWmpBeiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDYsImlhdCI6MTc5MzU4NTg0NiwianRpIjoiN2EwMDgwMDgtZWRmZC00NDNlLTg3MjItYzRiMTU4NDVjZGQ0In0.9QI8SU2le-aCoLVKOoAHrAS1bnE5kGphFQBhE_54Pvg",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/58af4c093a41ca9d4ecabe96/colorLogoPNG_1759338280891.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Classics Pluto TV",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/60f85644a9493e0007a1f035/3321280/playlist.m3u8?sid=f7478689-d631-11f1-92f5-9a60762652a6&deviceId=0927cea1-1fd5-4027-9465-40f54964fa61&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmNzQ3ODY4OS1kNjMxLTExZjEtOTJmNS05YTYwNzYyNjUyYTYiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMDkyN2NlYTEtMWZkNS00MDI3LTk0NjUtNDBmNTQ5NjRmYTYxIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjA5MjdjZWExLTFmZDUtNDAyNy05NDY1LTQwZjU0OTY0ZmE2MSIsImZ3VmNJRDJDb3BwYSI6IjA5MjdjZWExLTFmZDUtNDAyNy05NDY1LTQwZjU0OTY0ZmE2MSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMDkyN2NlYTEtMWZkNS00MDI3LTk0NjUtNDBmNTQ5NjRmYTYxIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1MTU1OSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1Ea3lOMk5sWVRFdE1XWmtOUzAwTURJM0xUazBOalV0TkRCbU5UUTVOalJtWVRZeCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NTEsImlhdCI6MTc5MzU2NDU1MSwianRpIjoiYzVhYTFhMWItZDgzNS00ZThkLWIyODItNTAyY2MwMGNhMDQ2In0.NvMuY1YBrm-FL1MdOMaFQnOcXBsGh7DFzTbTOXx-YEw",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/60f85644a9493e0007a1f035/colorLogoPNG_1759339662769.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Comedy Movies",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/68c32d88f56983aba40052bd/3321280/playlist.m3u8?sid=f64ac0c5-d631-11f1-90d1-fea136367bc8&deviceId=5da9d527-c521-45ba-85a1-be0a5b2f923a&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmNjRhYzBjNS1kNjMxLTExZjEtOTBkMS1mZWExMzYzNjdiYzgiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNWRhOWQ1MjctYzUyMS00NWJhLTg1YTEtYmUwYTViMmY5MjNhIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjVkYTlkNTI3LWM1MjEtNDViYS04NWExLWJlMGE1YjJmOTIzYSIsImZ3VmNJRDJDb3BwYSI6IjVkYTlkNTI3LWM1MjEtNDViYS04NWExLWJlMGE1YjJmOTIzYSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNWRhOWQ1MjctYzUyMS00NWJhLTg1YTEtYmUwYTViMmY5MjNhIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU0OTkwMywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5XUmhPV1ExTWpjdFl6VXlNUzAwTldKaExUZzFZVEV0WW1Vd1lUVmlNbVk1TWpOaCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NDksImlhdCI6MTc5MzU2NDU0OSwianRpIjoiMWZlMzU4NjUtMjFkMC00ZDAyLWE5MWUtMzJiNjBkMzQ3NzJlIn0.NYvLQhpr9u6q2o362bA59o0mnlyrtN1CDFG28AYwgRQ",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/68c32d88f56983aba40052bd/colorLogoPNG_1759246622596.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "BET Pluto TV",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca670f6593a5d78f0e85aed/3321280/playlist.m3u8?sid=8d893778-d663-11f1-b266-065e457fbaf2&deviceId=0444bee1-dc95-4c2a-b302-ba48968f1254&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4ZDg5Mzc3OC1kNjYzLTExZjEtYjI2Ni0wNjVlNDU3ZmJhZjIiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMDQ0NGJlZTEtZGM5NS00YzJhLWIzMDItYmE0ODk2OGYxMjU0IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjA0NDRiZWUxLWRjOTUtNGMyYS1iMzAyLWJhNDg5NjhmMTI1NCIsImZ3VmNJRDJDb3BwYSI6IjA0NDRiZWUxLWRjOTUtNGMyYS1iMzAyLWJhNDg5NjhmMTI1NCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMDQ0NGJlZTEtZGM5NS00YzJhLWIzMDItYmE0ODk2OGYxMjU0IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0ODk4OCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1EUTBOR0psWlRFdFpHTTVOUzAwWXpKaExXSXpNREl0WW1FME9EazJPR1l4TWpVMCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDksImlhdCI6MTc5MzU4NTg0OSwianRpIjoiM2E5OTdhZGQtMWQyMC00YTQwLWI2MmQtNzU3NDc5MTY5Mzg2In0.a1GcJYQIsoIMX1MXM0rsGpIquNeUles5pdoo6gBk4mQ",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "MTV Pluto TV",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca672f515a62078d2ec0ad2/3321280/playlist.m3u8?sid=6d31d95c-d64a-11f1-907d-a2625cdde701&deviceId=6b908ac5-4110-4452-8017-b989ec0f4144&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2ZDMxZDk1Yy1kNjRhLTExZjEtOTA3ZC1hMjYyNWNkZGU3MDEiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNmI5MDhhYzUtNDExMC00NDUyLTgwMTctYjk4OWVjMGY0MTQ0IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjZiOTA4YWM1LTQxMTAtNDQ1Mi04MDE3LWI5ODllYzBmNDE0NCIsImZ3VmNJRDJDb3BwYSI6IjZiOTA4YWM1LTQxMTAtNDQ1Mi04MDE3LWI5ODllYzBmNDE0NCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNmI5MDhhYzUtNDExMC00NDUyLTgwMTctYjk4OWVjMGY0MTQ0IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU3NTA1NzMxMCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5tSTVNRGhoWXpVdE5ERXhNQzAwTkRVeUxUZ3dNVGN0WWprNE9XVmpNR1kwTVRRMCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NjE0NTcsImlhdCI6MTc5MzU3NTA1NywianRpIjoiZWM5MDBmYmUtMzE3OC00NDUyLWJmMGEtN2NmMWI3OTdkZTM5In0.aTdg0FulemMEZPyMYccroM7yqD2JUomtyUqcH-4Wnas",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "MTV Spankin' New",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5d14fdb8ca91eedee1633117/3321280/playlist.m3u8?sid=fc81c198-d631-11f1-af64-aa8d7f3da025&deviceId=4295985c-61ae-48bc-b390-c69515d17f7c&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmYzgxYzE5OC1kNjMxLTExZjEtYWY2NC1hYThkN2YzZGEwMjUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNDI5NTk4NWMtNjFhZS00OGJjLWIzOTAtYzY5NTE1ZDE3ZjdjIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjQyOTU5ODVjLTYxYWUtNDhiYy1iMzkwLWM2OTUxNWQxN2Y3YyIsImZ3VmNJRDJDb3BwYSI6IjQyOTU5ODVjLTYxYWUtNDhiYy1iMzkwLWM2OTUxNWQxN2Y3YyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNDI5NTk4NWMtNjFhZS00OGJjLWIzOTAtYzY5NTE1ZDE3ZjdjIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU2MDMyOSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5ESTVOVGs0TldNdE5qRmhaUzAwT0dKakxXSXpPVEF0WXpZNU5URTFaREUzWmpkaiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NjAsImlhdCI6MTc5MzU2NDU2MCwianRpIjoiMjE0MDliNTktOGFiYi00Y2YyLWI5ZDAtM2E5YzJiOTM3ZmIwIn0.2_DxCWgKYUIGgR2ZzBhbcRImMl8oQMwnkakbDWuypFU",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/6541010f770cf1000866be98/colorLogoPNG.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "VH1 Queens of Reality",
+          "badge": "684p",
+          "height": 684,
+          "quality": "1216x684",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/66abefe5d2d50d00082c7d12/3321280/playlist.m3u8?sid=f92a9949-d631-11f1-8b70-ee546638646d&deviceId=7cea5164-5718-47c2-b8e7-e04e81e63945&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmOTJhOTk0OS1kNjMxLTExZjEtOGI3MC1lZTU0NjYzODY0NmQiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiN2NlYTUxNjQtNTcxOC00N2MyLWI4ZTctZTA0ZTgxZTYzOTQ1IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjdjZWE1MTY0LTU3MTgtNDdjMi1iOGU3LWUwNGU4MWU2Mzk0NSIsImZ3VmNJRDJDb3BwYSI6IjdjZWE1MTY0LTU3MTgtNDdjMi1iOGU3LWUwNGU4MWU2Mzk0NSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiN2NlYTUxNjQtNTcxOC00N2MyLWI4ZTctZTA0ZTgxZTYzOTQ1IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1NDcyNSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk4yTmxZVFV4TmpRdE5UY3hPQzAwTjJNeUxXSTRaVGN0WlRBMFpUZ3haVFl6T1RRMSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NTQsImlhdCI6MTc5MzU2NDU1NCwianRpIjoiMTIzMTY5OGMtYWUwZi00MDk1LTkyYTktYjIzOGJiNmUyNzJmIn0.exbYJDh01MGqyOAmEGXV6a1SLhM6xY702Yk4RKMAZVk",
+          "note": "684p | H.264",
+          "logo": "https://images.pluto.tv/channels/66abefe5d2d50d00082c7d12/colorLogoPNG.png",
+          "codec": "H.264"
+        }
+      ]
+    },
+    {
+      "name": "Sports",
+      "channels": [
+        {
+          "name": "NBA TV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 6.50 Mbps",
+          "url": "http://23.237.104.106:8080/USA_NBA/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 6.5 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "NHL Network",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.87 Mbps",
+          "url": "https://nhl-firetv.amagi.tv/playlist1080p.m3u8",
+          "note": "1080p | H.264 | 4.9 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Tennis Channel",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.09 Mbps",
+          "url": "https://amg01444-tennischannelth-tennischannelnl-samsungnl-x3dq1.amagi.tv/ts-eu-w1-n2/playlist/amg01444-tennischannelth-tennischannelnl-samsungnl/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade90c10de6fa3b3011c932813fa83439fd501b282d10f8342d370f4159a91f28ad212d1e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eac68cf5ac2c07d84634c4c3ef03b898ed4554607197b030996/111/1920x1080_5288800/index.m3u8",
+          "note": "1080p | H.264 | 5.1 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPN",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 5.80 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 5.8 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPN 2",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.22 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-2-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.2 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ESPNU",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.65 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/ESPN-U-HD/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Fox Sports 1",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.63 Mbps",
+          "url": "http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 3.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "NFL Network",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "http://198.58.104.90:8989/nfl/index.m3u8",
+          "note": "720p | H.264",
+          "codec": "H.264"
+        }
+      ]
+    },
+    {
+      "name": "News",
+      "channels": [
+        {
+          "name": "Bloomberg TV",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 3.16 Mbps",
+          "url": "http://23.237.104.106:8080/USA_BLOOMBERG/tracks-v1a1/mono.m3u8",
+          "note": "1080p | H.264 | 3.2 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "CGTN",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.64 Mbps",
+          "url": "https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master1080p.m3u8",
+          "note": "1080p | H.264 | 5.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "CGTN Documentary",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 5.64 Mbps",
+          "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master1080p.m3u8",
+          "note": "1080p | H.264 | 5.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "WION",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.10 Mbps",
+          "url": "https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8",
+          "note": "1080p | H.264 | 4.1 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Yahoo! Finance",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://d1ewctnvcwvvvu.cloudfront.net/1080p-es-cc/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ABC News",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.54 Mbps",
+          "url": "https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/7c7a6abe4d604faca4d6b91f6567558f/hdntl=exp=1793684347~acl=%2f*~data=hdntl~hmac=08ec903caab8706f624ae751cca3eb82c5e6943deffb4a403ae4b0d1cd2b33ff/index_47.m3u8",
+          "note": "720p | H.264 | 4.5 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "ABC News Live",
+          "url": "https://jmp2.uk/plu-6508be683a0d700008c534e4.m3u8",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "codec": "H.264",
+          "note": "720p | H.264 | ABC News Live (Pluto feed, browser safe)"
+        },
+        {
+          "name": "Euronews English",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 3.64 Mbps",
+          "url": "https://cdn-euronews.akamaized.net/live/eds/euronews-en/25002/euronews-en-avc1_3300000=9-mp4a_143200_eng=2.m3u8",
+          "note": "720p | H.264 | 3.6 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "India Today",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.50 Mbps",
+          "url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/vid/indiatoday-v2/p/live_720p/chunks.m3u8",
+          "note": "720p | H.264 | 1.5 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "NDTV 24x7",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.89 Mbps",
+          "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/masterp_720p@3.m3u8",
+          "note": "720p | H.264 | 2.9 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "NHK World Premium",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 1.79 Mbps",
+          "url": "https://media-tyo.hls.nhkworld.jp/hls/wp/live/1/sig/a4d3280e04ac0c7f2e1da3efba01188be434d3df06d75347976100b5d49c6137/v1.m3u8",
+          "note": "720p | H.264 | 1.8 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Republic Bharat",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 2.02 Mbps",
+          "url": "https://streams.tangotv.in/REPUBLICBHARAT/ORIGIN/tracks-v1a1/mono.m3u8",
+          "note": "720p | H.264 | 2.0 Mbps",
+          "codec": "H.264"
+        }
+      ]
+    },
+    {
+      "name": "UK",
+      "channels": [
+        {
+          "name": "BBC News",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 5.51 Mbps",
+          "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+          "note": "720p | H.264 | 5.5 Mbps",
+          "codec": "H.264"
+        },
+        {
+          "name": "Sky News Weather",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720 4.10 Mbps",
+          "url": "https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/chunklist_b4096000.m3u8",
+          "note": "720p | H.264 | 4.1 Mbps",
+          "logo": "https://pbs.twimg.com/profile_images/1604994875459518464/lGt2wEqM_400x400.jpg",
+          "codec": "H.264"
+        },
+        {
+          "name": "That's 70s",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/69ef53e12f4d2b4f9c582e76/3321280/playlist.m3u8?sid=d78d8510-d663-11f1-b38a-72dceacdd8fc&deviceId=4cbc0570-d63d-42b9-a499-70717cc32ab9&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJkNzhkODUxMC1kNjYzLTExZjEtYjM4YS03MmRjZWFjZGQ4ZmMiLCJjbGllbnRJUCI6IjEzMS4xMTQuMTMwLjIzOSIsImNpdHkiOiJQaXNhIiwicG9zdGFsQ29kZSI6IjU2MTI0IiwiY291bnRyeSI6IklUIiwiZG1hIjowLCJhY3RpdmVSZWdpb24iOiJJVCIsImRldmljZUxhdCI6NDMuNzAwMDAwNzYyOTM5NDUsImRldmljZUxvbiI6MTAuMzkwMDAwMzQzMzIyNzU0LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNGNiYzA1NzAtZDYzZC00MmI5LWE0OTktNzA3MTdjYzMyYWI5IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkV1cm9wZS9Sb21lIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjRjYmMwNTcwLWQ2M2QtNDJiOS1hNDk5LTcwNzE3Y2MzMmFiOSIsImZ3VmNJRDJDb3BwYSI6IjRjYmMwNTcwLWQ2M2QtNDJiOS1hNDk5LTcwNzE3Y2MzMmFiOSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNGNiYzA1NzAtZDYzZC00MmI5LWE0OTktNzA3MTdjYzMyYWI5IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwOSwxMDAxMywxMDAxNiwxMDAxNSwxMDAyMCwxMDAyMiwxMDAyMywxMDAxNCwxMDAyMSwxMDAyNSwxMDAwMCJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTk3MzE2NywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOklUOk5HTmlZekExTnpBdFpEWXpaQzAwTW1JNUxXRTBPVGt0TnpBM01UZGpZek15WVdJNSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIzNzMsImlhdCI6MTc5MzU4NTk3MywianRpIjoiYjFiMjNmMDctNDQ1Ny00MTNmLWE1NmQtOWQxN2UwMDk4MDgxIn0.kUghE2yRcUF1yvO1Y1mADx9Rb_S6jNKmQGKnmZkXuUg",
+          "note": "720p | H.264",
+          "logo": "https://i.imgur.com/j2q53JQ.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "That's 80s",
+          "badge": "720p",
+          "height": 720,
+          "quality": "1280x720",
+          "url": "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/69ef54f3c700cf0140272def/3321280/playlist.m3u8?sid=4bc13807-d632-11f1-98b1-c2d12ff49885&deviceId=3ad2a494-4255-4014-94d7-26a8b5c86b28&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI0YmMxMzgwNy1kNjMyLTExZjEtOThiMS1jMmQxMmZmNDk4ODUiLCJjbGllbnRJUCI6IjEzMS4xMTQuMTMwLjIzOSIsImNpdHkiOiJQaXNhIiwicG9zdGFsQ29kZSI6IjU2MTI0IiwiY291bnRyeSI6IklUIiwiZG1hIjowLCJhY3RpdmVSZWdpb24iOiJJVCIsImRldmljZUxhdCI6NDMuNzAwMDAwNzYyOTM5NDUsImRldmljZUxvbiI6MTAuMzkwMDAwMzQzMzIyNzU0LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiM2FkMmE0OTQtNDI1NS00MDE0LTk0ZDctMjZhOGI1Yzg2YjI4IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkV1cm9wZS9Sb21lIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjNhZDJhNDk0LTQyNTUtNDAxNC05NGQ3LTI2YThiNWM4NmIyOCIsImZ3VmNJRDJDb3BwYSI6IjNhZDJhNDk0LTQyNTUtNDAxNC05NGQ3LTI2YThiNWM4NmIyOCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiM2FkMmE0OTQtNDI1NS00MDE0LTk0ZDctMjZhOGI1Yzg2YjI4IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSwxMDAxMywxMDAxNiwxMDAyMSwxMDAyMiwxMDAyMywxMDAyNSwxMDAxNCwxMDAxNSwxMDAyMCJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDY5MzI4NSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOklUOk0yRmtNbUUwT1RRdE5ESTFOUzAwTURFMExUazBaRGN0TWpaaE9HSTFZemcyWWpJNCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTEwOTMsImlhdCI6MTc5MzU2NDY5MywianRpIjoiZmY0ZWZlZWYtMzJkNi00NGJiLWIyMWMtYTE5NmQwYjA4OWFhIn0.JUoO575Uhh6ZeeTdkvoHs4CD2TkvFMdIW8fUyQ-EG8A",
+          "note": "720p | H.264",
+          "codec": "H.264"
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "channels": [
+        {
+          "name": "CBC News Network",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.65 Mbps",
+          "url": "https://d2ny9lo79ujali.cloudfront.net/1080p-en-vtt/index.m3u8",
+          "note": "1080p | H.264 | 4.7 Mbps",
+          "logo": "https://i.imgur.com/SjTdhvJ.png",
+          "codec": "H.264"
+        },
+        {
+          "name": "TSN The Ocho",
+          "badge": "1080p",
+          "height": 1080,
+          "quality": "1920x1080 4.61 Mbps",
+          "url": "https://d3pnbvng3bx2nj.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/79510ce4-7cb6-44f7-a15b-c3b6dc6cae5b/3.m3u8",
+          "note": "1080p | H.264 | 4.6 Mbps",
+          "logo": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA1400003R3_20240709T002034SQUARE.png",
+          "codec": "H.264"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tvapp</title>
+<style>
+  :root{ --bg:#0b0d10; --panel:#12161b; --line:#232a33; --txt:#e6ebf2; --dim:#8b97a6; --acc:#ff3b30; --ok:#2ecc71; }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;margin:0;background:var(--bg);color:var(--txt);
+    font:15px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+  #bar{position:fixed;top:0;left:0;right:0;height:56px;display:flex;align-items:center;gap:10px;
+    padding:0 14px;background:var(--panel);border-bottom:1px solid var(--line);z-index:5}
+  #bar .dot{width:9px;height:9px;border-radius:50%;background:var(--acc)}
+  #bar b{font-size:16px}
+  #bar .cnt{margin-left:auto;color:var(--dim);font-size:12px}
+  #list{position:absolute;top:56px;left:0;right:0;bottom:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:24px}
+  .grp{color:var(--dim);font-size:11px;letter-spacing:1px;text-transform:uppercase;
+    padding:16px 16px 6px;font-weight:700}
+  .ch{padding:12px 16px;border-bottom:1px solid #171c23;display:flex;align-items:center;gap:10px}
+  .ch:active{background:#1b222b}
+  .nm{flex:1;min-width:0}
+  .nm .t{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nm .s{font-size:11.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+  .bdg{font-size:10.5px;font-weight:700;padding:3px 6px;border-radius:5px;background:#242d38;color:#9fb0c2;flex:0 0 auto}
+  #player{position:fixed;inset:0;background:#000;z-index:20;display:none;flex-direction:column}
+  #player.show{display:flex}
+  #stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0}
+  video{width:100%;height:100%;object-fit:contain;background:#000}
+  #top{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:10px;
+    padding:12px 14px;background:linear-gradient(rgba(0,0,0,.75),transparent)}
+  #top b{font-size:14px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #top button{background:rgba(30,36,44,.9);border:1px solid #313c48;color:#fff;border-radius:8px;
+    padding:7px 12px;font-size:13px}
+  #hud{position:absolute;bottom:0;left:0;right:0;display:flex;gap:8px;padding:10px 14px;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:11.5px;color:#cfd8e3}
+  #hud span{background:rgba(30,36,44,.85);border:1px solid #2a3340;border-radius:6px;padding:2px 7px}
+  #err{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;
+    gap:12px;padding:28px;text-align:center;background:rgba(0,0,0,.86)}
+  #err.show{display:flex}
+  @media (min-width:840px){
+    #list{right:auto;width:370px;border-right:1px solid var(--line)}
+    #player{left:370px}
+    #bar{width:370px}
+  }
+  #err p{color:var(--dim);font-size:13px;margin:0;word-break:break-all}
+</style>
+</head>
+<body>
+
+<div id="bar"><div class="dot"></div><b>tvapp</b><span class="cnt" id="cnt"></span></div>
+<div id="list"></div>
+
+<div id="player">
+  <div id="stage">
+    <video id="v" playsinline></video>
+    <div id="top"><b id="ttl"></b><button id="ext">Player</button><button id="close">Close</button></div>
+    <div id="hud"><span id="hRes">-</span><span id="hRate">-</span><span id="hLat">-</span></div>
+    <div id="err"><b id="errT">Stream failed</b><p id="errP"></p><button id="retry">Retry</button></div>
+  </div>
+</div>
+
+<script src="hls.min.js"></script>
+<script>
+var $ = function(s){ return document.querySelector(s); };
+var DATA = { groups: [] }, CUR = null, hls = null, tries = 0;
+
+function load(){
+  var x = new XMLHttpRequest();
+  x.open('GET', 'channels.json', true);
+  x.onload = function(){
+    try { DATA = JSON.parse(x.responseText); } catch(e){ DATA = {groups:[]}; }
+    render();
+  };
+  x.onerror = function(){ $('#list').innerHTML = '<div class="ch">channels.json missing</div>'; };
+  x.send();
+}
+
+function render(){
+  var html = '', n = 0;
+  for (var g = 0; g < DATA.groups.length; g++){
+    var grp = DATA.groups[g];
+    html += '<div class="grp">' + grp.name + ' &middot; ' + grp.channels.length + '</div>';
+    for (var i = 0; i < grp.channels.length; i++){
+      var c = grp.channels[i]; n++;
+      html += '<div class="ch" data-u="' + encodeURIComponent(c.url) + '" data-n="' + c.name.replace(/"/g,'') + '">' +
+              '<div class="nm"><div class="t">' + c.name + '</div><div class="s">' + (c.note || c.url) + '</div></div>' +
+              '<span class="bdg">' + (c.badge || '') + '</span></div>';
+    }
+  }
+  $('#list').innerHTML = html;
+  $('#cnt').textContent = n + ' ch';
+  var rows = document.querySelectorAll('.ch');
+  for (var k = 0; k < rows.length; k++){
+    rows[k].onclick = function(){
+      play(this.getAttribute('data-n'), decodeURIComponent(this.getAttribute('data-u')));
+    };
+  }
+}
+
+function best(h){
+  var bi = 0;
+  h.levels.forEach(function(l,i){
+    var a = h.levels[bi];
+    if ((l.height||0) > (a.height||0) || ((l.height||0)===(a.height||0) && (l.bitrate||0)>(a.bitrate||0))) bi = i;
+  });
+  return bi;
+}
+
+function play(name, url){
+  CUR = url; tries = 0;
+  $('#ttl').textContent = name;
+  $('#player').classList.add('show');
+  $('#err').classList.remove('show');
+  $('#hRes').textContent = '-'; $('#hRate').textContent = '-'; $('#hLat').textContent = '-';
+  var v = $('#v');
+  if (hls){ hls.destroy(); hls = null; }
+  v.removeAttribute('src'); v.load();
+
+  if (window.Hls && Hls.isSupported()){
+    hls = new Hls({ lowLatencyMode:true, maxBufferLength:8, backBufferLength:6,
+                    liveSyncDurationCount:1, maxLiveSyncDurationRate:1.5,
+                    maxLiveSyncPlaybackRate:1.5, capLevelToPlayerSize:false,
+                    defaultAudioCodec:'mp4a.40.2' });
+    hls.loadSource(url);
+    hls.attachMedia(v);
+    hls.on(Hls.Events.MANIFEST_PARSED, function(){
+      v.play().catch(function(){});
+      if (hls.levels.length > 1) hls.currentLevel = best(hls);   // always max
+      paint();
+    });
+    hls.on(Hls.Events.LEVEL_SWITCHED, paint);
+    hls.on(Hls.Events.ERROR, function(_, d){
+      if (!d.fatal) return;
+      if (tries++ < 3){ setTimeout(function(){ play(name, url); }, 1200 * tries); return; }
+      fail(d.details || 'unknown error', url);
+    });
+  } else if (v.canPlayType('application/vnd.apple.mpegurl')){
+    v.src = url; v.play().catch(function(){});
+  } else {
+    fail('HLS not supported by this WebView', url);
+  }
+}
+
+function paint(){
+  if (!hls) return;
+  var L = hls.levels[hls.currentLevel] || hls.levels[best(hls)];
+  if (L && L.height) $('#hRes').textContent = L.width + 'x' + L.height;
+  if (L && L.bitrate) $('#hRate').textContent = (L.bitrate/1e6).toFixed(2) + ' Mbps';
+  if (typeof hls.latency === 'number' && isFinite(hls.latency)) $('#hLat').textContent = hls.latency.toFixed(1) + 's';
+}
+
+function fail(txt, url){
+  $('#errT').textContent = 'Stream failed';
+  $('#errP').textContent = txt + '\n\n' + url;
+  $('#err').classList.add('show');
+}
+
+$('#ext').onclick = function(){
+  if (CUR && window.Android && Android.openExternal) Android.openExternal(CUR);
+};
+$('#close').onclick = function(){
+  if (hls){ hls.destroy(); hls = null; }
+  var v = $('#v'); v.pause(); v.removeAttribute('src'); v.load();
+  $('#player').classList.remove('show');
+};
+$('#retry').onclick = function(){ if (CUR) play($('#ttl').textContent, CUR); };
+
+setInterval(function(){ if (hls) paint(); }, 1000);
+window.tvappBack = function(){
+  if ($('#player').classList.contains('show')){ $('#close').click(); return true; }
+  return false;
+};
+load();
+// deep link: file:///android_asset/index.html?play=<encoded url>&name=<label>
+(function(){
+  var q = location.search || '';
+  var m = q.match(/[?&]play=([^&]+)/);
+  if (m){
+    var nm = q.match(/[?&]name=([^&]+)/);
+    setTimeout(function(){ play(nm ? decodeURIComponent(nm[1]) : 'Stream', decodeURIComponent(m[1])); }, 300);
+  }
+})();
+</script>
+</body>
+</html>
