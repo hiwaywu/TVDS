@@ -699,3 +699,212 @@ TVDS/
 │  └─ assets/index.html      mobile UI
 └─ release/tvapp.apk         signed build (0.15 MB)
 ```
+
+---
+
+## 13. Playlist in, playlist out (the M3U workflow)
+
+Everything a normal IPTV app understands, plus the same file in both directions.
+
+### 13.1 Formats accepted
+
+Standard extended M3U / M3U8:
+
+```
+#EXTM3U
+#EXTINF:-1 tvg-id="BBCNews" tvg-name="BBC News" tvg-logo="https://..." group-title="UK",BBC News
+https://example/bbc.m3u8
+```
+
+The parser in `android/assets/index.html` (`parseM3U`) handles:
+
+- `#EXTINF` attributes in any order — `tvg-id`, `tvg-name`, `tvg-logo`, `group-title`
+- the display name after the **last** comma (names containing commas survive)
+- `#EXTGRP:` lines as a group fallback
+- bare URL lines with no `#EXTINF` (name falls back to the last path segment)
+- CRLF or LF, blank lines, unknown `#` directives
+- de-duplication by URL
+
+### 13.2 Import — three ways
+
+| Route | How | Where it lands |
+|---|---|---|
+| **File** | ⤓ button → *Import playlist* → file picker | `localStorage['tvds.pls']` (raw text) |
+| **URL** | same menu → *paste a playlist URL* | fetched with `fetch()`, then parsed |
+| **Deep link** | `adb shell am start ... --es play "<url>"` | single stream, no list change |
+
+Native side (`Bridge.pickPlaylist` → `MainActivity.openPlaylistPicker`):
+
+```java
+Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+i.addCategory(Intent.CATEGORY_OPENABLE);
+i.setType("*/*");
+i.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{
+        "audio/x-mpegurl", "application/x-mpegurl", "application/vnd.apple.mpegurl",
+        "text/plain", "text/*", "application/octet-stream"});
+startActivityForResult(i, REQ_PLAYLIST);
+```
+
+The result is read as UTF-8, escaped by `jsString()`, and handed to the page:
+
+```java
+web.evaluateJavascript("window.tvImport(" + jsString(text) + ")", null);
+```
+
+`window.tvImport` parses, stores, flips the source chip to **Imported**, and re-renders.
+The list survives app restarts because it lives in `localStorage`.
+
+### 13.3 Export
+
+*Export playlist* writes the current list (`#EXTM3U` + `#EXTINF` + URL per channel) and puts
+it on the **clipboard** via `Bridge.copy`. Paste it into a file, into TiviMate / OTT Navigator,
+or into another phone.
+
+Command-line equivalent, from the repo:
+
+```powershell
+python make_m3u.py            # channels.json -> tvds.m3u (116 channels, 62 KB)
+```
+
+### 13.4 The file that ships in the repo
+
+`tvds.m3u` — 116 channels with `tvg-id`, `tvg-name`, `tvg-logo`, `group-title`, and
+`http-referrer` where the stream needs one. Open it directly in any IPTV player, or import it
+into tvapp.
+
+---
+
+## 14. The player (what "a real player" ended up meaning)
+
+### 14.1 Screen layout
+
+```
+list view                     player view
+├─ header  tvds  [⤓] [⋯]       ├─ top   ‹  title  ☆  ⋯
+├─ search                      ├─ video (zoomable)
+├─ chips All/★Fav/Recent/Imported
+└─ groups → channels           ├─ HUD  res · bitrate · latency · zoom
+   (logo, name, note,          └─ bar  ☰ Channels | ⟳ orientation | HD quality | ⤢ Player
+    badge, ☆)
+```
+
+### 14.2 Controls, and when they hide
+
+- Tap the picture → controls appear, auto-hide after **6.5 s**.
+- Tap again → hide immediately.
+- Any control interaction calls `bumpUI()`, which re-arms the timer.
+- Taps that **start on the control overlay are ignored by the toggle handler** — otherwise
+  every button press would hide the sheet it just opened (§15.2).
+
+### 14.3 Gestures
+
+| Gesture | Action |
+|---|---|
+| Pinch (2 fingers) | zoom 1× → 4×, free scaling, clamped to the frame |
+| Drag (1 finger, zoomed) | pan, clamped to the scaled bounds |
+| Double tap | play / pause |
+| Single tap | show / hide controls |
+| Long press | suppressed (`contextmenu` prevented) — no browser link preview |
+
+Zoom is a CSS transform on a wrapper around `<video>`:
+
+```js
+els.wrap.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + zoom + ')';
+```
+
+Pan limits are `(width × (zoom − 1)) / 2`, so the picture can never be dragged off-screen.
+The HUD shows the live factor (`1.0x … 4.0x`).
+
+### 14.4 Orientation
+
+Three states, cycled from the bar or picked in the sheet: **Auto / Landscape / Portrait**.
+
+```java
+if ("landscape".equals(mode)) m.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+else if ("portrait".equals(mode)) m.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+else m.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+```
+
+Fixed `LANDSCAPE`/`PORTRAIT` — **not** `SENSOR_*`. Sensor variants need an accelerometer,
+so they do nothing on an emulator and nothing on a device lying flat on a table. The choice
+persists in `localStorage['tvds.orient']` and is re-applied on next launch.
+
+### 14.5 Quality
+
+`MAX` pins `hls.currentLevel` to the best variant and re-pins on every `LEVEL_SWITCHED`;
+`AUTO` hands control back to ABR (`currentLevel = -1`). Persisted as `tvds.qual`.
+
+### 14.6 Favourites and recents
+
+- ☆ on any row (or in the sheet) toggles a favourite; stored as `name|url` in `tvds.favs`.
+- Every play pushes onto `tvds.recents` (last 30, de-duplicated).
+- The chips at the top filter: All / ★ Favourites / Recent / Imported.
+
+### 14.7 The ⋯ sheet
+
+Quality, Orientation, *Open in another player* (VLC/MX via `Bridge.openExternal`),
+*Add to favourites*, *Copy stream URL*, *Import playlist*, *Export playlist*, *Close player*.
+
+### 14.8 Deep link
+
+```powershell
+adb shell am start -n com.tvapp.player/.MainActivity --es play "https://.../index.m3u8"
+```
+
+### 14.9 Self-test hook
+
+`--es test 1` loads `index.html?selftest=1`, which after 2.5 s clicks the Landscape chip
+programmatically and logs each step to logcat:
+
+```
+$ adb logcat -s tvapp:I
+console LOG: ST chips=4
+console LOG: ST seg=orient
+console LOG: ST btn=landscape
+setOrientation(landscape)
+console LOG: ST after=landscape
+```
+
+This exists because scripted `adb input tap` kept missing the sheet while it was animating —
+the self-test proves the JS → bridge → Java chain without depending on tap coordinates.
+
+---
+
+## 15. Bug log, second pass (player work)
+
+### 15.1 `addJavascriptInterface` silently exposes nothing
+**Symptom** Every button that needed native (`orientation`, `import`, `VLC`) did nothing.
+No exception anywhere. `console.log` showed the handler running.
+**Cause** the interface object was an instance of a **private inner class**. Newer WebView
+builds skip non-public classes when they reflect over `@JavascriptInterface` methods.
+**Fix** `Bridge` became a **public top-level class** holding a `WeakReference<MainActivity>`.
+Diagnosis trick that found it in one shot:
+
+```java
+web.evaluateJavascript("(typeof Android) + '|' + Android.ping()", v -> Log.i(TAG, "bridge=" + v));
+// before: "undefined"   after: "object|ok"
+```
+
+### 15.2 Taps on controls closed the controls
+**Symptom** Opening the sheet and tapping a chip did nothing; the sheet vanished instead.
+**Cause** the player's tap handler listened on the whole surface, so `touchend` from a button
+ran `hideUI()` (which also closes the sheet) **before** the click was dispatched; the element
+was already `pointer-events:none`.
+**Fix** record whether the touch *started* inside `#ui` and skip the toggle in that case:
+
+```js
+tapInUI = !!(e.target.closest && e.target.closest('#ui'));
+tapStart = tapInUI ? null : { x: ..., y: ..., t: Date.now() };
+```
+
+### 15.3 Long-press opened a URL preview over the video
+**Symptom** Holding the picture showed a share/link chip with the stream URL.
+**Cause** WebView's default link/text behaviour on a media element.
+**Fix** `-webkit-touch-callout:none; user-select:none` on `#player`, plus
+`document.addEventListener('contextmenu', preventDefault)` while the player is open.
+
+### 15.4 `SCREEN_ORIENTATION_SENSOR_LANDSCAPE` never rotated
+**Symptom** Landscape looked selected, display stayed portrait.
+**Cause** sensor variants depend on the accelerometer; the emulator reports none.
+**Fix** fixed `LANDSCAPE` / `PORTRAIT` for explicit choices, `UNSPECIFIED` for Auto.
+`adb shell screencap` then reports `2400x1080`.

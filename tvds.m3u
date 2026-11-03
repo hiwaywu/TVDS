@@ -1,0 +1,349 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="HOYTV77" tvg-name="HOY TV 77" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/HOY TV.png",HOY TV 77
+#EXTGRP:Hong Kong
+https://fast.hidns.vip/163189/hoy
+#EXTINF:-1 tvg-id="RTHKTV31" tvg-name="RTHK TV 31" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/RTHK TV 31 (1080p) [Geo-blocked].png",RTHK TV 31
+#EXTGRP:Hong Kong
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream5/streamPlaylist.m3u8
+#EXTINF:-1 tvg-id="RTHKTV32" tvg-name="RTHK TV 32" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/RTHK32.png",RTHK TV 32
+#EXTGRP:Hong Kong
+https://fast.hidns.vip/163189/rthk32
+#EXTINF:-1 tvg-id="TVBJade" tvg-name="TVB Jade" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png",TVB Jade
+#EXTGRP:Hong Kong
+https://cdn3.indevs.in/stream/tvb/fct/stream_0.php?u=admin&p=69fe3eb1f0b037bc2479cb4fbd56551848343f071f939422ef250f04f68b4cee&uid=
+#EXTINF:-1 tvg-id="TVBJadeHEVC" tvg-name="TVB Jade (HEVC)" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/TVB翡翠台 1080P.png",TVB Jade (HEVC)
+#EXTGRP:Hong Kong
+https://10.fast.hidns.vip/163189/fct/video/index.php
+#EXTINF:-1 tvg-id="TVBJadeNorthAmerica" tvg-name="TVB Jade North America" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/翡翠台北美版.png",TVB Jade North America
+#EXTGRP:Hong Kong
+https://cdn6.cc.cd/163189/j1
+#EXTINF:-1 tvg-id="TVBNews" tvg-name="TVB News" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/無線新聞.png",TVB News
+#EXTGRP:Hong Kong
+https://cdn6.cc.cd/163189/wxxw
+#EXTINF:-1 tvg-id="TVBPearl" tvg-name="TVB Pearl" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/明珠台.png",TVB Pearl
+#EXTGRP:Hong Kong
+https://10.fast.hidns.vip/163189/mzt/video/index.php
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/VIUTV.png",ViuTV
+#EXTGRP:Hong Kong
+https://10.fast.hidns.vip/163189/viu/video/index.php
+#EXTINF:-1 tvg-id="ABC7WABCNewYork" tvg-name="ABC 7 WABC (New York)" group-title="New York",ABC 7 WABC (New York)
+#EXTGRP:New York
+https://d3ip9j8kiqtf8w.cloudfront.net/out/v1/9adf1cf1816e45b2a90e98e6cf436fa8/ADHOC-WABC-02-cmaf-manifest/ADHOC-WABC-02-index.m3u8
+#EXTINF:-1 tvg-id="CBS2NewYorklive" tvg-name="CBS 2 New York (live)" group-title="New York",CBS 2 New York (live)
+#EXTGRP:New York
+https://newyo9h67ea3.airspace-cdn.cbsivideo.com/live/manifest.m3u8
+#EXTINF:-1 tvg-id="CBSNewsNewYorkWCBS2" tvg-name="CBS News New York (WCBS 2)" group-title="New York",CBS News New York (WCBS 2)
+#EXTGRP:New York
+https://jmp2.uk/plu-5dc48170e280c80009a861ab.m3u8
+#EXTINF:-1 tvg-id="Fox5WNYWNewYork" tvg-name="Fox 5 WNYW (New York)" group-title="New York",Fox 5 WNYW (New York)
+#EXTGRP:New York
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-wnyw-lgus/playlist.m3u8
+#EXTINF:-1 tvg-id="News12NewYork" tvg-name="News 12 New York" group-title="New York",News 12 New York
+#EXTGRP:New York
+https://jmp2.uk/plu-5fff49cfb5cd4f0007c2b0dc.m3u8
+#EXTINF:-1 tvg-id="AccuWeatherNOW" tvg-name="AccuWeather NOW" group-title="US Cable" tvg-logo="https://i.imgur.com/M8wbVYK.png",AccuWeather NOW
+#EXTGRP:US Cable
+https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/ts-us-w2-n1/playlist/amg00684-accuweather-accuweather-plex/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95a168e6da1e3011c932813fa83439fd501b282825b834a8071a2169990f0dada438ae42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b197afd94ea1faa30a55698d47fb824d86447ae59e40c4a38d6b/82/1920x1080_7619040/index.m3u8
+#EXTINF:-1 tvg-id="BloombergOriginals" tvg-name="Bloomberg Originals" group-title="US Cable" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png",Bloomberg Originals
+#EXTGRP:US Cable
+https://live-qt-primary.akamaized.net/qt/Channel-QT-TX-AWS-virginia-2/Source-QT-10M-2-sn9jy9-BP-07-02-oNnPi5xc6sq_live.m3u8
+#EXTINF:-1 tvg-id="BloombergOriginalsSD" tvg-name="Bloomberg Originals SD" group-title="US Cable" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png",Bloomberg Originals SD
+#EXTGRP:US Cable
+https://86fdc85a.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/89a8b7f4-d269-46ae-9342-cf47df91651b/0.m3u8
+#EXTINF:-1 tvg-id="BloombergTV" tvg-name="Bloomberg TV" group-title="US Cable",Bloomberg TV
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_BLOOMBERG/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Bounce" tvg-name="Bounce" group-title="US Cable" tvg-logo="https://m.media-amazon.com/images/I/718bHckb8eL.png",Bounce
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_BOUNCE/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="BounceXL" tvg-name="Bounce XL" group-title="US Cable" tvg-logo="https://i.imgur.com/GzxgSkc.png",Bounce XL
+#EXTGRP:US Cable
+https://amg01438-ewscrippscompan-bouncexl-tablo-6s9me.amagi.tv/ts-us-w2-n1/playlist/amg01438-ewscrippscompan-bouncexl-tablo/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95516d16ba0e2011c932813fa83439fd501b3d3d55a8317d376f4469d93a1deda4582e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09ead6ccf5ac2c07d846320889e4c9e3a2600f01ceb0b990252b8/105/1920x1080_5058864/index.m3u8
+#EXTINF:-1 tvg-id="CheddarNews" tvg-name="Cheddar News" group-title="US Cable" tvg-logo="https://i.imgur.com/tuP9GW8.png",Cheddar News
+#EXTGRP:US Cable
+https://hls.livecdn.io/cheddar.com/cheddar/cheddar.com/cheddarTS_1080p/chunks.m3u8
+#EXTINF:-1 tvg-id="CinemaxUnitedStatesWest" tvg-name="Cinemax (United States) West" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png",Cinemax (United States) West
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_CINEMAX_WEST/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CinemaxClassics" tvg-name="Cinemax Classics" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Cinemax_Classics_Logo.png/960px-Cinemax_Classics_Logo.png",Cinemax Classics
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_5STARMAX/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CNNHEVC" tvg-name="CNN (HEVC)" group-title="US Cable",CNN (HEVC)
+#EXTGRP:US Cable
+http://212.5.144.156:8080/cnn/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CNNInternational" tvg-name="CNN International" group-title="US Cable",CNN International
+#EXTGRP:US Cable
+https://d3bp6dwmpbdajl.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/512f1a27-b86d-4411-8b3d-19c840c7173b/0.m3u8
+#EXTINF:-1 tvg-id="CNNOriginals" tvg-name="CNN Originals" group-title="US Cable" tvg-logo="https://provider-static.plex.tv/epg/cms/production/f351d697-1e1f-4e7d-86c7-5995698e593f/CNN_Originals_ChannelLogo_Dark_1500x1000_2025_-_Grace_Hartwig.png",CNN Originals
+#EXTGRP:US Cable
+https://amg01918-cnnus-amg01918c2-vizio-us-9192.playouts.now.amagi.tv/ts-us-w2-n2/playlist/amg01918-cnnus-cnnoriginals-vizious/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95a46df39a7b7011c932813fa83439fd501b385d10a83168427f5149f92f788d344d6e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eaf69cf5ac3c07d846310082552d0ddb5bd99bf540e7b8a1a77/120/1920x1080_4715744/index.m3u8
+#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" group-title="US Cable",ESPN
+#EXTGRP:US Cable
+http://212.5.144.156:8080/espn/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="GritXtra" tvg-name="Grit Xtra" group-title="US Cable" tvg-logo="https://provider-static.plex.tv/epg/cms/production/dbbb9bca-0b08-43b5-a0e7-715df9a6dbfd/_ChannelLogo_1500x1000.png",Grit Xtra
+#EXTGRP:US Cable
+https://amg01438-ewscrippscompan-gritxtra-tablo-3nzsr.amagi.tv/ts-us-w2-n2/playlist/amg01438-ewscrippscompan-gritxtra-tablo/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade95546de3df4e3011c932813fa83439fd501e987d75d8340d37ef8179fc0a388db13d4e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eaa6dcf5ac2c07d84638652e5323315ae6d00aadbf1bd654829/174/1920x1080_5058864/index.m3u8
+#EXTINF:-1 tvg-id="History" tvg-name="History" group-title="US Cable",History
+#EXTGRP:US Cable
+http://212.5.144.156:8080/history/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="HistoryHit" tvg-name="History Hit" group-title="US Cable" tvg-logo="https://i.imgur.com/ulHoqlP.png",History Hit
+#EXTGRP:US Cable
+https://lds-timeline-rakuten.amagi.tv/1080p-cc/index.m3u8
+#EXTINF:-1 tvg-id="HLN" tvg-name="HLN" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/HLN_%28TV_network%29_2017_logo.svg/960px-HLN_%28TV_network%29_2017_logo.svg.png",HLN
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_HLN/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="IFC" tvg-name="IFC" group-title="US Cable",IFC
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_IFC/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="MTV" tvg-name="MTV" group-title="US Cable",MTV
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_MTV/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="MTVLive" tvg-name="MTV Live" group-title="US Cable" tvg-logo="https://i.imgur.com/3UByLqb.png",MTV Live
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_MTV_LIVE/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Newsmax2" tvg-name="Newsmax 2" group-title="US Cable" tvg-logo="https://i.imgur.com/iE1izWq.png",Newsmax 2
+#EXTGRP:US Cable
+https://amg00217-newsmax-newsmax-zeasn-022k9.amagi.tv/playlist1080P.m3u8
+#EXTINF:-1 tvg-id="NewsmaxTV" tvg-name="Newsmax TV" group-title="US Cable",Newsmax TV
+#EXTGRP:US Cable
+https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/3.m3u8
+#EXTINF:-1 tvg-id="OWN" tvg-name="OWN" group-title="US Cable",OWN
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_OWN/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Pac12Insider" tvg-name="Pac-12 Insider" group-title="US Cable" tvg-logo="https://i.imgur.com/736QREy.png",Pac-12 Insider
+#EXTGRP:US Cable
+https://pac12-firetv.amagi.tv/1080p-en-cc/index.m3u8
+#EXTINF:-1 tvg-id="ParamountNetwork" tvg-name="Paramount Network" group-title="US Cable",Paramount Network
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="PBS" tvg-name="PBS" group-title="US Cable" tvg-logo="https://i.imgur.com/8c8isLj.png",PBS
+#EXTGRP:US Cable
+https://pbs.lls.cdn.pbs.org/est/index_1080p.m3u8
+#EXTINF:-1 tvg-id="PBSAntiquesRoadshow" tvg-name="PBS Antiques Roadshow" group-title="US Cable" tvg-logo="https://i.imgur.com/U9CYaok.png",PBS Antiques Roadshow
+#EXTGRP:US Cable
+https://amg00953-pbsusa-antiroadshow-xumo-x6ud5.amagi.tv/1080p-cc/index.m3u8
+#EXTINF:-1 tvg-id="PBSNature" tvg-name="PBS Nature" group-title="US Cable" tvg-logo="https://i.imgur.com/Brry7cZ.png",PBS Nature
+#EXTGRP:US Cable
+https://d3mr43kyql7wgk.cloudfront.net/1080p-vtt/index.m3u8
+#EXTINF:-1 tvg-id="PBSTravel" tvg-name="PBS Travel" group-title="US Cable" tvg-logo="https://i.imgur.com/A6GXhta.png",PBS Travel
+#EXTGRP:US Cable
+https://d3hqevbyoxtkoi.cloudfront.net/1080p-vtt/index.m3u8
+#EXTINF:-1 tvg-id="Revolt" tvg-name="Revolt" group-title="US Cable" tvg-logo="https://i.imgur.com/eaYnGpH.png",Revolt
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_REVOLT/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Starz" tvg-name="Starz" group-title="US Cable",Starz
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_STARZ_WEST/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="StarzComedy" tvg-name="Starz Comedy" group-title="US Cable",Starz Comedy
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_STARZ_COMEDY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="SYFY" tvg-name="SYFY" group-title="US Cable",SYFY
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_SYFY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TNT" tvg-name="TNT" group-title="US Cable",TNT
+#EXTGRP:US Cable
+http://212.5.144.156/tnt/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="AE" tvg-name="A&E" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",A&E
+#EXTGRP:US Cable
+http://23.239.31.26:8989/aande/index.m3u8
+#EXTINF:-1 tvg-id="AMC" tvg-name="AMC" group-title="US Cable",AMC
+#EXTGRP:US Cable
+http://23.239.31.26:8989/amc/index.m3u8
+#EXTINF:-1 tvg-id="AXSTV" tvg-name="AXS TV" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AXS_TV_logo.svg/960px-AXS_TV_logo.svg.png",AXS TV
+#EXTGRP:US Cable
+http://23.239.31.26:8989/axstv/index.m3u8
+#EXTINF:-1 tvg-id="BETThrowbacks" tvg-name="BET Throwbacks" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/61326275b3c86a00078e4833/colorLogoPNG_1759340015358.png",BET Throwbacks
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/61326275b3c86a00078e4833/3321280/playlist.m3u8?sid=1beb9779-d618-11f1-9363-76bec15de22f&deviceId=95627070-6fa8-488d-afe8-0b322300eacd&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiIxYmViOTc3OS1kNjE4LTExZjEtOTM2My03NmJlYzE1ZGUyMmYiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiOTU2MjcwNzAtNmZhOC00ODhkLWFmZTgtMGIzMjIzMDBlYWNkIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6Ijk1NjI3MDcwLTZmYTgtNDg4ZC1hZmU4LTBiMzIyMzAwZWFjZCIsImZ3VmNJRDJDb3BwYSI6Ijk1NjI3MDcwLTZmYTgtNDg4ZC1hZmU4LTBiMzIyMzAwZWFjZCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiOTU2MjcwNzAtNmZhOC00ODhkLWFmZTgtMGIzMjIzMDBlYWNkIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU1MzQ0NjExNywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk9UVTJNamN3TnpBdE5tWmhPQzAwT0Roa0xXRm1aVGd0TUdJek1qSXpNREJsWVdOayIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2Mzk4NDYsImlhdCI6MTc5MzU1MzQ0NiwianRpIjoiNTg1Y2EwMDUtNzFmYy00MzNiLWJkYTUtYWE3Y2FkMTY4OGNlIn0.uARtPEzFCvZfySItmTgAWxC66rYIwQ--MdOamg5qpjw
+#EXTINF:-1 tvg-id="BETVisionaries" tvg-name="BET Visionaries" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/663946c1b18d700008d9c168/colorLogoPNG_1759338795452.png",BET Visionaries
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/663946c1b18d700008d9c168/3321280/playlist.m3u8?sid=8bded222-d663-11f1-be2a-5a96277d92a5&deviceId=969ba6ac-b835-4d65-adaa-66b5bd4ae613&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4YmRlZDIyMi1kNjYzLTExZjEtYmUyYS01YTk2Mjc3ZDkyYTUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiOTY5YmE2YWMtYjgzNS00ZDY1LWFkYWEtNjZiNWJkNGFlNjEzIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6Ijk2OWJhNmFjLWI4MzUtNGQ2NS1hZGFhLTY2YjViZDRhZTYxMyIsImZ3VmNJRDJDb3BwYSI6Ijk2OWJhNmFjLWI4MzUtNGQ2NS1hZGFhLTY2YjViZDRhZTYxMyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiOTY5YmE2YWMtYjgzNS00ZDY1LWFkYWEtNjZiNWJkNGFlNjEzIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0NjE5MywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk9UWTVZbUUyWVdNdFlqZ3pOUzAwWkRZMUxXRmtZV0V0TmpaaU5XSmtOR0ZsTmpFeiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDYsImlhdCI6MTc5MzU4NTg0NiwianRpIjoiMzAwZjVhYTYtODhkYi00NTA4LWFlN2MtN2I3NzBmZmU4NmVlIn0.SWYUMHAv8gcwlaEy-RlPbawbVhc9Ls2UhCxoSezWLII
+#EXTINF:-1 tvg-id="BloombergTVLiveEvent" tvg-name="Bloomberg TV Live Event" group-title="US Cable" tvg-logo="https://i.imgur.com/OuogLHx.png",Bloomberg TV Live Event
+#EXTGRP:US Cable
+https://live-prod-us-event-primary.global.ssl.fastly.net/evt/Channel-USEvt-AWS-virginia-2/Source-USEvt-10000-1-sdlg9j-BP-HD-4-W7WyphVQipuJ_live.m3u8
+#EXTINF:-1 tvg-id="BloombergTVPoliticsLiveE" tvg-name="Bloomberg TV Politics Live Event" group-title="US Cable" tvg-logo="https://i.imgur.com/OuogLHx.png",Bloomberg TV Politics Live Event
+#EXTGRP:US Cable
+https://live-prod-us-politics-primary.global.ssl.fastly.net/pol/Channel-POL-AWS-virginia-2/Source-Pol-10000-1-slq1r5-BP-HD-4-O7Kj6FMgIYSk_live.m3u8
+#EXTINF:-1 tvg-id="Bravo" tvg-name="Bravo" group-title="US Cable",Bravo
+#EXTGRP:US Cable
+http://41.205.93.154/BRAVO/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CinemaxHits" tvg-name="Cinemax Hits" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Cinemax_Hits_Logo.png/960px-Cinemax_Hits_Logo.png",Cinemax Hits
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_MOREMAX/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CNN" tvg-name="CNN" group-title="US Cable" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png",CNN
+#EXTGRP:US Cable
+https://tvsen6.aynaott.com/cnn/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="DiscoveryChannel" tvg-name="Discovery Channel" group-title="US Cable",Discovery Channel
+#EXTGRP:US Cable
+http://212.5.144.156:8080/discovery/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="DiscoveryTurboUnitedStat" tvg-name="Discovery Turbo (United States)" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Discovery_Turbo_2025.svg/1920px-Discovery_Turbo_2025.svg.png",Discovery Turbo (United States)
+#EXTGRP:US Cable
+http://41.205.93.154/ESPNNEWS/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="ESPNUnitedStatesHD" tvg-name="ESPN (United States) HD" group-title="US Cable" tvg-logo="https://imgx.fubo.tv/station_logos/espn-hd_c.png",ESPN (United States) HD
+#EXTGRP:US Cable
+http://85.237.89.160:9590/usa-s/ESPN-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN 2" group-title="US Cable",ESPN 2
+#EXTGRP:US Cable
+http://85.237.89.160:9590/usa-s/ESPN-2-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="ESPNU" tvg-name="ESPNU" group-title="US Cable",ESPNU
+#EXTGRP:US Cable
+http://85.237.89.160:9590/usa-s/ESPN-U-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="HallmarkMoviesMore" tvg-name="Hallmark Movies & More" group-title="US Cable" tvg-logo="https://provider-static.plex.tv/epg/cms/production/29af70d1-d3ba-4a16-bc4d-bd99e7e7def4/hallmark-movies-and-more_color.png",Hallmark Movies & More
+#EXTGRP:US Cable
+https://dbrb49pjoymg4.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/7ee49462-15c1-4a51-a210-9fccee8a9ebe/5.m3u8
+#EXTINF:-1 tvg-id="JusticeCentralTV" tvg-name="Justice Central.TV" group-title="US Cable" tvg-logo="https://i.imgur.com/peuHszg.png",Justice Central.TV
+#EXTGRP:US Cable
+https://a-cdn.klowdtv.com/live2/justicecentral_720p/chunks.m3u8
+#EXTINF:-1 tvg-id="MTVBiggestPop" tvg-name="MTV Biggest Pop" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/6047fbdbbb776a0007e7f2ff/colorLogoPNG.png",MTV Biggest Pop
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5d14fd1a252d35decbc4080c/3321280/playlist.m3u8?sid=fc49b83e-d631-11f1-a6b2-da8314d9ecf5&deviceId=10395842-2486-4a05-ae94-cb95ec79d41d&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmYzQ5YjgzZS1kNjMxLTExZjEtYTZiMi1kYTgzMTRkOWVjZjUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMTAzOTU4NDItMjQ4Ni00YTA1LWFlOTQtY2I5NWVjNzlkNDFkIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjEwMzk1ODQyLTI0ODYtNGEwNS1hZTk0LWNiOTVlYzc5ZDQxZCIsImZ3VmNJRDJDb3BwYSI6IjEwMzk1ODQyLTI0ODYtNGEwNS1hZTk0LWNiOTVlYzc5ZDQxZCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMTAzOTU4NDItMjQ4Ni00YTA1LWFlOTQtY2I5NWVjNzlkNDFkIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1OTk2MiwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1UQXpPVFU0TkRJdE1qUTROaTAwWVRBMUxXRmxPVFF0WTJJNU5XVmpOemxrTkRGayIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NjAsImlhdCI6MTc5MzU2NDU2MCwianRpIjoiNTQwODQ2MjgtNDc0My00NmIxLTljN2UtZDQ4Yjc3NzM1MjYxIn0.q3WxhDAbOQKLER-jHIYgyE2fJFUruk8KDSa3AEiwiCg
+#EXTINF:-1 tvg-id="Nickelodeon" tvg-name="Nickelodeon" group-title="US Cable",Nickelodeon
+#EXTGRP:US Cable
+http://198.58.104.90:8989/nickelodeon/index.m3u8
+#EXTINF:-1 tvg-id="NickelodeonPlutoTV" tvg-name="Nickelodeon Pluto TV" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoPNG.png",Nickelodeon Pluto TV
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca673e0d0bd6c2689c94ce3/3321280/playlist.m3u8?sid=6ebcb6e4-d64a-11f1-a12d-8213719433ca&deviceId=a5ba9250-e609-49e9-b343-748787545a9b&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2ZWJjYjZlNC1kNjRhLTExZjEtYTEyZC04MjEzNzE5NDMzY2EiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiYTViYTkyNTAtZTYwOS00OWU5LWIzNDMtNzQ4Nzg3NTQ1YTliIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImE1YmE5MjUwLWU2MDktNDllOS1iMzQzLTc0ODc4NzU0NWE5YiIsImZ3VmNJRDJDb3BwYSI6ImE1YmE5MjUwLWU2MDktNDllOS1iMzQzLTc0ODc4NzU0NWE5YiIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiYTViYTkyNTAtZTYwOS00OWU5LWIzNDMtNzQ4Nzg3NTQ1YTliIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU3NTA1OTg5OCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOllUVmlZVGt5TlRBdFpUWXdPUzAwT1dVNUxXSXpORE10TnpRNE56ZzNOVFExWVRsaSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NjE0NTksImlhdCI6MTc5MzU3NTA1OSwianRpIjoiNGM4NGM5MGUtMGJmMy00NGYzLThhZDItOTRiZTEzMDgwNTllIn0.9gDPC4Hz0gjhG4_1OcmQaTvuUatvQ04EDgRs455uu7A
+#EXTINF:-1 tvg-id="PBSKids" tvg-name="PBS Kids" group-title="US Cable" tvg-logo="https://i.imgur.com/fg8c9WK.png",PBS Kids
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est_2.m3u8
+#EXTINF:-1 tvg-id="PBSKidsAlaska" tvg-name="PBS Kids Alaska" group-title="US Cable" tvg-logo="https://i.imgur.com/ambc9le.png",PBS Kids Alaska
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/94b88ad58fc14f84a9382341f1c00b82/akst_2.m3u8
+#EXTINF:-1 tvg-id="PBSKidsHawaii" tvg-name="PBS Kids Hawaii" group-title="US Cable" tvg-logo="https://i.imgur.com/ambc9le.png",PBS Kids Hawaii
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/aa31792fee094b24b09045483f04d150/hast_2.m3u8
+#EXTINF:-1 tvg-id="PBSKidsMountain" tvg-name="PBS Kids Mountain" group-title="US Cable" tvg-logo="https://i.imgur.com/ambc9le.png",PBS Kids Mountain
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/3fe3030a2c8045a3932f4289d9eba3e6/mst_2.m3u8
+#EXTINF:-1 tvg-id="PBSKidsPacific" tvg-name="PBS Kids Pacific" group-title="US Cable" tvg-logo="https://i.imgur.com/ambc9le.png",PBS Kids Pacific
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/11f2e6b73eaa4887b3746cb863960e79/pst_2.m3u8
+#EXTINF:-1 tvg-id="PBSKMOSTV" tvg-name="PBS KMOS-TV" group-title="US Cable" tvg-logo="https://i.imgur.com/8c8isLj.png",PBS KMOS-TV
+#EXTGRP:US Cable
+https://hls-kmosdt.lls.cdn.pbs.org/hls/live/index_720.m3u8
+#EXTINF:-1 tvg-id="PBSWJXT" tvg-name="PBS WJXT" group-title="US Cable" tvg-logo="https://i.imgur.com/8c8isLj.png",PBS WJXT
+#EXTGRP:US Cable
+https://dai.google.com/linear/hls/pa/event/RDmbn03GRCOLNG1eetEKhg/stream/8c642f23-31f0-41ee-aba3-d445d45a2d76:ATL/variant/c4c6e5d82ab61cf6c6dfaaaf865ae08b/bandwidth/5359200.m3u8
+#EXTINF:-1 tvg-id="ShowtimeFamilyZone" tvg-name="Showtime Family Zone" group-title="US Cable" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Showtime_Family_Zone.svg/960px-Showtime_Family_Zone.svg.png",Showtime Family Zone
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_SHOWTIME_FAMILY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Stadium" tvg-name="Stadium" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Stadium_%28sports_network%29_logo.svg/960px-Stadium_%28sports_network%29_logo.svg.png",Stadium
+#EXTGRP:US Cable
+https://wurl120sports.global.transmit.live/us-east-1-a/manifest/679a907dce42a042c23ace37/2cf88cc2-68d8-4424-a74c-74a0a56427b0/v1/stadium_gracenote/samsung_us/latest/main/hls/video-avc1.64001F-mp4a.40.2-2.m3u8?h=720&sessionStart=1793597946981&tlSession=G9WbImhTHyIapCizYpdcthnRBjFDEcTkSJzFh1kZbTNEF6WBEIIMiH3u1BtlfZT4CKS1U0h-1YY_dRbOL-uEj6yiJnwBhscBuwyywFWD5vTdqS0xbPfweCJ2ohibvV9ARtTaO_psOSB4KOZuHkh3Z1zef23D2IyKeKv1BS8qkTq5ec-k5EXaWUpEe9VD9Ut7nAlCMNRZKKDTiPomLLp6slgbr_o73LL8XLjEeI_bMKoDXPVM4jLlQWA8hQQIEENbWslh3LfMfmuEzgj0gQTzgnOseYp45Oz1rqGyLPu2ZPHbPGFvQh391BYfX_7vY-V6LvOMMiKeIXp_&tlSessionVer=2&uid=__USER_ID__&w=1280
+#EXTINF:-1 tvg-id="StarzKidsFamily" tvg-name="Starz Kids & Family" group-title="US Cable" tvg-logo="https://i.imgur.com/eE9FzEP.png",Starz Kids & Family
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_STARZ_FAMILY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TBS" tvg-name="TBS" group-title="US Cable",TBS
+#EXTGRP:US Cable
+https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TBSWest" tvg-name="TBS West" group-title="US Cable" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/TBS_2020.svg/960px-TBS_2020.svg.png",TBS West
+#EXTGRP:US Cable
+https://turnerlive.warnermediacdn.com/hls/live/2023174/tbswest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TNTUnitedStatesWest" tvg-name="TNT (United States) West" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png",TNT (United States) West
+#EXTGRP:US Cable
+https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="truTV" tvg-name="truTV" group-title="US Cable",truTV
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_TRUTV/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="truTVWest" tvg-name="truTV West" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png",truTV West
+#EXTGRP:US Cable
+https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="BETCinema" tvg-name="BET Cinema" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/58af4c093a41ca9d4ecabe96/colorLogoPNG_1759338280891.png",BET Cinema
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/58af4c093a41ca9d4ecabe96/3321280/playlist.m3u8?sid=8be66c43-d663-11f1-915a-9246bf69f363&deviceId=b109e59a-a707-416a-82b3-884e0b057f03&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4YmU2NmM0My1kNjYzLTExZjEtOTE1YS05MjQ2YmY2OWYzNjMiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiYjEwOWU1OWEtYTcwNy00MTZhLTgyYjMtODg0ZTBiMDU3ZjAzIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImIxMDllNTlhLWE3MDctNDE2YS04MmIzLTg4NGUwYjA1N2YwMyIsImZ3VmNJRDJDb3BwYSI6ImIxMDllNTlhLWE3MDctNDE2YS04MmIzLTg4NGUwYjA1N2YwMyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiYjEwOWU1OWEtYTcwNy00MTZhLTgyYjMtODg0ZTBiMDU3ZjAzIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0NjI0MywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOllqRXdPV1UxT1dFdFlUY3dOeTAwTVRaaExUZ3lZak10T0RnMFpUQmlNRFUzWmpBeiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDYsImlhdCI6MTc5MzU4NTg0NiwianRpIjoiN2EwMDgwMDgtZWRmZC00NDNlLTg3MjItYzRiMTU4NDVjZGQ0In0.9QI8SU2le-aCoLVKOoAHrAS1bnE5kGphFQBhE_54Pvg
+#EXTINF:-1 tvg-id="BETClassicsPlutoTV" tvg-name="BET Classics Pluto TV" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/60f85644a9493e0007a1f035/colorLogoPNG_1759339662769.png",BET Classics Pluto TV
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/60f85644a9493e0007a1f035/3321280/playlist.m3u8?sid=f7478689-d631-11f1-92f5-9a60762652a6&deviceId=0927cea1-1fd5-4027-9465-40f54964fa61&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmNzQ3ODY4OS1kNjMxLTExZjEtOTJmNS05YTYwNzYyNjUyYTYiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMDkyN2NlYTEtMWZkNS00MDI3LTk0NjUtNDBmNTQ5NjRmYTYxIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjA5MjdjZWExLTFmZDUtNDAyNy05NDY1LTQwZjU0OTY0ZmE2MSIsImZ3VmNJRDJDb3BwYSI6IjA5MjdjZWExLTFmZDUtNDAyNy05NDY1LTQwZjU0OTY0ZmE2MSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMDkyN2NlYTEtMWZkNS00MDI3LTk0NjUtNDBmNTQ5NjRmYTYxIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1MTU1OSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1Ea3lOMk5sWVRFdE1XWmtOUzAwTURJM0xUazBOalV0TkRCbU5UUTVOalJtWVRZeCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NTEsImlhdCI6MTc5MzU2NDU1MSwianRpIjoiYzVhYTFhMWItZDgzNS00ZThkLWIyODItNTAyY2MwMGNhMDQ2In0.NvMuY1YBrm-FL1MdOMaFQnOcXBsGh7DFzTbTOXx-YEw
+#EXTINF:-1 tvg-id="BETComedyMovies" tvg-name="BET Comedy Movies" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/68c32d88f56983aba40052bd/colorLogoPNG_1759246622596.png",BET Comedy Movies
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/68c32d88f56983aba40052bd/3321280/playlist.m3u8?sid=f64ac0c5-d631-11f1-90d1-fea136367bc8&deviceId=5da9d527-c521-45ba-85a1-be0a5b2f923a&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmNjRhYzBjNS1kNjMxLTExZjEtOTBkMS1mZWExMzYzNjdiYzgiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNWRhOWQ1MjctYzUyMS00NWJhLTg1YTEtYmUwYTViMmY5MjNhIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjVkYTlkNTI3LWM1MjEtNDViYS04NWExLWJlMGE1YjJmOTIzYSIsImZ3VmNJRDJDb3BwYSI6IjVkYTlkNTI3LWM1MjEtNDViYS04NWExLWJlMGE1YjJmOTIzYSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNWRhOWQ1MjctYzUyMS00NWJhLTg1YTEtYmUwYTViMmY5MjNhIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU0OTkwMywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5XUmhPV1ExTWpjdFl6VXlNUzAwTldKaExUZzFZVEV0WW1Vd1lUVmlNbVk1TWpOaCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NDksImlhdCI6MTc5MzU2NDU0OSwianRpIjoiMWZlMzU4NjUtMjFkMC00ZDAyLWE5MWUtMzJiNjBkMzQ3NzJlIn0.NYvLQhpr9u6q2o362bA59o0mnlyrtN1CDFG28AYwgRQ
+#EXTINF:-1 tvg-id="BETPlutoTV" tvg-name="BET Pluto TV" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png",BET Pluto TV
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca670f6593a5d78f0e85aed/3321280/playlist.m3u8?sid=8d893778-d663-11f1-b266-065e457fbaf2&deviceId=0444bee1-dc95-4c2a-b302-ba48968f1254&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI4ZDg5Mzc3OC1kNjYzLTExZjEtYjI2Ni0wNjVlNDU3ZmJhZjIiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMDQ0NGJlZTEtZGM5NS00YzJhLWIzMDItYmE0ODk2OGYxMjU0IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjA0NDRiZWUxLWRjOTUtNGMyYS1iMzAyLWJhNDg5NjhmMTI1NCIsImZ3VmNJRDJDb3BwYSI6IjA0NDRiZWUxLWRjOTUtNGMyYS1iMzAyLWJhNDg5NjhmMTI1NCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMDQ0NGJlZTEtZGM5NS00YzJhLWIzMDItYmE0ODk2OGYxMjU0IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTg0ODk4OCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1EUTBOR0psWlRFdFpHTTVOUzAwWXpKaExXSXpNREl0WW1FME9EazJPR1l4TWpVMCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIyNDksImlhdCI6MTc5MzU4NTg0OSwianRpIjoiM2E5OTdhZGQtMWQyMC00YTQwLWI2MmQtNzU3NDc5MTY5Mzg2In0.a1GcJYQIsoIMX1MXM0rsGpIquNeUles5pdoo6gBk4mQ
+#EXTINF:-1 tvg-id="MTVPlutoTV" tvg-name="MTV Pluto TV" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png",MTV Pluto TV
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5ca672f515a62078d2ec0ad2/3321280/playlist.m3u8?sid=6d31d95c-d64a-11f1-907d-a2625cdde701&deviceId=6b908ac5-4110-4452-8017-b989ec0f4144&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2ZDMxZDk1Yy1kNjRhLTExZjEtOTA3ZC1hMjYyNWNkZGU3MDEiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNmI5MDhhYzUtNDExMC00NDUyLTgwMTctYjk4OWVjMGY0MTQ0IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjZiOTA4YWM1LTQxMTAtNDQ1Mi04MDE3LWI5ODllYzBmNDE0NCIsImZ3VmNJRDJDb3BwYSI6IjZiOTA4YWM1LTQxMTAtNDQ1Mi04MDE3LWI5ODllYzBmNDE0NCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNmI5MDhhYzUtNDExMC00NDUyLTgwMTctYjk4OWVjMGY0MTQ0IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU3NTA1NzMxMCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5tSTVNRGhoWXpVdE5ERXhNQzAwTkRVeUxUZ3dNVGN0WWprNE9XVmpNR1kwTVRRMCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NjE0NTcsImlhdCI6MTc5MzU3NTA1NywianRpIjoiZWM5MDBmYmUtMzE3OC00NDUyLWJmMGEtN2NmMWI3OTdkZTM5In0.aTdg0FulemMEZPyMYccroM7yqD2JUomtyUqcH-4Wnas
+#EXTINF:-1 tvg-id="MTVSpankinNew" tvg-name="MTV Spankin' New" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/6541010f770cf1000866be98/colorLogoPNG.png",MTV Spankin' New
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/5d14fdb8ca91eedee1633117/3321280/playlist.m3u8?sid=fc81c198-d631-11f1-af64-aa8d7f3da025&deviceId=4295985c-61ae-48bc-b390-c69515d17f7c&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmYzgxYzE5OC1kNjMxLTExZjEtYWY2NC1hYThkN2YzZGEwMjUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNDI5NTk4NWMtNjFhZS00OGJjLWIzOTAtYzY5NTE1ZDE3ZjdjIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjQyOTU5ODVjLTYxYWUtNDhiYy1iMzkwLWM2OTUxNWQxN2Y3YyIsImZ3VmNJRDJDb3BwYSI6IjQyOTU5ODVjLTYxYWUtNDhiYy1iMzkwLWM2OTUxNWQxN2Y3YyIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNDI5NTk4NWMtNjFhZS00OGJjLWIzOTAtYzY5NTE1ZDE3ZjdjIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU2MDMyOSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk5ESTVOVGs0TldNdE5qRmhaUzAwT0dKakxXSXpPVEF0WXpZNU5URTFaREUzWmpkaiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NjAsImlhdCI6MTc5MzU2NDU2MCwianRpIjoiMjE0MDliNTktOGFiYi00Y2YyLWI5ZDAtM2E5YzJiOTM3ZmIwIn0.2_DxCWgKYUIGgR2ZzBhbcRImMl8oQMwnkakbDWuypFU
+#EXTINF:-1 tvg-id="VH1QueensofReality" tvg-name="VH1 Queens of Reality" group-title="US Cable" tvg-logo="https://images.pluto.tv/channels/66abefe5d2d50d00082c7d12/colorLogoPNG.png",VH1 Queens of Reality
+#EXTGRP:US Cable
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/66abefe5d2d50d00082c7d12/3321280/playlist.m3u8?sid=f92a9949-d631-11f1-8b70-ee546638646d&deviceId=7cea5164-5718-47c2-b8e7-e04e81e63945&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJmOTJhOTk0OS1kNjMxLTExZjEtOGI3MC1lZTU0NjYzODY0NmQiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiN2NlYTUxNjQtNTcxOC00N2MyLWI4ZTctZTA0ZTgxZTYzOTQ1IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjdjZWE1MTY0LTU3MTgtNDdjMi1iOGU3LWUwNGU4MWU2Mzk0NSIsImZ3VmNJRDJDb3BwYSI6IjdjZWE1MTY0LTU3MTgtNDdjMi1iOGU3LWUwNGU4MWU2Mzk0NSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiN2NlYTUxNjQtNTcxOC00N2MyLWI4ZTctZTA0ZTgxZTYzOTQ1IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDU1NDcyNSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk4yTmxZVFV4TmpRdE5UY3hPQzAwTjJNeUxXSTRaVGN0WlRBMFpUZ3haVFl6T1RRMSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTA5NTQsImlhdCI6MTc5MzU2NDU1NCwianRpIjoiMTIzMTY5OGMtYWUwZi00MDk1LTkyYTktYjIzOGJiNmUyNzJmIn0.exbYJDh01MGqyOAmEGXV6a1SLhM6xY702Yk4RKMAZVk
+#EXTINF:-1 tvg-id="NBATV" tvg-name="NBA TV" group-title="Sports",NBA TV
+#EXTGRP:Sports
+http://23.237.104.106:8080/USA_NBA/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="NHLNetwork" tvg-name="NHL Network" group-title="Sports",NHL Network
+#EXTGRP:Sports
+https://nhl-firetv.amagi.tv/playlist1080p.m3u8
+#EXTINF:-1 tvg-id="TennisChannel" tvg-name="Tennis Channel" group-title="Sports",Tennis Channel
+#EXTGRP:Sports
+https://amg01444-tennischannelth-tennischannelnl-samsungnl-x3dq1.amagi.tv/ts-eu-w1-n2/playlist/amg01444-tennischannelth-tennischannelnl-samsungnl/cb573b1a6573658f84cb3b6ecef64682847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ade90c10de6fa3b3011c932813fa83439fd501b282d10f8342d370f4159a91f28ad212d1e42f52937f8ab5a2c54007fbb54ad1a468b8d38e6c3ddc423c470a50f5d1eb942c12a7378ed8659db1d24bf001da8165a06d32a9099b4efe5fe28e49d0c593268ea8ac9f7b4e2baf862809f9433cc2f8991b0ac70ed5a7fe9d4a738bfd5e1f2dac3c88727b6ac2b4a375f52b812d01c2be904964ebdb0395ab828023af25ee00ec04c7c2e6913e43014d0115b964ad8866e1e4bc12a7e31c3b554148acd5008ad69916076b41828f49c753358d9bdad3915e608a571254be34821b1d3a987d2c5df53df59f0b698b0d03917a68a80f7bd314bcf007dd93f6c94a7bb9d7cc47bf48eab601ddbf428a652e560fb6bd7d0c14022d9ebe285d704ac243e5c1c3ae225a57a2a49b8cb5395230301956039cf1a721cbfca7072956900368300e537df023d966d80c4c7a5eea16c1a30471c54b611aefa93b524d7fd4af958494ddde4ba575b09eac68cf5ac2c07d84634c4c3ef03b898ed4554607197b030996/111/1920x1080_5288800/index.m3u8
+#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" group-title="Sports",ESPN
+#EXTGRP:Sports
+http://85.237.89.160:9590/usa-s/ESPN-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN 2" group-title="Sports",ESPN 2
+#EXTGRP:Sports
+http://85.237.89.160:9590/usa-s/ESPN-2-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="ESPNU" tvg-name="ESPNU" group-title="Sports",ESPNU
+#EXTGRP:Sports
+http://85.237.89.160:9590/usa-s/ESPN-U-HD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="FoxSports1" tvg-name="Fox Sports 1" group-title="Sports",Fox Sports 1
+#EXTGRP:Sports
+http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="NFLNetwork" tvg-name="NFL Network" group-title="Sports",NFL Network
+#EXTGRP:Sports
+http://198.58.104.90:8989/nfl/index.m3u8
+#EXTINF:-1 tvg-id="BloombergTV" tvg-name="Bloomberg TV" group-title="News",Bloomberg TV
+#EXTGRP:News
+http://23.237.104.106:8080/USA_BLOOMBERG/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="CGTN" tvg-name="CGTN" group-title="News",CGTN
+#EXTGRP:News
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master1080p.m3u8
+#EXTINF:-1 tvg-id="CGTNDocumentary" tvg-name="CGTN Documentary" group-title="News",CGTN Documentary
+#EXTGRP:News
+https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master1080p.m3u8
+#EXTINF:-1 tvg-id="WION" tvg-name="WION" group-title="News",WION
+#EXTGRP:News
+https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8
+#EXTINF:-1 tvg-id="YahooFinance" tvg-name="Yahoo! Finance" group-title="News",Yahoo! Finance
+#EXTGRP:News
+https://d1ewctnvcwvvvu.cloudfront.net/1080p-es-cc/index.m3u8
+#EXTINF:-1 tvg-id="ABCNews" tvg-name="ABC News" group-title="News",ABC News
+#EXTGRP:News
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/7c7a6abe4d604faca4d6b91f6567558f/hdntl=exp=1793684347~acl=%2f*~data=hdntl~hmac=08ec903caab8706f624ae751cca3eb82c5e6943deffb4a403ae4b0d1cd2b33ff/index_47.m3u8
+#EXTINF:-1 tvg-id="ABCNewsLive" tvg-name="ABC News Live" group-title="News",ABC News Live
+#EXTGRP:News
+https://jmp2.uk/plu-6508be683a0d700008c534e4.m3u8
+#EXTINF:-1 tvg-id="EuronewsEnglish" tvg-name="Euronews English" group-title="News",Euronews English
+#EXTGRP:News
+https://cdn-euronews.akamaized.net/live/eds/euronews-en/25002/euronews-en-avc1_3300000=9-mp4a_143200_eng=2.m3u8
+#EXTINF:-1 tvg-id="IndiaToday" tvg-name="India Today" group-title="News",India Today
+#EXTGRP:News
+https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/vid/indiatoday-v2/p/live_720p/chunks.m3u8
+#EXTINF:-1 tvg-id="NDTV24x7" tvg-name="NDTV 24x7" group-title="News",NDTV 24x7
+#EXTGRP:News
+https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/masterp_720p@3.m3u8
+#EXTINF:-1 tvg-id="NHKWorldPremium" tvg-name="NHK World Premium" group-title="News",NHK World Premium
+#EXTGRP:News
+https://media-tyo.hls.nhkworld.jp/hls/wp/live/1/sig/a4d3280e04ac0c7f2e1da3efba01188be434d3df06d75347976100b5d49c6137/v1.m3u8
+#EXTINF:-1 tvg-id="RepublicBharat" tvg-name="Republic Bharat" group-title="News",Republic Bharat
+#EXTGRP:News
+https://streams.tangotv.in/REPUBLICBHARAT/ORIGIN/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="BBCNews" tvg-name="BBC News" group-title="UK",BBC News
+#EXTGRP:UK
+https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
+#EXTINF:-1 tvg-id="SkyNewsWeather" tvg-name="Sky News Weather" group-title="UK" tvg-logo="https://pbs.twimg.com/profile_images/1604994875459518464/lGt2wEqM_400x400.jpg",Sky News Weather
+#EXTGRP:UK
+https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/chunklist_b4096000.m3u8
+#EXTINF:-1 tvg-id="Thats70s" tvg-name="That's 70s" group-title="UK" tvg-logo="https://i.imgur.com/j2q53JQ.png",That's 70s
+#EXTGRP:UK
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/69ef53e12f4d2b4f9c582e76/3321280/playlist.m3u8?sid=d78d8510-d663-11f1-b38a-72dceacdd8fc&deviceId=4cbc0570-d63d-42b9-a499-70717cc32ab9&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6Ijc1MmFhNTA3LTE4Y2QtNGIzMC04N2E3LWIzNTgwZmY3M2I2NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJkNzhkODUxMC1kNjYzLTExZjEtYjM4YS03MmRjZWFjZGQ4ZmMiLCJjbGllbnRJUCI6IjEzMS4xMTQuMTMwLjIzOSIsImNpdHkiOiJQaXNhIiwicG9zdGFsQ29kZSI6IjU2MTI0IiwiY291bnRyeSI6IklUIiwiZG1hIjowLCJhY3RpdmVSZWdpb24iOiJJVCIsImRldmljZUxhdCI6NDMuNzAwMDAwNzYyOTM5NDUsImRldmljZUxvbiI6MTAuMzkwMDAwMzQzMzIyNzU0LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNGNiYzA1NzAtZDYzZC00MmI5LWE0OTktNzA3MTdjYzMyYWI5IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkV1cm9wZS9Sb21lIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjRjYmMwNTcwLWQ2M2QtNDJiOS1hNDk5LTcwNzE3Y2MzMmFiOSIsImZ3VmNJRDJDb3BwYSI6IjRjYmMwNTcwLWQ2M2QtNDJiOS1hNDk5LTcwNzE3Y2MzMmFiOSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNGNiYzA1NzAtZDYzZC00MmI5LWE0OTktNzA3MTdjYzMyYWI5IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwOSwxMDAxMywxMDAxNiwxMDAxNSwxMDAyMCwxMDAyMiwxMDAyMywxMDAxNCwxMDAyMSwxMDAyNSwxMDAwMCJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU4NTk3MzE2NywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOklUOk5HTmlZekExTnpBdFpEWXpaQzAwTW1JNUxXRTBPVGt0TnpBM01UZGpZek15WVdJNSIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NzIzNzMsImlhdCI6MTc5MzU4NTk3MywianRpIjoiYjFiMjNmMDctNDQ1Ny00MTNmLWE1NmQtOWQxN2UwMDk4MDgxIn0.kUghE2yRcUF1yvO1Y1mADx9Rb_S6jNKmQGKnmZkXuUg
+#EXTINF:-1 tvg-id="Thats80s" tvg-name="That's 80s" group-title="UK",That's 80s
+#EXTGRP:UK
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/69ef54f3c700cf0140272def/3321280/playlist.m3u8?sid=4bc13807-d632-11f1-98b1-c2d12ff49885&deviceId=3ad2a494-4255-4014-94d7-26a8b5c86b28&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjRiNjAyZWM5LTRmYmUtNDkyNC1hNjc5LTEyNGFhYTE2Y2E5NSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI0YmMxMzgwNy1kNjMyLTExZjEtOThiMS1jMmQxMmZmNDk4ODUiLCJjbGllbnRJUCI6IjEzMS4xMTQuMTMwLjIzOSIsImNpdHkiOiJQaXNhIiwicG9zdGFsQ29kZSI6IjU2MTI0IiwiY291bnRyeSI6IklUIiwiZG1hIjowLCJhY3RpdmVSZWdpb24iOiJJVCIsImRldmljZUxhdCI6NDMuNzAwMDAwNzYyOTM5NDUsImRldmljZUxvbiI6MTAuMzkwMDAwMzQzMzIyNzU0LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiM2FkMmE0OTQtNDI1NS00MDE0LTk0ZDctMjZhOGI1Yzg2YjI4IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkV1cm9wZS9Sb21lIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjNhZDJhNDk0LTQyNTUtNDAxNC05NGQ3LTI2YThiNWM4NmIyOCIsImZ3VmNJRDJDb3BwYSI6IjNhZDJhNDk0LTQyNTUtNDAxNC05NGQ3LTI2YThiNWM4NmIyOCIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiM2FkMmE0OTQtNDI1NS00MDE0LTk0ZDctMjZhOGI1Yzg2YjI4IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSwxMDAxMywxMDAxNiwxMDAyMSwxMDAyMiwxMDAyMywxMDAyNSwxMDAxNCwxMDAxNSwxMDAyMCJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5MzU2NDY5MzI4NSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOklUOk0yRmtNbUUwT1RRdE5ESTFOUzAwTURFMExUazBaRGN0TWpaaE9HSTFZemcyWWpJNCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTM2NTEwOTMsImlhdCI6MTc5MzU2NDY5MywianRpIjoiZmY0ZWZlZWYtMzJkNi00NGJiLWIyMWMtYTE5NmQwYjA4OWFhIn0.JUoO575Uhh6ZeeTdkvoHs4CD2TkvFMdIW8fUyQ-EG8A
+#EXTINF:-1 tvg-id="CBCNewsNetwork" tvg-name="CBC News Network" group-title="Canada" tvg-logo="https://i.imgur.com/SjTdhvJ.png",CBC News Network
+#EXTGRP:Canada
+https://d2ny9lo79ujali.cloudfront.net/1080p-en-vtt/index.m3u8
+#EXTINF:-1 tvg-id="TSNTheOcho" tvg-name="TSN The Ocho" group-title="Canada" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA1400003R3_20240709T002034SQUARE.png",TSN The Ocho
+#EXTGRP:Canada
+https://d3pnbvng3bx2nj.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/79510ce4-7cb6-44f7-a15b-c3b6dc6cae5b/3.m3u8
