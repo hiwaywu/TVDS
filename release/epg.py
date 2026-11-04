@@ -190,6 +190,36 @@ def _needles(channel_name):
 
 
 MAP_FILE = os.path.join(ROOT, "guide_map.json")
+# writable location for user tweaks; the frozen build points this at %LOCALAPPDATA%\tvapp
+DATA_DIR = os.environ.get("TVDS_DATA_DIR") or ROOT
+OFFSET_FILE = os.path.join(DATA_DIR, "guide_offset.json")
+
+
+def load_offsets():
+    """{channel: minutes} - a per-channel nudge; None means 'hide these listings'."""
+    try:
+        with open(OFFSET_FILE, encoding="utf-8") as fh:
+            return {k: v for k, v in json.load(fh).items() if not k.startswith("_")}
+    except Exception:
+        return {}
+
+
+def set_offset(name, value):
+    """value: int minutes, None to hide listings, 'clear' to forget the channel."""
+    data = load_offsets()
+    if value == "clear":
+        data.pop(name, None)
+    elif value is None:
+        data[name] = None
+    else:
+        data[name] = int(value)
+    try:
+        os.makedirs(os.path.dirname(OFFSET_FILE), exist_ok=True)
+        with open(OFFSET_FILE, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=2, ensure_ascii=False, sort_keys=True)
+    except Exception:
+        pass
+    return data
 
 # suffixes that may follow a channel name in a guide and still mean the same channel
 SAFE_SUFFIX = {"hd", "sd", "fhd", "east", "west", "eastern", "pacific", "us", "tv",
@@ -229,6 +259,7 @@ def guide(channels, idx=None, full=False):
     lo = now - 3600
     hi = now + 6 * 3600
     pins = load_map()
+    offsets = load_offsets()
 
     per_country = {}
     for cc, d in idx.items():
@@ -264,6 +295,15 @@ def guide(channels, idx=None, full=False):
 
         cid, matched = pick
         rows = idx[want]["programmes"].get(cid) or []
+
+        # a per-channel nudge, when the provider's clock does not line up with the feed
+        shift = offsets.get(name, 0)
+        if shift is None:
+            continue
+        shift = int(shift) * 60 if shift else 0
+        if shift:
+            rows = [[r[0] + shift, r[1] + shift, r[2]] for r in rows]
+
         cur = next((r for r in rows if r[0] <= now < r[1]), None)
         nxt = next((r for r in rows if r[0] > now), None)
         if not (cur or nxt):

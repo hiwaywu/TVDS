@@ -68,6 +68,10 @@
     color:var(--dim);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
   .ecell .n{font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:158px}
   .ecell .b{font-size:9.5px;color:var(--dim2)}
+  .ecell .play{display:none;position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    color:var(--acc);font-size:9px;letter-spacing:.5px}
+  .erow[data-i] .ecell{position:sticky;left:0}
+  .erow[data-i]:hover .ecell .play{display:block}
   .etrack{position:relative;flex:0 0 auto}
   .etrack .none{position:absolute;left:10px;top:19px;font-size:11px;color:#3f4f5f;font-style:italic}
   .eblock{position:absolute;top:8px;bottom:8px;border-radius:8px;background:linear-gradient(180deg,#141f2a,#111a23);
@@ -91,11 +95,26 @@
   .erow.dead .n{text-decoration:line-through;text-decoration-color:#6b2b2b}
   .erow.dead .b{color:var(--bad)}
   .erow.cur{background:#0e1a24}
+  .erow[data-i]{cursor:pointer}
+  .erow[data-i]:hover{background:#0f1c26}
+  .erow[data-i]:hover .ecell{background:#111e28}
+  .erow[data-i]:hover .ecell .glogo{color:var(--acc);border-color:#2c4a5e}
   .ecell{box-shadow:10px 0 14px -10px rgba(0,0,0,.85)}
   .eblock.clip{border-top-left-radius:0;border-bottom-left-radius:0;padding-left:12px}
   #hideDead.on{color:var(--ok);border-color:#22422f;background:#0d1a13}
   .qgroup{padding:12px 10px 5px;font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;
     color:var(--dim2);font-weight:800}
+  /* per-channel guide sync popover */
+  #syncPop{position:absolute;right:18px;bottom:64px;z-index:6;display:none;width:290px;
+    background:rgba(10,15,21,.98);border:1px solid var(--line2);border-radius:12px;padding:12px;
+    box-shadow:0 18px 40px rgba(0,0,0,.6);backdrop-filter:blur(8px)}
+  #syncPop.show{display:block}
+  #syncPop .sh{font-size:11.5px;color:var(--dim);margin-bottom:10px;display:flex;gap:6px;
+    align-items:baseline;flex-wrap:wrap}
+  #syncPop .sh b{color:var(--txt);font-weight:600}
+  #syncVal{color:var(--acc);font-variant-numeric:tabular-nums}
+  #syncPop .sb{display:flex;gap:6px;margin-top:6px}
+  #syncPop .sb button{flex:1;font-size:11.5px;padding:6px 4px}
 
   /* ============================================================ PLAYER */
   #stage{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
@@ -196,6 +215,7 @@
     </div>
     <span id="nowNote"></span>
     <div id="pBtns">
+      <button id="pSync" title="this channel's guide timing is off — nudge it">⏱ Sync</button>
       <button id="pList" title="channel list (L)">☰ List</button>
       <button id="ccBtn" title="captions (C)">CC</button>
       <button id="qmode" title="MAX = highest variant, AUTO = adapt">MAX</button>
@@ -205,6 +225,20 @@
   </div>
 
   <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText"></p><button id="retry">Retry</button></div>
+
+  <div id="syncPop">
+    <div class="sh">Guide timing · <b id="syncName"></b><span id="syncVal"></span></div>
+    <div class="sb">
+      <button data-d="-30">−30 min</button>
+      <button data-d="30">+30 min</button>
+      <button data-d="-60">−1 hour</button>
+      <button data-d="60">+1 hour</button>
+    </div>
+    <div class="sb">
+      <button data-d="off">Hide these listings</button>
+      <button data-d="clear">Reset</button>
+    </div>
+  </div>
 
   <div id="qdrawer">
     <div class="qhead"><b>Channels</b><span id="qInfo"></span><span class="sp"></span>
@@ -378,7 +412,7 @@ $('#ccBtn').onclick = () => {
 // Listings come from XMLTV indexes the server builds in the background (epg.py).
 // Coverage is partial by nature: relay-only channels and FAST feeds often have no
 // schedule at all, so a row without a listing simply shows nothing extra.
-let GUIDE = null, guideTimer = null;
+let GUIDE = null, guideTimer = null, OFFSETS = {};
 
 function fmtTime(ts){
   try { return new Date(ts * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
@@ -402,10 +436,48 @@ async function loadGuide(){
     const r = await fetch('/api/epg?full=1', { cache: 'no-store' });
     const j = await r.json();
     GUIDE = j.channels || {};
+    OFFSETS = j.offsets || {};
   } catch (e){ GUIDE = GUIDE || {}; }
   renderGuide();
   if (CUR >= 0 && FLAT[CUR]) setNowProg(FLAT[CUR].name);
 }
+
+// ---- per-channel guide nudge: epg.pw's clock is wrong for some feeds ----
+function syncValue(name){
+  const v = OFFSETS[name];
+  if (v === null) return 'hidden';
+  return v ? (v > 0 ? '+' : '') + v + ' min' : 'aligned';
+}
+
+$('#pSync').onclick = () => {
+  const p = $('#syncPop');
+  if (p.classList.contains('show')){ p.classList.remove('show'); return; }
+  const ch = FLAT[CUR];
+  if (!ch) return;
+  $('#syncName').textContent = ch.name;
+  $('#syncVal').textContent = syncValue(ch.name);
+  p.classList.add('show');
+  showCtl();
+};
+
+$('#syncPop').querySelectorAll('button[data-d]').forEach(b => {
+  b.onclick = async () => {
+    const ch = FLAT[CUR];
+    if (!ch) return;
+    const d = b.dataset.d;
+    let value = d;
+    if (d !== 'off' && d !== 'clear'){
+      value = String(Number(OFFSETS[ch.name] || 0) + Number(d));
+    }
+    try {
+      await fetch('/api/guide-shift?ch=' + encodeURIComponent(ch.name) + '&min=' + encodeURIComponent(value));
+    } catch (e){}
+    $('#syncPop').classList.remove('show');
+    await loadGuide();
+    setNowProg(ch.name);
+    showCtl();
+  };
+});
 
 function renderGuide(groups){
   const box = $('#gList');
@@ -456,7 +528,8 @@ function renderGuide(groups){
       html += '<div class="erow' + (dead ? ' dead' : '') + '" data-i="' + idx + '">' +
               '<div class="ecell"><div class="glogo">' + initial + '</div>' +
               '<div><div class="n">' + escHtml(c.name) + '</div>' +
-              '<div class="b">' + escHtml(sub) + '</div></div></div>' +
+              '<div class="b">' + escHtml(sub) + '</div></div>' +
+              '<span class="play">▶ play</span></div>' +
               '<div class="etrack" style="width:' + trackW + 'px">' +
               (dead ? '<div class="none">offline — press Check to re-test</div>'
                     : (blocks || '<div class="none">no listings</div>')) + '</div></div>';
@@ -467,16 +540,17 @@ function renderGuide(groups){
 
   box.innerHTML = html;
   box.querySelectorAll('.eblock').forEach(el => {
-    el.onclick = () => {
+    el.onclick = e => {
+      e.stopPropagation();
       const i = +el.dataset.i;
       if (i >= 0) openPlayer(i);
     };
   });
+  // the whole row is a play target - the channel cell, the gaps between blocks and the
+  // empty track all start that channel, so nothing needs pixel-hunting
   box.querySelectorAll('.erow[data-i]').forEach(el => {
-    el.ondblclick = () => {
-      const i = +el.dataset.i;
-      if (i >= 0) openPlayer(i);
-    };
+    const i = +el.dataset.i;
+    el.onclick = () => { if (i >= 0) openPlayer(i); };
   });
   const offline = DATA.groups.reduce((n, g) => n + g.channels.filter(c => c.status === 'dead').length, 0);
   $('#gInfo').textContent = new Date().toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }) +

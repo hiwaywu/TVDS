@@ -253,7 +253,8 @@ def epg_payload(full=False):
             chans = [(g["name"], c["name"]) for g in data.get("groups", [])
                      for c in g.get("channels", [])]
             guide = mod.guide(chans, full=full)
-            payload.update(channels=guide, covered=len(guide), total=len(chans))
+            payload.update(channels=guide, covered=len(guide), total=len(chans),
+                           offsets=mod.load_offsets())
         except Exception:
             pass
     with _EPG_LOCK:
@@ -446,6 +447,27 @@ class Handler(BaseHTTPRequestHandler):
             full = (qs.get("full") or ["0"])[0] == "1"
             return self._send(200, json.dumps(epg_payload(full)), "application/json",
                               {"Cache-Control": "no-store"})
+        if u.path == "/api/guide-shift":
+            ch = (qs.get("ch") or [""])[0]
+            raw = (qs.get("min") or [""])[0]
+            mod = epg_module()
+            if not ch or not mod:
+                return self._send(400, '{"ok":false}', "application/json")
+            if raw == "clear":
+                value = "clear"
+            elif raw in ("off", "hide"):
+                value = None
+            else:
+                try:
+                    value = int(raw)
+                except ValueError:
+                    return self._send(400, '{"ok":false,"error":"min"}', "application/json")
+            data = mod.set_offset(ch, value)
+            global _EPG_TS
+            with _EPG_LOCK:
+                _EPG_TS = 0.0
+            return self._send(200, json.dumps({"ok": True, "offsets": data}),
+                              "application/json", {"Cache-Control": "no-store"})
         if u.path == "/api/stats":
             with CACHE_LOCK:
                 size = sum(len(v[0]) for v in CACHE.values())

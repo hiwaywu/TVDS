@@ -293,6 +293,7 @@ def main():
     os.chdir(assets)
     # the guide index is written to the user's data dir, not inside the read-only bundle
     os.environ.setdefault("TVDS_EPG_CACHE", os.path.join(data_dir(), "epg"))
+    os.environ.setdefault("TVDS_DATA_DIR", data_dir())
 
     # single instance: if tvapp is already up, focus its window instead of starting a
     # second server and a second window
