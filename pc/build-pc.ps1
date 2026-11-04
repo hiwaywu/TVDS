@@ -21,7 +21,7 @@ $data = @(
 ) | ForEach-Object { "..\$_\;$_\;" + $_.Replace('/', '\') }
 # PyInstaller --add-data wants "src;dest"; keep every asset at the bundle root
 $addData = @()
-foreach ($f in 'index.html', 'hls.min.js', 'channels.json', 'manifest.json', 'sw.js', 'icon-512.png', 'server.py') {
+foreach ($f in 'index.html', 'hls.min.js', 'channels.json', 'manifest.json', 'sw.js', 'icon-512.png', 'server.py', 'epg.py') {
     $addData += @('--add-data', "$root\$f;.")
 }
 
@@ -36,6 +36,8 @@ python -m PyInstaller `
     --hidden-import queue `
     --hidden-import http.client `
     --hidden-import io `
+    --hidden-import xml.etree.ElementTree `
+    --hidden-import xml.parsers.expat `
     --distpath (Join-Path $here 'dist') `
     --workpath $work `
     --specpath $here `
@@ -50,6 +52,7 @@ Copy-Item (Join-Path $here "dist\$name.exe") (Join-Path $OutDir "$name.exe") -Fo
 # so channel-list updates never require a rebuild
 Copy-Item (Join-Path $root 'channels.json') (Join-Path $OutDir 'channels.json') -Force
 Copy-Item (Join-Path $root 'index.html') (Join-Path $OutDir 'index.html') -Force
+Copy-Item (Join-Path $root 'epg.py') (Join-Path $OutDir 'epg.py') -Force
 if (-not $KeepBuild) {
     Remove-Item $work -Recurse -Force -ErrorAction SilentlyContinue
     Remove-Item (Join-Path $here 'dist') -Recurse -Force -ErrorAction SilentlyContinue

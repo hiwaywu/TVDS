@@ -191,6 +191,90 @@ def prox(url, referer=None):
     return "/proxy?" + urllib.parse.urlencode(q)
 
 
+# ---------------------------------------------------------------- TV guide
+_EPG_LOCK = threading.Lock()
+_EPG_CACHE = {}
+_EPG_TS = 0.0
+_EPG_TTL = 120                 # seconds a computed guide stays valid
+_EPG_MAX_AGE = 12 * 3600       # rebuild the XMLTV indexes after this long
+
+
+def asset_bytes(name):
+    """Read a bundled asset, preferring the copy next to the exe."""
+    for base in list(EXTRA_ROOTS) + [ROOT]:
+        path = os.path.join(base, name)
+        if os.path.isfile(path):
+            with open(path, "rb") as fh:
+                return fh.read()
+    return None
+
+
+_EPG_MOD = None
+
+
+def epg_module():
+    """Load epg.py by path: in the frozen build it ships as a data file, not a module."""
+    global _EPG_MOD
+    if _EPG_MOD is not None:
+        return _EPG_MOD
+    import importlib.util
+    for base in list(EXTRA_ROOTS) + [ROOT]:
+        path = os.path.join(base, "epg.py")
+        if not os.path.isfile(path):
+            continue
+        try:
+            spec = importlib.util.spec_from_file_location("tvds_epg", path)
+            mod = importlib.util.module_from_spec(spec)
+            sys.modules["tvds_epg"] = mod
+            spec.loader.exec_module(mod)
+            _EPG_MOD = mod
+            return mod
+        except Exception:
+            return None
+    return None
+
+
+def epg_payload():
+    global _EPG_CACHE, _EPG_TS
+    now = time.time()
+    with _EPG_LOCK:
+        if _EPG_CACHE and now - _EPG_TS < _EPG_TTL:
+            return _EPG_CACHE
+    mod = epg_module()
+    payload = {"generated": int(now), "channels": {}, "covered": 0, "total": 0,
+               "ready": bool(mod and mod.index_age() is not None)}
+    if mod:
+        try:
+            raw = asset_bytes("channels.json")
+            data = json.loads(raw.decode("utf-8")) if raw else {"groups": []}
+            chans = [(g["name"], c["name"]) for g in data.get("groups", [])
+                     for c in g.get("channels", [])]
+            guide = mod.guide(chans)
+            payload.update(channels=guide, covered=len(guide), total=len(chans))
+        except Exception:
+            pass
+    with _EPG_LOCK:
+        _EPG_CACHE, _EPG_TS = payload, now
+    return payload
+
+
+def start_epg_refresh():
+    """Pull and index the XMLTV files in the background if they are stale or missing."""
+    def worker():
+        mod = epg_module()
+        if not mod:
+            return
+        try:
+            age = mod.index_age()
+            if age is None or age > _EPG_MAX_AGE:
+                mod.refresh(verbose=False)
+                with _EPG_LOCK:
+                    _EPG_TS = 0.0           # force the next request to recompute
+        except Exception:
+            pass
+    threading.Thread(target=worker, daemon=True).start()
+
+
 # ---------------------------------------------------------------- segment cache
 # HLS is strictly sequential: the player asks for segment N, then N+1. Fetching
 # one segment ahead in the background turns the next request into a local hit,
@@ -325,13 +409,10 @@ class Handler(BaseHTTPRequestHandler):
     def _static(self, name, ctype):
         # EXTRA_ROOTS lets the packaged exe serve a channels.json that sits next to the
         # .exe, so a catalogue update does not need a rebuild
-        for base in list(EXTRA_ROOTS) + [ROOT]:
-            path = os.path.join(base, name)
-            if os.path.isfile(path):
-                with open(path, "rb") as fh:
-                    data = fh.read()
-                return self._send(200, data, ctype, {"Cache-Control": "no-cache"})
-        return self._send(404, "not found", "text/plain")
+        data = asset_bytes(name)
+        if data is None:
+            return self._send(404, "not found", "text/plain")
+        return self._send(200, data, ctype, {"Cache-Control": "no-cache"})
 
     def do_OPTIONS(self):
         self.send_response(204)
@@ -358,6 +439,9 @@ class Handler(BaseHTTPRequestHandler):
             return self._static("sw.js", "application/javascript")
         if u.path == "/api/channels":
             return self._static("channels.json", "application/json")
+        if u.path == "/api/epg":
+            return self._send(200, json.dumps(epg_payload()), "application/json",
+                              {"Cache-Control": "no-store"})
         if u.path == "/api/stats":
             with CACHE_LOCK:
                 size = sum(len(v[0]) for v in CACHE.values())
@@ -496,6 +580,7 @@ def main():
         sys.exit(1)
     url = f"http://127.0.0.1:{args.port}/"
     print(f"tvapp running at {url}   (Ctrl+C to stop)")
+    start_epg_refresh()
     if args.open:
         webbrowser.open(url)
     try:

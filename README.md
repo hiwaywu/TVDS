@@ -82,6 +82,25 @@ Captions: off by default. The **CC** button in the bar (or `c`) turns the feed's
 renditions on; `video::cue` pins them at 20px so a broadcaster's own styling cannot blow them
 up to fill the frame. `?cc=0` in the URL forces the first track on for a given channel.
 
+## TV guide
+
+**Guide** in the bar (or `g`) opens the schedule: time span, channel, what's on now, what's
+next. Click a row to switch to that channel; **On now** jumps to the row you're watching.
+The playing channel's current programme also shows in the bottom bar.
+
+Listings come from public XMLTV dumps (epg.pw, one file per country: HK / CA / US / GB).
+`epg.py` streams them with `iterparse`, keeps a 36-hour window and writes compact JSON
+indexes; the server refreshes them in the background once a day and serves `/api/epg`.
+
+```powershell
+python epg.py --refresh                 # rebuild the indexes now (~220 MB download, 14 s)
+python epg.py --query "CNN"             # what the index says for a channel
+```
+
+Coverage is **126 of 147** channels: Hong Kong 9/12, New York 3/5, US Cable 73/80,
+Sports 17/17, News 9/14, UK 6/9, Canada 9/10. Relay-only feeds and FAST channels with no
+published schedule show `—` — the guide never invents a programme.
+
 Requirements: Python 3.8+ on PATH, and a browser with hls.js support (any Chromium/Firefox).
 VLC is optional.
 

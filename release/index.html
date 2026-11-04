@@ -76,6 +76,24 @@
   #ccBtn{min-width:44px;font-weight:700}
   #ccBtn.on{color:#7ee787;border-color:#2b5e33}
   #ccBtn:disabled{opacity:.4}
+  /* TV guide overlay */
+  #guide{position:absolute;inset:0;display:none;flex-direction:column;background:rgba(9,12,16,.97);z-index:9}
+  #guide.show{display:flex}
+  #gHead{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);
+    font-size:13px;color:var(--dim)}
+  #gHead b{color:var(--txt);font-size:14px}
+  #gHead .sp{flex:1}
+  #gList{overflow:auto;padding:6px 10px 14px}
+  .gday{color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:1.1px;padding:12px 4px 6px}
+  .grow{display:grid;grid-template-columns:120px 200px 1fr;gap:10px;align-items:baseline;
+    padding:7px 8px;border-radius:8px;cursor:pointer;font-size:12.5px}
+  .grow:hover{background:var(--panel2)}
+  .grow .gt{color:var(--dim);font-variant-numeric:tabular-nums}
+  .grow .gn{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .grow .gx{color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .grow .gx i{color:var(--dim);font-style:normal;padding-left:8px}
+  .grow.on{background:#16202b}
+  #nowProg{color:#9fb0c2;max-width:36ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   /* captions: keep them readable instead of letting the browser scale them to the frame */
   video::cue{background:rgba(0,0,0,.62);color:#fff;font-size:20px;line-height:1.32;
     font-family:inherit;text-shadow:0 1px 2px #000}
@@ -105,10 +123,17 @@
 <div id="main">
   <div id="stage">
     <video id="v" playsinline controls controlslist="nodownload nofullscreen" disablepictureinpicture></video>
+    <div id="guide">
+      <div id="gHead"><b>TV Guide</b><span id="gInfo"></span><span class="sp"></span>
+        <button id="gNow" title="jump to what's on now">On now</button>
+        <button id="gClose">Close</button></div>
+      <div id="gList"></div>
+    </div>
     <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText">Pick a channel on the left.</p><button id="retry">Retry</button></div>
   </div>
   <div id="bar">
     <b id="nowTitle">-</b>
+    <span id="nowProg"></span>
     <span id="nowNote"></span>
     <div id="meta">
       <span class="pill" id="mRes">-</span>
@@ -117,6 +142,7 @@
       <span class="pill" id="mLive">-</span>
       <span class="pill" id="mLat" title="seconds behind the live edge">-</span>
       <button id="ccBtn" title="captions: press C to cycle off / track 1 / track 2">CC</button>
+      <button id="guideBtn" title="TV guide (G)">Guide</button>
       <button id="qmode" title="MAX = force the highest variant, AUTO = let ABR adapt">MAX</button>
       <button id="vlc" title="open this stream in VLC (handles HEVC / AC-3 / multi-program TS)">VLC</button>
       <button id="fs">Fullscreen</button>
@@ -138,6 +164,7 @@ async function boot(){
   const r = await fetch('/api/channels');
   DATA = await r.json();
   rebuild();
+  loadGuide();
   const q = new URLSearchParams(location.search);
   if (q.has('cc')){
     const c = parseInt(q.get('cc'), 10);
@@ -147,6 +174,7 @@ async function boot(){
     const i = parseInt(q.get('ch'), 10);
     if (!isNaN(i) && FLAT[i]){ $('#v').muted = true; play(i); }
   }
+  if (q.has('guide')) setTimeout(openGuide, 400);
 }
 
 function rebuild(){
@@ -240,6 +268,10 @@ setInterval(() => {
   }
 }, 1000);
 
+setInterval(() => {
+  if (CUR >= 0 && FLAT[CUR]) setNowProg(FLAT[CUR].name);
+}, 60000);
+
 $('#qmode').onclick = () => {
   QMODE = (QMODE === 'max') ? 'auto' : 'max';
   applyQuality();
@@ -300,10 +332,86 @@ $('#ccBtn').onclick = () => {
   applyCC();
 };
 
+// ---------------------------------------------------------------- TV guide
+// Listings come from XMLTV indexes the server builds in the background (epg.py).
+// Coverage is partial by nature: relay-only channels and FAST feeds often have no
+// schedule at all, so a row without a listing simply shows nothing extra.
+let GUIDE = null, guideTimer = null;
+
+function fmtTime(ts){
+  try { return new Date(ts * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+  catch (e) { return ''; }
+}
+
+async function loadGuide(){
+  try {
+    const r = await fetch('/api/epg', { cache: 'no-store' });
+    const j = await r.json();
+    GUIDE = j.channels || {};
+  } catch (e){ GUIDE = GUIDE || {}; }
+  renderGuide();
+  if (CUR >= 0 && FLAT[CUR]) setNowProg(FLAT[CUR].name);
+}
+
+function renderGuide(){
+  const box = $('#gList');
+  if (!GUIDE){ box.innerHTML = '<div class="gday">loading listings…</div>'; return; }
+  let html = '';
+  DATA.groups.forEach(g => {
+    const withEp = g.channels.filter(c => GUIDE[c.name]).length;
+    html += '<div class="gday">' + g.name + ' — ' + withEp + '/' + g.channels.length + ' with listings</div>';
+    g.channels.forEach(c => {
+      const e = GUIDE[c.name];
+      const i = FLAT.indexOf(c);
+      const span = e && e.now ? fmtTime(e.now.start) + '–' + fmtTime(e.now.stop) : '';
+      const now = e && e.now ? e.now.title : '';
+      const nxt = e && e.next ? e.next.title : '';
+      html += '<div class="grow' + (i === CUR ? ' on' : '') + '" data-i="' + i + '">' +
+              '<span class="gt">' + span + '</span>' +
+              '<span class="gn">' + c.name + '</span>' +
+              '<span class="gx">' + (now || '—') + (nxt ? '<i>next ' + fmtTime(e.next.start) + ' ' + nxt + '</i>' : '') + '</span>' +
+              '</div>';
+    });
+  });
+  box.innerHTML = html;
+  box.querySelectorAll('.grow').forEach(el => {
+    el.onclick = () => {
+      const i = +el.dataset.i;
+      if (i >= 0){ play(i); closeGuide(); }
+    };
+  });
+  $('#gInfo').textContent = Object.keys(GUIDE).length + ' channels with listings';
+}
+
+function openGuide(){
+  $('#guide').classList.add('show');
+  loadGuide();
+  if (!guideTimer) guideTimer = setInterval(loadGuide, 300000);
+}
+function closeGuide(){
+  $('#guide').classList.remove('show');
+  if (guideTimer){ clearInterval(guideTimer); guideTimer = null; }
+}
+
+function setNowProg(name){
+  const e = GUIDE && GUIDE[name];
+  $('#nowProg').textContent = (e && e.now) ? '· ' + e.now.title : '';
+}
+
+$('#guideBtn').onclick = () => {
+  if ($('#guide').classList.contains('show')) closeGuide(); else openGuide();
+};
+$('#gClose').onclick = closeGuide;
+$('#gNow').onclick = () => {
+  const row = $('#gList .grow.on');
+  if (row) row.scrollIntoView({ block: 'center' });
+};
+
 function play(i){
   const ch = FLAT[i]; if (!ch) return;
   CUR = i; tries = 0; markActive();
   $('#nowTitle').textContent = ch.name;
+  setNowProg(ch.name);
   $('#nowNote').textContent = ch.note || '';
   $('#mRes').textContent = (ch.quality || '').split(' ')[0] || '-';
   const bwm = (ch.quality || '').match(/([\d.]+ Mbps)/);
@@ -439,6 +547,7 @@ addEventListener('keydown', e => {
   if (e.key === 'f') $('#fs').click();
   if (e.key === 'm') $('#v').muted = !$('#v').muted;
   if (e.key === 'c'){ $('#ccBtn').click(); }
+  if (e.key === 'g'){ $('#guideBtn').click(); }
   if (e.key === 'a'){ $('#qmode').click(); }
   if (e.key === 'r' && CUR >= 0) play(CUR);
 });

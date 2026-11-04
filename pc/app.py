@@ -49,6 +49,8 @@ def data_dir():
 
 def load_server(assets):
     """Import server.py from the bundle so it can be re-rooted at the assets."""
+    if assets not in sys.path:
+        sys.path.insert(0, assets)          # so `import epg` resolves when frozen
     path = os.path.join(assets, "server.py")
     spec = importlib.util.spec_from_file_location("tvds_server", path)
     mod = importlib.util.module_from_spec(spec)
@@ -224,6 +226,8 @@ def main():
 
     assets = asset_dir()
     os.chdir(assets)
+    # the guide index is written to the user's data dir, not inside the read-only bundle
+    os.environ.setdefault("TVDS_EPG_CACHE", os.path.join(data_dir(), "epg"))
     srv_mod = load_server(assets)
 
     port = free_port(args.port)
