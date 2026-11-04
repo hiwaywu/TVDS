@@ -126,6 +126,7 @@
     <input id="q" type="search" placeholder="filter channels...">
     <button id="checkAll" title="probe every channel">Check</button>
     <button id="addBtn" title="add a stream URL">+</button>
+    <button id="guideTop" title="TV guide (G)">Guide</button>
   </div>
   <div id="addbar">
     <input id="addUrl" type="text" placeholder="https://.../index.m3u8">
@@ -143,7 +144,7 @@
         <button id="gClose">Close</button></div>
       <div id="gScroll"><div class="epg" id="gList"></div></div>
     </div>
-    <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText">Pick a channel on the left.</p><button id="retry">Retry</button></div>
+    <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText">Pick a channel on the left — press <b>G</b> for the TV guide.</p><button id="retry">Retry</button></div>
   </div>
   <div id="bar">
     <b id="nowTitle">-</b>
@@ -454,6 +455,7 @@ function setNowProg(name){
 $('#guideBtn').onclick = () => {
   if ($('#guide').classList.contains('show')) closeGuide(); else openGuide();
 };
+$('#guideTop').onclick = () => $('#guideBtn').click();
 $('#gClose').onclick = closeGuide;
 $('#gNow').onclick = () => {
   const sc = $('#gScroll');
