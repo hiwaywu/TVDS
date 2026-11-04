@@ -189,10 +189,16 @@ def _needles(channel_name):
     return {n for n in out if n}
 
 
-def guide(channels, idx=None):
-    """channels: [(group, name)] -> {name: {now, next, src}}"""
+def guide(channels, idx=None, full=False):
+    """channels: [(group, name)] -> {name: {now, next, src, progs?}}
+
+    full=True also returns the programme list inside the visible window, which is what
+    the grid view draws.
+    """
     idx = idx if idx is not None else load()
     now = time.time()
+    lo = now - 3600
+    hi = now + 6 * 3600
     table = {}
     for cc, d in idx.items():
         for cid, names in d.get("channels", {}).items():
@@ -224,12 +230,16 @@ def guide(channels, idx=None):
         rows = idx[cc]["programmes"].get(cid) or []
         cur = next((r for r in rows if r[0] <= now < r[1]), None)
         nxt = next((r for r in rows if r[0] > now), None)
-        if cur or nxt:
-            out[name] = {
-                "src": cc,
-                "now": {"title": cur[2], "start": cur[0], "stop": cur[1]} if cur else None,
-                "next": {"title": nxt[2], "start": nxt[0], "stop": nxt[1]} if nxt else None,
-            }
+        if not (cur or nxt):
+            continue
+        rec = {
+            "src": cc,
+            "now": {"title": cur[2], "start": cur[0], "stop": cur[1]} if cur else None,
+            "next": {"title": nxt[2], "start": nxt[0], "stop": nxt[1]} if nxt else None,
+        }
+        if full:
+            rec["progs"] = [[r[0], r[1], r[2]] for r in rows if r[1] > lo and r[0] < hi][:40]
+        out[name] = rec
     return out
 
 

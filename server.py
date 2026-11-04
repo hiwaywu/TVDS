@@ -234,14 +234,17 @@ def epg_module():
     return None
 
 
-def epg_payload():
+def epg_payload(full=False):
     global _EPG_CACHE, _EPG_TS
     now = time.time()
     with _EPG_LOCK:
         if _EPG_CACHE and now - _EPG_TS < _EPG_TTL:
-            return _EPG_CACHE
+            cached = _EPG_CACHE
+            if not full or cached.get("full_included"):
+                return cached
     mod = epg_module()
     payload = {"generated": int(now), "channels": {}, "covered": 0, "total": 0,
+               "full_included": bool(full),
                "ready": bool(mod and mod.index_age() is not None)}
     if mod:
         try:
@@ -249,7 +252,7 @@ def epg_payload():
             data = json.loads(raw.decode("utf-8")) if raw else {"groups": []}
             chans = [(g["name"], c["name"]) for g in data.get("groups", [])
                      for c in g.get("channels", [])]
-            guide = mod.guide(chans)
+            guide = mod.guide(chans, full=full)
             payload.update(channels=guide, covered=len(guide), total=len(chans))
         except Exception:
             pass
@@ -440,7 +443,8 @@ class Handler(BaseHTTPRequestHandler):
         if u.path == "/api/channels":
             return self._static("channels.json", "application/json")
         if u.path == "/api/epg":
-            return self._send(200, json.dumps(epg_payload()), "application/json",
+            full = (qs.get("full") or ["0"])[0] == "1"
+            return self._send(200, json.dumps(epg_payload(full)), "application/json",
                               {"Cache-Control": "no-store"})
         if u.path == "/api/stats":
             with CACHE_LOCK:

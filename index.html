@@ -76,23 +76,37 @@
   #ccBtn{min-width:44px;font-weight:700}
   #ccBtn.on{color:#7ee787;border-color:#2b5e33}
   #ccBtn:disabled{opacity:.4}
-  /* TV guide overlay */
-  #guide{position:absolute;inset:0;display:none;flex-direction:column;background:rgba(9,12,16,.97);z-index:9}
+  /* TV guide: the classic grid - channel column on the left, time ruler on top */
+  #guide{position:absolute;inset:0;display:none;flex-direction:column;background:#0a0e13;z-index:9}
   #guide.show{display:flex}
-  #gHead{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);
-    font-size:13px;color:var(--dim)}
-  #gHead b{color:var(--txt);font-size:14px}
+  #gHead{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);
+    font-size:12.5px;color:var(--dim)}
+  #gHead b{color:var(--txt);font-size:14px;margin-right:4px}
   #gHead .sp{flex:1}
-  #gList{overflow:auto;padding:6px 10px 14px}
-  .gday{color:var(--dim);font-size:10.5px;text-transform:uppercase;letter-spacing:1.1px;padding:12px 4px 6px}
-  .grow{display:grid;grid-template-columns:120px 200px 1fr;gap:10px;align-items:baseline;
-    padding:7px 8px;border-radius:8px;cursor:pointer;font-size:12.5px}
-  .grow:hover{background:var(--panel2)}
-  .grow .gt{color:var(--dim);font-variant-numeric:tabular-nums}
-  .grow .gn{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .grow .gx{color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .grow .gx i{color:var(--dim);font-style:normal;padding-left:8px}
-  .grow.on{background:#16202b}
+  #gScroll{overflow:auto;flex:1;position:relative}
+  .epg{position:relative;width:max-content}
+  .erow{display:flex;align-items:stretch;height:46px;border-bottom:1px solid #141c24}
+  .erow.grp{height:28px;border-bottom:1px solid #1b2530;background:#0c1218}
+  .erow.grp .ecell{font-size:10.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--dim);
+    font-weight:700;justify-content:center}
+  .ecell{position:sticky;left:0;z-index:3;width:190px;min-width:190px;background:#0f1620;
+    border-right:1px solid #1b2530;display:flex;flex-direction:column;justify-content:center;
+    padding:0 10px;gap:1px}
+  .ecell .n{font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ecell .b{font-size:9.5px;color:var(--dim)}
+  .etrack{position:relative;flex:0 0 auto}
+  .etrack .none{position:absolute;left:8px;top:15px;font-size:11px;color:#4a5a6a}
+  .eblock{position:absolute;top:5px;bottom:5px;border-radius:6px;background:#16222e;
+    border:1px solid #1f2d3b;padding:3px 7px;overflow:hidden;cursor:pointer;color:#c9d6e3}
+  .eblock:hover{background:#1d2c3a;border-color:#2b3f52}
+  .eblock.now{background:#12301f;border-color:#1f5a36;color:#d8ffe6}
+  .eblock .t{font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .eblock .s{font-size:10px;color:#88a0b6}
+  .eblock.now .s{color:#7fd39b}
+  .ehead{position:sticky;top:0;z-index:5;background:#0b1016;height:30px;border-bottom:1px solid var(--line)}
+  .ehead .ecell{z-index:6;font-size:11px;color:var(--dim)}
+  .etick{position:absolute;top:0;height:100%;border-left:1px solid #1b2530;color:var(--dim);
+    font-size:10.5px;padding:7px 0 0 5px;white-space:nowrap}
   #nowProg{color:#9fb0c2;max-width:36ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   /* captions: keep them readable instead of letting the browser scale them to the frame */
   video::cue{background:rgba(0,0,0,.62);color:#fff;font-size:20px;line-height:1.32;
@@ -125,9 +139,9 @@
     <video id="v" playsinline controls controlslist="nodownload nofullscreen" disablepictureinpicture></video>
     <div id="guide">
       <div id="gHead"><b>TV Guide</b><span id="gInfo"></span><span class="sp"></span>
-        <button id="gNow" title="jump to what's on now">On now</button>
+        <button id="gNow" title="scroll back to now">Now</button>
         <button id="gClose">Close</button></div>
-      <div id="gList"></div>
+      <div id="gScroll"><div class="epg" id="gList"></div></div>
     </div>
     <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText">Pick a channel on the left.</p><button id="retry">Retry</button></div>
   </div>
@@ -343,9 +357,21 @@ function fmtTime(ts){
   catch (e) { return ''; }
 }
 
+const EPG_WIN_MIN = 240;        // 4 hours on screen
+const EPG_PX_PER_MIN = 5;       // 1 h = 300 px
+
+function epgStart(){
+  const now = Math.floor(Date.now() / 1000);
+  return Math.floor(now / 1800) * 1800 - 1800;   // one 30-min slot of context on the left
+}
+
+function escHtml(s){
+  return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
 async function loadGuide(){
   try {
-    const r = await fetch('/api/epg', { cache: 'no-store' });
+    const r = await fetch('/api/epg?full=1', { cache: 'no-store' });
     const j = await r.json();
     GUIDE = j.channels || {};
   } catch (e){ GUIDE = GUIDE || {}; }
@@ -355,32 +381,59 @@ async function loadGuide(){
 
 function renderGuide(){
   const box = $('#gList');
-  if (!GUIDE){ box.innerHTML = '<div class="gday">loading listings…</div>'; return; }
+  if (!GUIDE){ box.innerHTML = '<div class="erow grp"><div class="ecell">loading listings…</div></div>'; return; }
+
+  const start = epgStart(), end = start + EPG_WIN_MIN * 60;
+  const x = t => (t - start) / 60 * EPG_PX_PER_MIN;
+  const trackW = EPG_WIN_MIN * EPG_PX_PER_MIN;
+  const now = Date.now() / 1000;
   let html = '';
+
+  html += '<div class="erow ehead"><div class="ecell">Channel</div>' +
+          '<div class="etrack" style="width:' + trackW + 'px">';
+  for (let t = start; t < end; t += 1800){
+    html += '<div class="etick" style="left:' + x(t) + 'px">' + fmtTime(t) + '</div>';
+  }
+  html += '</div></div>';
+
   DATA.groups.forEach(g => {
-    const withEp = g.channels.filter(c => GUIDE[c.name]).length;
-    html += '<div class="gday">' + g.name + ' — ' + withEp + '/' + g.channels.length + ' with listings</div>';
+    html += '<div class="erow grp"><div class="ecell">' + escHtml(g.name) + '</div>' +
+            '<div class="etrack" style="width:' + trackW + 'px"></div></div>';
     g.channels.forEach(c => {
       const e = GUIDE[c.name];
-      const i = FLAT.indexOf(c);
-      const span = e && e.now ? fmtTime(e.now.start) + '–' + fmtTime(e.now.stop) : '';
-      const now = e && e.now ? e.now.title : '';
-      const nxt = e && e.next ? e.next.title : '';
-      html += '<div class="grow' + (i === CUR ? ' on' : '') + '" data-i="' + i + '">' +
-              '<span class="gt">' + span + '</span>' +
-              '<span class="gn">' + c.name + '</span>' +
-              '<span class="gx">' + (now || '—') + (nxt ? '<i>next ' + fmtTime(e.next.start) + ' ' + nxt + '</i>' : '') + '</span>' +
-              '</div>';
+      const idx = FLAT.indexOf(c);
+      let blocks = '';
+      if (e && e.progs){
+        e.progs.forEach(p => {
+          if (p[1] <= start || p[0] >= end) return;
+          const a = Math.max(p[0], start), b = Math.min(p[1], end);
+          const left = x(a) + 1;
+          const width = Math.max(26, (b - a) / 60 * EPG_PX_PER_MIN - 2);
+          const cls = (p[0] <= now && now < p[1]) ? 'eblock now' : 'eblock';
+          blocks += '<div class="' + cls + '" style="left:' + left + 'px;width:' + width + 'px" data-i="' + idx + '">' +
+                    '<div class="t">' + escHtml(p[2]) + '</div>' +
+                    '<div class="s">' + fmtTime(p[0]) + '–' + fmtTime(p[1]) + '</div></div>';
+        });
+      }
+      html += '<div class="erow">' +
+              '<div class="ecell"><div class="n">' + escHtml(c.name) + '</div>' +
+              '<div class="b">' + (e ? 'guide · ' + e.src : 'no listings') + '</div></div>' +
+              '<div class="etrack" style="width:' + trackW + 'px">' +
+              (blocks || '<div class="none">no listings</div>') + '</div></div>';
     });
   });
+
   box.innerHTML = html;
-  box.querySelectorAll('.grow').forEach(el => {
+  box.querySelectorAll('.eblock').forEach(el => {
     el.onclick = () => {
       const i = +el.dataset.i;
       if (i >= 0){ play(i); closeGuide(); }
     };
   });
   $('#gInfo').textContent = Object.keys(GUIDE).length + ' channels with listings';
+
+  const sc = $('#gScroll');
+  if (sc && !sc.dataset.parked){ sc.scrollLeft = Math.max(0, x(now) - 150); sc.dataset.parked = '1'; }
 }
 
 function openGuide(){
@@ -403,8 +456,10 @@ $('#guideBtn').onclick = () => {
 };
 $('#gClose').onclick = closeGuide;
 $('#gNow').onclick = () => {
-  const row = $('#gList .grow.on');
-  if (row) row.scrollIntoView({ block: 'center' });
+  const sc = $('#gScroll');
+  if (!sc) return;
+  const start = epgStart();
+  sc.scrollLeft = Math.max(0, (Date.now() / 1000 - start) / 60 * EPG_PX_PER_MIN - 150);
 };
 
 function play(i){

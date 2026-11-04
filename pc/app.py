@@ -22,6 +22,7 @@ import subprocess
 import sys
 import threading
 import time
+import urllib.request
 import webbrowser
 from http.server import ThreadingHTTPServer
 
@@ -91,6 +92,68 @@ def find_edge():
             return p
     from shutil import which
     return which("msedge")
+
+
+def read_port():
+    try:
+        with open(os.path.join(data_dir(), "port.txt"), encoding="utf-8") as fh:
+            return int(fh.read().strip())
+    except Exception:
+        return None
+
+
+def write_port(port):
+    try:
+        with open(os.path.join(data_dir(), "port.txt"), "w", encoding="utf-8") as fh:
+            fh.write(str(port))
+    except Exception:
+        pass
+
+
+def app_running():
+    """(url, True) when a tvapp instance already answers on this machine."""
+    for port in [read_port(), DEFAULT_PORT, DEFAULT_PORT + 1, DEFAULT_PORT + 2]:
+        if not port:
+            continue
+        url = "http://127.0.0.1:%d/" % port
+        try:
+            with urllib.request.urlopen(url + "api/channels", timeout=1.2) as r:
+                if r.status == 200:
+                    return url, True
+        except Exception:
+            continue
+    return None, False
+
+
+def focus_window(title="tvapp - live channels"):
+    """Bring an existing app window to the front; True when one was found."""
+    if os.name != "nt":
+        return False
+    import ctypes
+    from ctypes import wintypes
+    user32 = ctypes.windll.user32
+    hits = []
+
+    @ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+    def enum(hwnd, _):
+        if not user32.IsWindowVisible(hwnd):
+            return True
+        n = user32.GetWindowTextLengthW(hwnd)
+        if n:
+            buf = ctypes.create_unicode_buffer(n + 1)
+            user32.GetWindowTextW(hwnd, buf, n + 1)
+            if title in buf.value:
+                hits.append(hwnd)
+                return False
+        return True
+
+    user32.EnumWindows(enum, 0)
+    if not hits:
+        return False
+    hwnd = hits[0]
+    user32.ShowWindow(hwnd, 9)          # SW_RESTORE
+    user32.SetForegroundWindow(hwnd)
+    return True
 
 
 # Chromium-family browsers open a real app window with --app=; Firefox has no such
@@ -222,12 +285,33 @@ def main():
     ap.add_argument("--windowed", action="store_true",
                     help="Firefox only: open a normal window instead of kiosk")
     ap.add_argument("--no-window", action="store_true", help="serve only (used for testing)")
+    ap.add_argument("--new", action="store_true",
+                    help="start a second instance even if tvapp is already running")
     args = ap.parse_args()
 
     assets = asset_dir()
     os.chdir(assets)
     # the guide index is written to the user's data dir, not inside the read-only bundle
     os.environ.setdefault("TVDS_EPG_CACHE", os.path.join(data_dir(), "epg"))
+
+    # single instance: if tvapp is already up, focus its window instead of starting a
+    # second server and a second window
+    if not args.new:
+        running_url, up = app_running()
+        if up:
+            if focus_window():
+                return 0
+            edge_url = running_url                      # server alive, window was closed
+            kind, exe, name = find_browser(read_pref() or "auto")
+            if exe and kind == "chromium":
+                subprocess.Popen([exe, "--app=" + edge_url,
+                                  "--user-data-dir=" + os.path.join(data_dir(), "edge-handoff"),
+                                  "--no-first-run", "--no-default-browser-check",
+                                  "--window-size=1440,900"])
+            else:
+                webbrowser.open(edge_url)
+            return 0
+
     srv_mod = load_server(assets)
 
     port = free_port(args.port)
@@ -243,6 +327,7 @@ def main():
     if not wait_ready(url):
         print("server did not answer on %s" % url, file=sys.stderr)
         return 2
+    write_port(port)
 
     if args.no_window:
         print("serving", url, flush=True)
