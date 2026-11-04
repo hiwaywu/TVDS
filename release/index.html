@@ -126,6 +126,7 @@
   #dvrPop .sb button:disabled{opacity:.35;cursor:default}
   #pDvr:disabled{opacity:.35;cursor:default}
   #pDvr.on{color:var(--acc);border-color:#1f4a63;background:#0b1a24}
+  #pRec.on{color:#ff5d5d;border-color:#5a2020;background:#1c0d0d}
 
   /* ============================================================ PLAYER */
   #stage{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
@@ -694,6 +695,11 @@ $('#pSmooth').onclick = () => {
   showCtl();
 };
 
+// ---- Rec: the server-side recorder (recorder.py) is built and verified, but hls.js
+// will not consume its synthesized playlist yet, so there is no button for it. The
+// endpoints stay live for the next attempt: /rec/live, /rec/status, /rec/<key>/<file>.
+
+
 // ---- DVR: how far back the source playlist actually goes ----
 let DVRWIN = 0;
 
@@ -761,7 +767,7 @@ $('#gNow').onclick = () => {
   sc.scrollLeft = Math.max(0, (Date.now() / 1000 - start) / 60 * EPG_PX_PER_MIN - 150);
 };
 
-function play(i){
+async function play(i){
   const ch = FLAT[i]; if (!ch) return;
   CUR = i; tries = 0; markActive();
   $('#nowTitle').textContent = ch.name;
@@ -772,12 +778,23 @@ function play(i){
   $('#mRate').textContent = bwm ? bwm[1] : '-';
   $('#mLive').textContent = 'connecting';
   audioBadge(ch, '', -1);
-  const src = '/proxy?u=' + encodeURIComponent(ch.url) + (ch.referer ? '&r=' + encodeURIComponent(ch.referer) : '');
+  const useRec = false;   // recorder.py keeps its own copy, but hls.js will not consume the
+                          // synthesized playlist yet - left wired for the next pass
+  const src = useRec
+    ? '/rec/live?u=' + encodeURIComponent(ch.url) + (ch.referer ? '&r=' + encodeURIComponent(ch.referer) : '')
+    : '/proxy?u=' + encodeURIComponent(ch.url) + (ch.referer ? '&r=' + encodeURIComponent(ch.referer) : '');
   const v = $('#v');
   hideOverlay();
   if (hls){ hls.destroy(); hls = null; }
   v.classList.remove('idle');
   v.removeAttribute('src'); v.load();
+
+  // with the local recorder there may be no segments yet; hls.js reloads the playlist
+  // every target duration, so it simply starts playing as soon as frames land
+  if (useRec){
+    overlay('Starting the recorder…', 'first segments are being written — playback begins in a few seconds');
+    setTimeout(hideOverlay, 6000);
+  }
 
   if (window.Hls && Hls.isSupported()){
     // Buffer depth is a real trade: keep pulling while paused and unpausing is seamless,
@@ -794,7 +811,7 @@ function play(i){
                 liveMaxLatencyDurationCount: 90, maxLiveSyncPlaybackRate: 1.0 }
     }[bufMode] || {};
     hls = new Hls(Object.assign({
-      lowLatencyMode: true, capLevelToPlayerSize: false,
+      lowLatencyMode: !useRec, capLevelToPlayerSize: false,
       manifestLoadingTimeOut: 15000, fragLoadingMaxRetry: 6,
       enableWebVTT: true, defaultAudioCodec: 'mp4a.40.2'
     }, CFG));
@@ -816,6 +833,9 @@ function play(i){
       hls.on(Hls.Events.SUBTITLE_TRACKS_UPDATED, () => applyCC());
     }
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      // our own playlist is a grown window, not a moving edge: start at its first
+      // fragment so playback always has content behind it
+      if (useRec){ try { hls.startLoad(0); } catch (e){} }
       v.play().catch(() => {});
       $('#mLive').textContent = 'live';
       const L = hls.levels.reduce((a, b) => (b.height > ((a && a.height) || 0) ? b : a), null);
@@ -859,11 +879,25 @@ function play(i){
       }
     });
     hls.on(Hls.Events.ERROR, (_, d) => {
-      if (!d.fatal) return;
+      console.log('HLSERR', d.details, 'fatal=' + d.fatal, d.reason || d.type || '');
+      if (!d.fatal) { if (new URLSearchParams(location.search).has('dbg')) $('#nowNote').textContent = 'warn: ' + d.details; return; }
       if (tries++ < 3){ setTimeout(() => play(CUR), 1200 * tries); return; }
       $('#mLive').textContent = 'error';
       overlay('Stream failed', d.details + ' - feed may be offline or geo-blocked. Try the next channel.');
     });
+    if (new URLSearchParams(location.search).has('dbg')){
+      setInterval(() => {
+        if (!hls || CUR !== i) return;
+        const b = hls.media && hls.media.buffered;
+        const d = hls.levels[0] && hls.levels[0].details;
+        $('#nowNote').textContent = 'dbg frags=' + (d ? d.fragments.length : '-') +
+          ' buf=' + (b && b.length ? (b.end(0) - b.start(0)).toFixed(1) : '0') +
+          ' lat=' + (hls.latency || 0).toFixed(1) +
+          ' startSN=' + (d ? d.startSN : '-') +
+          ' curSN=' + (d ? d.endSN : '-') +
+          ' paused=' + (hls.media ? hls.media.paused : '?');
+      }, 1000);
+    }
   } else if (v.canPlayType('application/vnd.apple.mpegurl')){
     v.src = src; v.play().catch(() => {});
     $('#mLive').textContent = 'live';

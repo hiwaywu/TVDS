@@ -94,6 +94,20 @@ def find_edge():
     return which("msedge")
 
 
+def purge_scratch(keep=None):
+    """Delete throwaway data: per-launch browser profiles and timeshifted segments."""
+    import shutil
+    base = data_dir()
+    try:
+        for name in os.listdir(base):
+            if name == keep:
+                continue
+            if name.startswith("chrome-profile-") or name.startswith("edge-profile") or name == "rec":
+                shutil.rmtree(os.path.join(base, name), ignore_errors=True)
+    except Exception:
+        pass
+
+
 def read_port():
     try:
         with open(os.path.join(data_dir(), "port.txt"), encoding="utf-8") as fh:
@@ -313,6 +327,10 @@ def main():
                 webbrowser.open(edge_url)
             return 0
 
+    # we are the one instance that owns this run: clear last run's scratch data now,
+    # never before the single-instance check (that would wipe a live window's profile)
+    purge_scratch()
+
     srv_mod = load_server(assets)
 
     port = free_port(args.port)
@@ -328,9 +346,10 @@ def main():
     if not wait_ready(url):
         print("server did not answer on %s" % url, file=sys.stderr)
         return 2
-    write_port(port)
 
     if args.no_window:
+        # test mode: serving only, and it must not claim "tvapp is running" for the next
+        # real launch (that made a double-click hand off to a windowless server)
         print("serving", url, flush=True)
         try:
             while True:
@@ -339,6 +358,8 @@ def main():
             pass
         httpd.shutdown()
         return 0
+
+    write_port(port)                   # only a real (windowed) instance claims the port
 
     # --browser takes an optional name: chrome / edge / firefox / brave / vivaldi /
     # default (system browser) / auto (first installed). Saved for next launch.
@@ -390,6 +411,8 @@ def main():
         stop = threading.Event()
         tkinter_shell(url, stop)
     httpd.shutdown()
+    # the timeshifted recordings and this launch's browser profile are scratch data
+    purge_scratch()
     return 0
 
 

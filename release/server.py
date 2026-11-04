@@ -17,6 +17,7 @@ import io
 import json
 import os
 import queue
+import re
 import socket
 import sys
 import threading
@@ -262,6 +263,62 @@ def epg_payload(full=False):
     return payload
 
 
+# ---------------------------------------------------------------- recorder
+# The feeds delete history after ~30 s. This keeps its own copy on disk and publishes a
+# sliding playlist whose length is ours (default 30 min), so pause/rewind stop depending
+# on the relay's retention.
+import hashlib as _hashlib
+
+REC_ROOT = os.path.join(os.environ.get("TVDS_DATA_DIR") or ROOT, "rec")
+REC_SPAN = int(os.environ.get("TVDS_REC_SPAN") or 1800)          # seconds kept per channel
+REC_MAX_BYTES = int(os.environ.get("TVDS_REC_BYTES") or 2500 * 1000 * 1000)
+_RECORDERS = {}
+_REC_LOCK = threading.Lock()
+
+
+def recorder_for(url, referer=None):
+    import importlib.util
+    key = _hashlib.sha1((url + "|" + (referer or "")).encode()).hexdigest()[:10]
+    with _REC_LOCK:
+        rec = _RECORDERS.get(key)
+        if rec and not rec.stopped:
+            rec.touch()
+            return rec
+        # retire recorders nobody has asked for in a while, so disk does not pile up
+        for k, old in list(_RECORDERS.items()):
+            if old.stopped or time.time() - getattr(old, "last_access", 0) > 300:
+                old.stop()
+                _RECORDERS.pop(k, None)
+        mod = None
+        for base in list(EXTRA_ROOTS) + [ROOT]:
+            path = os.path.join(base, "recorder.py")
+            if os.path.isfile(path):
+                try:
+                    spec = importlib.util.spec_from_file_location("tvds_recorder", path)
+                    mod = importlib.util.module_from_spec(spec)
+                    spec.loader.exec_module(mod)
+                    break
+                except Exception:
+                    mod = None
+        if not mod:
+            return None
+        os.makedirs(REC_ROOT, exist_ok=True)
+        rec = mod.Recorder(key, url, referer, REC_SPAN, REC_MAX_BYTES,
+                           fetch=lambda u, r=None: fetch(u, r), root=REC_ROOT)
+        rec.start()
+        _RECORDERS[key] = rec
+        return rec
+
+
+def purge_recordings():
+    """Timeshifted segments are scratch data: nothing survives a restart on purpose."""
+    import shutil
+    try:
+        shutil.rmtree(REC_ROOT, ignore_errors=True)
+    except Exception:
+        pass
+
+
 def start_epg_refresh():
     """Pull and index the XMLTV files in the background if they are stale or missing."""
     def worker():
@@ -443,6 +500,46 @@ class Handler(BaseHTTPRequestHandler):
             return self._static("sw.js", "application/javascript")
         if u.path == "/api/channels":
             return self._static("channels.json", "application/json")
+        if u.path == "/rec/live":
+            target = (qs.get("u") or [""])[0]
+            referer = (qs.get("r") or [None])[0]
+            if not target:
+                return self._send(400, "missing u", "text/plain")
+            rec = recorder_for(target, referer)
+            if not rec:
+                return self._send(503, "recorder unavailable", "text/plain")
+            body = rec.playlist(wait=25.0).encode("utf-8")
+            return self._send(200, body, "application/vnd.apple.mpegurl",
+                              {"Cache-Control": "no-store"})
+        if u.path == "/rec/status":
+            target = (qs.get("u") or [""])[0]
+            referer = (qs.get("r") or [None])[0]
+            rec = recorder_for(target, referer) if target else None
+            return self._send(200, json.dumps(rec.status() if rec else {}),
+                              "application/json", {"Cache-Control": "no-store"})
+        if u.path.startswith("/rec/") and u.path.count("/") == 3:
+            _, _, key, name = u.path.split("/")
+            if not re.fullmatch(r"[0-9a-f]{10}", key) or not re.fullmatch(r"[A-Za-z0-9._-]+", name):
+                return self._send(403, "bad path", "text/plain")
+            path = os.path.join(REC_ROOT, key, name)
+            if not os.path.isfile(path):
+                return self._send(404, "gone", "text/plain")
+            with open(path, "rb") as fh:
+                data = fh.read()
+            ctype = ("video/mp2t" if name.endswith(".ts")
+                     else "video/mp4" if name.endswith((".m4s", ".mp4"))
+                     else "application/octet-stream")
+            return self._send(200, data, ctype, {"Cache-Control": "max-age=60"})
+        if u.path == "/rec-key":
+            target = (qs.get("u") or [""])[0]
+            if not target:
+                return self._send(400, "missing u", "text/plain")
+            r = fetch(target)
+            try:
+                return self._send(200, r.read(), "application/octet-stream",
+                                  {"Cache-Control": "no-store"})
+            finally:
+                r.release()
         if u.path == "/api/epg":
             full = (qs.get("full") or ["0"])[0] == "1"
             return self._send(200, json.dumps(epg_payload(full)), "application/json",
@@ -606,6 +703,9 @@ def main():
         sys.exit(1)
     url = f"http://127.0.0.1:{args.port}/"
     print(f"tvapp running at {url}   (Ctrl+C to stop)")
+    purge_recordings()          # leftovers from a crash or a previous run
+    import atexit
+    atexit.register(purge_recordings)
     start_epg_refresh()
     if args.open:
         webbrowser.open(url)
