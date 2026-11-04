@@ -115,6 +115,17 @@
   #syncVal{color:var(--acc);font-variant-numeric:tabular-nums}
   #syncPop .sb{display:flex;gap:6px;margin-top:6px}
   #syncPop .sb button{flex:1;font-size:11.5px;padding:6px 4px}
+  #dvrPop{position:absolute;right:18px;bottom:64px;z-index:6;display:none;width:300px;
+    background:rgba(10,15,21,.98);border:1px solid var(--line2);border-radius:12px;padding:12px;
+    box-shadow:0 18px 40px rgba(0,0,0,.6);backdrop-filter:blur(8px)}
+  #dvrPop.show{display:block}
+  #dvrPop .sh{font-size:11.5px;color:var(--dim);margin-bottom:10px}
+  #dvrPop .sh b{color:var(--txt)}
+  #dvrPop .sb{display:flex;gap:6px;margin-top:6px}
+  #dvrPop .sb button{flex:1;font-size:11.5px;padding:6px 4px}
+  #dvrPop .sb button:disabled{opacity:.35;cursor:default}
+  #pDvr:disabled{opacity:.35;cursor:default}
+  #pDvr.on{color:var(--acc);border-color:#1f4a63;background:#0b1a24}
 
   /* ============================================================ PLAYER */
   #stage{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
@@ -217,6 +228,7 @@
     <span id="nowNote"></span>
     <div id="pBtns">
       <button id="pSmooth" title="Live = as close to the edge as possible · Smooth = sit ~30 s behind with a bigger buffer">Live</button>
+      <button id="pDvr" title="jump back into the stream's history, then buffer forward">⏪ DVR</button>
       <button id="pSync" title="this channel's guide timing is off — nudge it">⏱ Sync</button>
       <button id="pList" title="channel list (L)">☰ List</button>
       <button id="ccBtn" title="captions (C)">CC</button>
@@ -227,6 +239,16 @@
   </div>
 
   <div id="overlay"><h2 id="ovTitle">Nothing playing</h2><p id="ovText"></p><button id="retry">Retry</button></div>
+
+  <div id="dvrPop">
+    <div class="sh">Rewind this stream · <b id="dvrWin"></b></div>
+    <div class="sb">
+      <button data-s="30">−30 s</button>
+      <button data-s="120">−2 min</button>
+      <button data-s="300">−5 min</button>
+      <button data-s="900">−15 min</button>
+    </div>
+  </div>
 
   <div id="syncPop">
     <div class="sh">Guide timing · <b id="syncName"></b><span id="syncVal"></span></div>
@@ -662,6 +684,42 @@ $('#pSmooth').onclick = () => {
   if (CUR >= 0) play(CUR);      // the buffer size only applies to a fresh hls instance
   showCtl();
 };
+
+// ---- DVR: how far back the source playlist actually goes ----
+let DVRWIN = 0;
+
+function paintDvr(){
+  const b = $('#pDvr');
+  if (!b) return;
+  b.disabled = DVRWIN < 45;
+  b.classList.toggle('on', DVRWIN >= 45);
+  b.title = DVRWIN >= 45
+    ? 'rewind up to ' + Math.round(DVRWIN) + ' s into this stream'
+    : 'this feed keeps almost no history (' + Math.round(DVRWIN) + ' s)';
+}
+
+$('#pDvr').onclick = () => {
+  const p = $('#dvrPop');
+  if (p.classList.contains('show')){ p.classList.remove('show'); return; }
+  $('#dvrWin').textContent = Math.round(DVRWIN) + ' s of history on this feed';
+  p.querySelectorAll('button[data-s]').forEach(b => {
+    b.disabled = Number(b.dataset.s) > DVRWIN - 8;
+  });
+  p.classList.add('show');
+  showCtl();
+};
+
+$('#dvrPop').querySelectorAll('button[data-s]').forEach(b => {
+  b.onclick = () => {
+    const back = Number(b.dataset.s);
+    if (hls && back > 0){
+      try { hls.startLoad(-back); } catch (e){}
+      $('#v').play().catch(() => {});
+    }
+    $('#dvrPop').classList.remove('show');
+    showCtl();
+  };
+});
 $('#pList').onclick = () => {
   const d = $('#qdrawer');
   d.classList.toggle('show');
@@ -729,6 +787,18 @@ function play(i){
           enableWebVTT: true, defaultAudioCodec: 'mp4a.40.2' });
     hls.loadSource(src);
     hls.attachMedia(v);
+    DVRWIN = 0; paintDvr();
+    if (Hls.Events.LEVEL_UPDATED){
+      hls.on(Hls.Events.LEVEL_UPDATED, (ev, data) => {
+        const lv = hls.levels[data.level] || hls.levels[0];
+        const d = lv && lv.details;
+        const fr = d && d.fragments;
+        if (fr && fr.length > 1){
+          DVRWIN = Math.max(0, fr[fr.length - 1].end - fr[0].start);
+          paintDvr();
+        }
+      });
+    }
     if (Hls.Events.SUBTITLE_TRACKS_UPDATED){
       hls.on(Hls.Events.SUBTITLE_TRACKS_UPDATED, () => applyCC());
     }
