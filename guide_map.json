@@ -1,0 +1,15 @@
+{
+  "_comment": "Pin a channel to the exact display-name used by the guide index. Only needed when the guide spells a channel differently from us; matching is otherwise strict and country-scoped, so a missing pin means 'no listings', never a wrong schedule.",
+  "ABC 7 WABC (New York)": "WABC-DT",
+  "CBS 2 New York": "WCBS-DT",
+  "Fox 5 WNYW (New York)": "WNYW-DT",
+  "AccuWeather NOW": "AccuWeather",
+  "Bloomberg TV": "Bloomberg",
+  "Cheddar News": "Cheddar",
+  "Sundance TV": "SundanceTV",
+  "ION": "ION Television",
+  "Nick Jr.": "Nick Jr",
+  "Fox Business Network": "Fox Business",
+  "Hallmark Movies & Mysteries": "Hallmark Mystery",
+  "CBS News 24/7": "CBS News National Stream"
+}

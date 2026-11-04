@@ -189,51 +189,88 @@ def _needles(channel_name):
     return {n for n in out if n}
 
 
-def guide(channels, idx=None, full=False):
-    """channels: [(group, name)] -> {name: {now, next, src, progs?}}
+MAP_FILE = os.path.join(ROOT, "guide_map.json")
 
-    full=True also returns the programme list inside the visible window, which is what
-    the grid view draws.
+# suffixes that may follow a channel name in a guide and still mean the same channel
+SAFE_SUFFIX = {"hd", "sd", "fhd", "east", "west", "eastern", "pacific", "us", "tv",
+               "canada", "canadian", "feed", "channel", "network", "international"}
+
+
+def load_map():
+    try:
+        with open(MAP_FILE, encoding="utf-8") as fh:
+            return {k.lower(): v for k, v in json.load(fh).items() if not k.startswith("_")}
+    except Exception:
+        return {}
+
+
+def _strict_eq(a, b):
+    """Same channel when the guide name is our name plus only harmless suffixes."""
+    if a == b:
+        return True
+    if not b.startswith(a):
+        return False
+    for tail in b[len(a):].split():
+        if tail not in SAFE_SUFFIX:
+            return False
+    return True
+
+
+def guide(channels, idx=None, full=False):
+    """channels: [(group, name)] -> {name: {now, next, src, matched, progs?}}
+
+    Matching is deliberately strict and country-scoped: a channel only ever takes listings
+    from its own country's index, and only when the guide's display name is the same name
+    (bar an "HD"/"East" style suffix) or an explicit alias. Loose substring matching used
+    to put a Hong Kong schedule on HBO Family, which is worse than no guide at all.
     """
     idx = idx if idx is not None else load()
     now = time.time()
     lo = now - 3600
     hi = now + 6 * 3600
-    table = {}
+    pins = load_map()
+
+    per_country = {}
     for cc, d in idx.items():
+        table = per_country.setdefault(cc, {})
         for cid, names in d.get("channels", {}).items():
             for dn in names:
-                table.setdefault(norm(dn), []).append((cc, cid))
-
-    def candidates(needles):
-        out = []
-        for needle in needles:
-            out.extend(table.get(needle, []))
-        if out:
-            return out
-        for needle in needles:
-            if len(needle) < 3:
-                continue
-            for key, cands in table.items():
-                if needle in key or (len(key) > 3 and key in needle):
-                    out.extend(cands)
-        return out
+                table.setdefault(norm(dn), []).append((cid, dn))
 
     out = {}
     for group, name in channels:
-        cands = candidates(_needles(name))
-        if not cands:
-            continue
         want = GROUP_COUNTRY.get(group)
-        pick = next((c for c in cands if c[0] == want), cands[0])
-        cc, cid = pick
-        rows = idx[cc]["programmes"].get(cid) or []
+        table = per_country.get(want) if want else None
+        if not table:
+            continue
+
+        pick = None
+        pin = pins.get(name.lower())
+        if pin:
+            for key, cands in table.items():
+                if key == norm(pin):
+                    pick = cands[0]
+                    break
+        if not pick:
+            for needle in _needles(name):
+                for key, cands in table.items():
+                    if _strict_eq(needle, key):
+                        pick = cands[0]
+                        break
+                if pick:
+                    break
+        if not pick:
+            continue
+
+        cid, matched = pick
+        rows = idx[want]["programmes"].get(cid) or []
         cur = next((r for r in rows if r[0] <= now < r[1]), None)
         nxt = next((r for r in rows if r[0] > now), None)
         if not (cur or nxt):
             continue
         rec = {
-            "src": cc,
+            "src": want,
+            "matched": matched,
             "now": {"title": cur[2], "start": cur[0], "stop": cur[1]} if cur else None,
             "next": {"title": nxt[2], "start": nxt[0], "stop": nxt[1]} if nxt else None,
         }

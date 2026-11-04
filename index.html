@@ -437,7 +437,8 @@ function renderGuide(groups){
       const initial = ((c.name.replace(/[^A-Za-z0-9\u4e00-\u9fff]/g, '') || '?')[0] || '?').toUpperCase();
       const sub = dead ? 'offline'
                 : (c.status === '?' ? 'unverified'
-                : (e ? e.src : ((c.badge || '') + ' · ' + (c.note || '').split('|')[1].trim())));
+                : (e ? e.src + ' · ' + e.matched
+                     : ((c.badge || '') + ' · ' + (c.note || '').split('|')[1].trim())));
       let blocks = '';
       if (e && e.progs && !dead){
         e.progs.forEach(p => {
