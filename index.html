@@ -145,6 +145,7 @@
   #ccBtn{min-width:46px;font-weight:700}
   #ccBtn.on{color:var(--ok);border-color:#22422f;background:#0d1a13}
   #ccBtn:disabled{opacity:.35;cursor:default}
+  #pSmooth.on{color:var(--acc);border-color:#1f4a63;background:#0b1a24}
   #overlay{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;
     gap:12px;background:rgba(4,6,9,.9);text-align:center;padding:24px;z-index:4}
   #overlay.show{display:flex}
@@ -215,6 +216,7 @@
     </div>
     <span id="nowNote"></span>
     <div id="pBtns">
+      <button id="pSmooth" title="Live = as close to the edge as possible · Smooth = sit ~30 s behind with a bigger buffer">Live</button>
       <button id="pSync" title="this channel's guide timing is off — nudge it">⏱ Sync</button>
       <button id="pList" title="channel list (L)">☰ List</button>
       <button id="ccBtn" title="captions (C)">CC</button>
@@ -643,6 +645,23 @@ function setNowProg(name){
 }
 
 $('#pBack').onclick = back;
+
+function paintSmooth(){
+  const on = localStorage.getItem('tvapp.smooth') === '1';
+  const b = $('#pSmooth');
+  b.textContent = on ? 'Smooth' : 'Live';
+  b.classList.toggle('on', on);
+  b.title = on ? 'Smooth: ~30 s behind live, 30 s buffer (steadier)'
+               : 'Live: as close to the edge as possible (lowest latency)';
+}
+paintSmooth();
+$('#pSmooth').onclick = () => {
+  const on = localStorage.getItem('tvapp.smooth') === '1';
+  localStorage.setItem('tvapp.smooth', on ? '0' : '1');
+  paintSmooth();
+  if (CUR >= 0) play(CUR);      // the buffer size only applies to a fresh hls instance
+  showCtl();
+};
 $('#pList').onclick = () => {
   const d = $('#qdrawer');
   d.classList.toggle('show');
@@ -694,11 +713,20 @@ function play(i){
   v.removeAttribute('src'); v.load();
 
   if (window.Hls && Hls.isSupported()){
-    hls = new Hls({ lowLatencyMode: true, maxBufferLength: 6, backBufferLength: 4,
-                    liveSyncDurationCount: 1, liveMaxLatencyDurationCount: 2,
-                    maxLiveSyncPlaybackRate: 1.5, capLevelToPlayerSize: false,
-                    manifestLoadingTimeOut: 15000, fragLoadingMaxRetry: 6,
-                    enableWebVTT: true, defaultAudioCodec: 'mp4a.40.2' });
+    // SMOOTH trades latency for stability: sit ~5 segments behind the edge and keep a
+    // 30 s forward buffer, so a relay hiccup is absorbed instead of freezing the picture.
+    const smooth = localStorage.getItem('tvapp.smooth') === '1';
+    hls = new Hls(smooth
+      ? { lowLatencyMode: true, maxBufferLength: 30, backBufferLength: 60,
+          liveSyncDurationCount: 5, liveMaxLatencyDurationCount: 12,
+          maxLiveSyncPlaybackRate: 1.0, capLevelToPlayerSize: false,
+          manifestLoadingTimeOut: 15000, fragLoadingMaxRetry: 6,
+          enableWebVTT: true, defaultAudioCodec: 'mp4a.40.2' }
+      : { lowLatencyMode: true, maxBufferLength: 6, backBufferLength: 4,
+          liveSyncDurationCount: 1, liveMaxLatencyDurationCount: 2,
+          maxLiveSyncPlaybackRate: 1.5, capLevelToPlayerSize: false,
+          manifestLoadingTimeOut: 15000, fragLoadingMaxRetry: 6,
+          enableWebVTT: true, defaultAudioCodec: 'mp4a.40.2' });
     hls.loadSource(src);
     hls.attachMedia(v);
     if (Hls.Events.SUBTITLE_TRACKS_UPDATED){
