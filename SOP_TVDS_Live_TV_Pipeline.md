@@ -1,4 +1,4 @@
-# SOP — Building a 141-channel live TV app from public HLS relays
+# SOP — Building a live TV app from public HLS relays (147 verified → 123 playable)
 
 > **Scope of this document.** Everything that was done, in order: what "a working channel" actually
 > means, how the catalogue is sourced and verified, why most of the obvious candidates are junk, how
@@ -9,9 +9,13 @@
 >
 > **Target.** Public HLS feeds for US / UK / Canada / Hong Kong mainstream channels. No credentials,
 > no TVE login, no scraping of subscription portals.
-> **Outcome.** 141 verified channels (Hong Kong 12 · New York 5 · US Cable 76 · Sports 15 · News 14 ·
-> UK 9 · Canada 10), 101 of them with TV-guide listings, shipped as a single-file Windows app and an
-> Android APK.
+> **Outcome.** 123 channels that a browser can actually render (Hong Kong 11 · New York 3 · US Cable 66 ·
+> Sports 14 · News 11 · UK 9 · Canada 9), 91 of them with TV-guide listings, shipped as a single-file
+> Windows app and an Android APK. Ten further feeds are kept but marked VLC-only (HEVC / AC-3).
+>
+> **Read §19 first if you are debugging a black screen** — that chapter is the difference between
+> "the URL answers" and "the browser can play it", and it is where a fifth of the catalogue used to
+> fail silently.
 > **Repo.** `https://github.com/hiwaywu/TVDS`
 
 ---
@@ -58,7 +62,7 @@ Machine-specific gotchas, collected so they are not rediscovered:
 - **PowerShell heredocs do not exist.** `python - <<'EOF'` is a parse error. Write a `.py` file with
   the `write` tool, or use `python -c "..."` with single-quoted outer strings.
 - **`Set-Content` round-trips mangle UTF-8.** Reading a file with `Get-Content -Raw` and writing it
-  back turned `·` into `Â·` and `–` into `â€“` inside `index.html`. Rule adopted: **only** rewrite
+  back turned `·` into `·` and `–` into `–` inside `index.html`. Rule adopted: **only** rewrite
   text files through Python with `io.open(..., encoding='utf-8', newline='')`.
 - **`SO_REUSEADDR` on Windows lets two servers bind the same port.** A stale `pythonw server.py` and
   the new exe both answered on 8777, and the window showed the *old* catalogue. Fix: probe with a
@@ -762,7 +766,221 @@ DVR.
 
 ---
 
-## 18. Changelog
+---
+
+# Part II — the second pass (what the first version got wrong)
+
+The chapters above describe the build as it stood when the app first worked. Everything below is
+what happened after actually *using* it: a catalogue where a fifth of the channels showed a black
+rectangle, and a TV guide that was confidently wrong on most rows. Both had a single root cause of
+the same shape — the pipeline verified that bytes arrived, not that the bytes were usable.
+
+## 19. Why 19 channels showed a black screen
+
+### 19.1 The gap
+
+The health gate (§2) proved: master answers → variant answers → a segment of ≥ 20 KB arrives. All
+true for a channel that renders nothing, because a browser cannot decode:
+
+- **HEVC** (`hvc1`) — hls.js in Chrome gets nothing usable through MSE
+- **AC-3 / E-AC-3 / MP2** audio — picture plays, sound does not
+- an **fMP4** segment read without its init segment — ffprobe sees audio only
+- an **audio-only** feed
+
+So the catalogue carried channels that passed every check and could not be watched. The fix is a
+second gate that asks the only question that matters: *can a browser play this?*
+
+### 19.2 `playability_scan.py`
+
+For every channel it does what the player does — go through `/proxy`, walk to a media playlist,
+download a segment, `ffprobe` it — and records `play: ok | vlc | broken` plus the reason.
+
+The first run produced **111 ok / 13 vlc / 17 broken**, and some of those "broken" were channels
+that demonstrably worked. Two false-negative traps, both instructive:
+
+| Trap | Symptom | Fix |
+|---|---|---|
+| **fMP4 without its init segment** | `no video stream` on channels that play fine | fetch `#EXT-X-MAP`, prepend those bytes before probing |
+| **one bad segment** | a single ad slate / half-written chunk condemns the channel | sample newest, middle and oldest; retry once on timeout; best verdict wins |
+
+After both fixes the verdicts are stable and repeatable.
+
+### 19.3 `repair_channels.py` — fixing rather than deleting
+
+The other half of the problem was our own doing: many relays publish **both** an HEVC 1080 variant
+and an H.264 720 one, and the ranking in §4 ordered by height, so the pipeline stored the HEVC
+variant. Chrome then showed nothing.
+
+The repair pass parses the master, enumerates `#EXT-X-STREAM-INF` entries with their `CODECS`,
+prefers an H.264 variant, and re-points the channel **only when it had to skip a taller non-H.264
+rendition** (otherwise the master stays, which keeps ABR intact). Result: Discovery Channel went
+from `no video stream` to `h264 1080p` without touching the source list.
+
+### 19.4 Outcome — 147 → 123
+
+```
+playable  112      (H.264 + AAC/MP3 - plays in the app)
+vlc-only   10      (real feed, codec a browser cannot decode)
+broken     19      (404 / timeout / audio-only)   -> dropped
+```
+
+The ten VLC-only channels, with the reason the scan found:
+
+| Channel | Reason |
+|---|---|
+| RTHK TV 33 | HEVC video |
+| Travel Channel | HEVC video |
+| TNT | HEVC video |
+| American Heroes Channel | audio ac3 |
+| IFC | audio ac3 |
+| Lifetime | audio ac3 |
+| Paramount Network | audio ac3 |
+| Starz Comedy | audio ac3 |
+| ION | audio ac3 |
+| Bounce | audio eac3 |
+| CBeebies | audio mp2 |
+
+The app now says so instead of showing a black rectangle: the guide row reads `VLC · HEVC video`, and
+opening one shows *"This feed needs VLC"* with the handoff button.
+
+Slow-but-alive feeds, measured (segment fetch, > 4 s): **Fox Sports 2 14.1 s**, Fox Business 7.0,
+Love Nature 6.5, CP24 5.6, HBO 2 4.8, Hallmark Movies 4.5. Worth knowing before blaming the app.
+
+### 19.5 TNT, as a worked case
+
+Reported as "dead or just slow to load". It was neither:
+
+```
+stored URL  /tnt/tracks-v1a1/mono.m3u8   → 404      (a variant path that no longer exists)
+/tnt/index.m3u8                          → 200      (the live master)
+master CODECS="hvc1.2.2.L120.90,mp4a.40.2"          (one variant, HEVC, no H.264 alternative)
+```
+
+So the URL was repaired and the channel restored — but flagged **VLC-only**, because the only mount
+is HEVC. Six other candidate mounts were probed for an H.264 TNT; all 404 or offline. The allowlist
+in `expand.py` was updated to the working mount so a rebuild cannot reintroduce the dead path.
+
+## 20. Guide data, take two — the provider was wrong, not the clock
+
+The complaint was precise: *"mad off, none matches"*. The obvious suspect is a timezone bug, so that
+was settled with data before touching anything.
+
+### 20.1 Timezone: checked, and cleared
+
+```
+programmes sampled: 439,487
+offsets: {'+0000': 439,487}        # every entry is UTC
+naive=2026-11-05 00:00  stated_utc=2026-11-05 00:00   same
+```
+
+Our conversion matched the stated offset exactly. A latent bug was still fixed: the parser used
+`time.mktime(...) - time.timezone`, which is only right while the machine is on standard time — at a
+DST boundary every listing would shift an hour. It now uses `calendar.timegm` (and honours an
+explicit offset if the provider ever writes one).
+
+### 20.2 The provider switch
+
+epg.pw's *content* is the problem: CMT listed as *Cheers* while the feed ran a Christmas film, and
+dozens of rows disagreed with reality. **epgshare01** publishes rips of the real listing providers
+(zap2it / tvguide style) with per-channel ids such as `CMT.HD.us2`, and is now the primary source:
+
+| File | Size | Channels | Programmes kept |
+|---|---|---|---|
+| `epg_ripper_US2` | 6.6 MB | 791 | 37 027 |
+| `epg_ripper_US_LOCALS1` | 58.1 MB | 4 471 | 259 267 |
+| `epg_ripper_US_SPORTS1` | 0.9 MB | 298 | 2 484 |
+| `epg_ripper_UK1` | 2.8 MB | 487 | 19 017 |
+| `epg_ripper_CA2` | 6.6 MB | 696 | 28 795 |
+| `epg_ripper_HK1` | 0.6 MB | 143 | 7 088 |
+
+epg.pw stays as the fallback that fills gaps. Both are merged into one bucket per country.
+
+### 20.3 Three bugs that made wrong matches look right
+
+1. **Both providers wrote the same index file.** `US.json` from epgshare was overwritten by
+   `US.json` from epg.pw, so the "new" data was never actually read. Files are now `share-*.json`
+   and `pw-*.json`, merged with epgshare first.
+2. **`international` was in the "harmless suffix" list.** `CNN` therefore matched `CNN International`
+   instead of `CNN HD`. Removed, and candidates are now ranked by *fewest extra tokens*, so an exact
+   name always wins over an embellished one.
+3. **`norm()` deleted parenthesised text.** `HBO (Pacific)` normalised to plain `hbo`, matched exactly,
+   and beat `HBO East` — which is why film times looked wrong on HBO. Brackets are now replaced with
+   spaces (the words are kept), and East is preferred over West/Pacific by a small weight.
+
+Result on the same catalogue: **91/123** channels with listings, and the rows that matter read
+correctly — `HBO East · The Gilded Age`, `CNN HD · Live: Election Night in America`,
+`Cinemax HD · Open Water`, `Starz HD · Replicas`.
+
+### 20.4 CMT: a feed that is not on the published schedule
+
+A frame grab settled it: at 03:49 UTC the "CMT" mount was showing a **black-and-white Christmas
+film**, while epg.pw said *Cheers* and epgshare said *CMT Music*. CMT's bug is burned into the
+corner, so the channel is right and the relay is not running the published schedule.
+
+No provider can fix that. `⏱ Sync` (per-channel offset in `guide_offset.json`) is the only tool, and
+the stale +6 h offset that had been applied while chasing this was cleared, so the channel can be
+aligned from scratch if it matters.
+
+## 21. Fullscreen: container, not the video element
+
+The player fullscreens `#stage`, never the `<video>`. Handing the element to the platform player
+(the old Android path, `video.webkitEnterFullscreen()`) ignores `object-fit` and stretches a 16:9
+feed on a 16:10 screen. What the implementation does now:
+
+```js
+enterFull()  -> stage.requestFullscreen()
+             -> screen.orientation.lock('landscape')      // where supported
+             -> Android.setOrientation('landscape')       // WebView cannot rotate itself
+exitFull()   -> document.exitFullscreen() + unlock + orientation back to the user setting
+```
+
+- `body.fs` reveals an explicit **✕ exit full** button, because controls auto-hide after 3 s and
+  native fullscreen has no visible exit otherwise
+- `Esc` and `f` both leave/enter; the button label flips between `⛶` and `⛶ Exit`
+- `#stage:fullscreen video { width:100%; height:100%; object-fit:contain }` — the picture letterboxes,
+  it never distorts
+
+## 22. Release engineering, and the trap in it
+
+Two rules learned the hard way:
+
+1. **`gh release upload --clobber` does not move the release's date.** GitHub kept showing
+   "2 days ago" while the binaries were new, because `published_at` belongs to the release, not the
+   asset. The correct move is a new tag (`gh release create v1.3.0 … --target main`) and
+   `gh release delete v1.2.0 --yes --cleanup-tag` for the superseded one.
+2. **Both binaries must be rebuilt, not just the catalogue.** `server.py`, `epg.py` and `recorder.py`
+   are data-shipped and therefore **baked into the exe**; changing them without a rebuild ships a
+   stale engine. `channels.json` / `index.html` are hot-swappable next to the exe, but everything
+   else needs `pc/build-pc.ps1`. The Android APK additionally embeds its own copy of
+   `channels.json`, so a catalogue change means a rebuild there too.
+
+Verification after publishing is done against the API, not the filesystem:
+
+```powershell
+curl.exe -s http://127.0.0.1:8777/api/channels | python -c "import json,sys; d=json.load(sys.stdin); print(sum(len(g['channels']) for g in d['groups']))"
+curl.exe -s http://127.0.0.1:8777/api/epg | python -c "import json,sys; d=json.load(sys.stdin); print(d['covered'], '/', d['total'])"
+```
+
+`v1.3.0` ships: `tvapp.exe` 12,401,505 B, `tvapp.apk` 156,243 B, 123 channels, guide 91/123.
+
+## 23. Changelog, part II
+
+| When | Change |
+|---|---|
+| Nov 5 | `playability_scan.py`: every channel probed for decodability through the proxy |
+| Nov 5 | fMP4 init-segment fix; multi-segment sampling with retry |
+| Nov 5 | `repair_channels.py`: prefer H.264 variants; 108 channels re-pointed, later restricted to real downgrades |
+| Nov 5 | 19 broken channels dropped, TNT restored as VLC-only → **123 channels** |
+| Nov 5 | Guide switched to **epgshare01** primary, epg.pw fallback (91/123) |
+| Nov 5 | Fixed: index filename collision, `international` suffix, bracket-stripping in `norm()` |
+| Nov 5 | `stamp()` moved to `calendar.timegm` (DST-proof) |
+| Nov 5 | Fullscreen targets the stage, landscape lock, explicit exit button |
+| Nov 5 | `latency_scan.py`: per-channel start latency, six slow feeds flagged |
+| Nov 5 | Release `v1.3.0` cut with both rebuilt binaries; `v1.2.0` removed |
+
+---
+
+## 24. Changelog, part I (the first build)
 
 | Date | Change |
 |---|---|
