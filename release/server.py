@@ -253,7 +253,9 @@ def epg_payload(full=False):
             data = json.loads(raw.decode("utf-8")) if raw else {"groups": []}
             chans = [(g["name"], c["name"]) for g in data.get("groups", [])
                      for c in g.get("channels", [])]
-            guide = mod.guide(chans, full=full)
+            hidden = {c["name"] for g in data.get("groups", [])
+                      for c in g.get("channels", []) if c.get("guide_hidden")}
+            guide = mod.guide(chans, full=full, hidden=hidden)
             payload.update(channels=guide, covered=len(guide), total=len(chans),
                            offsets=mod.load_offsets())
         except Exception:

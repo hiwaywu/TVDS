@@ -328,7 +328,7 @@ def _strict_eq(a, b):
     return True
 
 
-def guide(channels, idx=None, full=False):
+def guide(channels, idx=None, full=False, hidden=None):
     """channels: [(group, name)] -> {name: {now, next, src, matched, progs?}}
 
     Matching is deliberately strict and country-scoped: a channel only ever takes listings
@@ -350,8 +350,11 @@ def guide(channels, idx=None, full=False):
             for dn in names:
                 table.setdefault(norm(dn), []).append((cid, dn))
 
+    hidden = hidden or set()
     out = {}
     for group, name in channels:
+        if name in hidden:          # two providers disagree by >30 min: show nothing
+            continue
         want = GROUP_COUNTRY.get(group)
         table = per_country.get(want) if want else None
         if not table:
