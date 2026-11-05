@@ -141,6 +141,12 @@
   .pctl{position:absolute;left:0;right:0;z-index:3;display:flex;align-items:center;gap:10px;
     transition:opacity .25s,transform .25s;opacity:1}
   .pctl.hide{opacity:0;pointer-events:none}
+  #fsexit{display:none}
+  body.fs #fsexit{display:inline-block}
+  #stage:fullscreen{background:#000}
+  #stage:fullscreen video{width:100%;height:100%;max-width:100%;max-height:100%;
+    object-fit:contain !important;object-position:center}
+  :fullscreen::backdrop,:-webkit-full-screen::backdrop{background:#000}
   #pTop{top:0;padding:14px 18px;background:linear-gradient(180deg,rgba(4,7,10,.92),rgba(4,7,10,0))}
   #pTop.hide{transform:translateY(-8px)}
   #pBottom{bottom:0;padding:16px 18px 14px;background:linear-gradient(0deg,rgba(4,7,10,.95),rgba(4,7,10,0));
@@ -214,6 +220,7 @@
     <button id="pBack" class="ghost" title="back to the guide (Esc / mouse back)">‹ Guide</button>
     <div class="pinfo"><b id="nowTitle">—</b><span id="nowProg"></span></div>
     <span class="sp"></span>
+    <button id="fsexit" class="ghost" title="leave fullscreen (Esc)">✕ exit full</button>
   </div>
 
   <div id="pBottom" class="pctl">
@@ -913,14 +920,61 @@ $('#vlc').onclick = () => {
     .catch(() => alert('VLC launch failed'));
 };
 $('#retry').onclick = () => { if (CUR >= 0) play(CUR); };
-$('#fs').onclick = () => { const s = $('#stage'); if (document.fullscreenElement) document.exitFullscreen(); else s.requestFullscreen(); };
+
+// ---------------------------------------------------------------- fullscreen
+// Always fullscreen the *stage container*, never the raw <video>: our CSS then owns the
+// geometry (object-fit: contain => the picture letterboxes), on a desktop monitor and in
+// a WebView alike. Handing the element to the platform player is what stretched 16:9
+// feeds on a 16:10 screen.
+function isFull(){
+  return !!(document.fullscreenElement || document.webkitFullscreenElement);
+}
+
+function tellAppLandscape(on){
+  // in the Android build the WebView cannot rotate itself; the bridge can
+  try { if (window.Android && Android.setOrientation) Android.setOrientation(on ? 'landscape' : 'auto'); }
+  catch (e){}
+  try {
+    if (on && screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(() => {});
+    if (!on && screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+  } catch (e){}
+}
+
+async function enterFull(){
+  const stage = $('#stage');
+  try {
+    if (stage.requestFullscreen) await stage.requestFullscreen();
+    else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
+    else { overlay('Fullscreen blocked', 'Maximise the window instead — the browser refused the request.'); return; }
+  } catch (e){
+    overlay('Fullscreen blocked', 'Maximise the window instead — the browser refused the request.');
+    return;
+  }
+  tellAppLandscape(true);
+  showCtl();
+}
+
+function exitFull(){
+  if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+  else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  tellAppLandscape(false);
+}
+
+$('#fs').onclick = () => { if (isFull()) exitFull(); else enterFull(); };
+$('#fsexit').onclick = exitFull;
+
 // the browser's own video-fullscreen path ignores the page layout and can stretch a
 // non-16:9 feed: whenever it happens, drop out of it and fullscreen the stage instead.
 document.addEventListener('fullscreenchange', () => {
   const v = document.querySelector('#v');
   if (document.fullscreenElement && document.fullscreenElement === v) {
     document.exitFullscreen().then(() => $('#stage').requestFullscreen()).catch(() => {});
+    return;
   }
+  document.body.classList.toggle('fs', isFull());
+  $('#fs').textContent = isFull() ? '⛶ Exit' : '⛶';
+  if (!isFull()) tellAppLandscape(false);
+  else tellAppLandscape(true);
 });
 ['webkitbeginfullscreen', 'webkitendfullscreen'].forEach(ev => {
   document.querySelector('#v').addEventListener(ev, e => {

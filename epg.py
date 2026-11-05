@@ -21,6 +21,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+import calendar
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 # the frozen PC build cannot write next to its bundled files, so the exe points this at
@@ -35,6 +36,22 @@ SOURCES = {
     "US": "https://epg.pw/xmltv/epg_US.xml",
     "GB": "https://epg.pw/xmltv/epg_GB.xml",
 }
+
+# epgshare01 publishes rips of the real listing providers (zap2it / tvguide style), which
+# carry per-channel ids such as "CMT.HD.us2". They are gzipped and much better behaved
+# than epg.pw, so they are indexed first and epg.pw stays as the fallback.
+SOURCES2 = {
+    "US": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "US-LOCAL": "https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS1.xml.gz",
+    "US-SPORT": "https://epgshare01.online/epgshare01/epg_ripper_US_SPORTS1.xml.gz",
+    "GB": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    "CA": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
+    "HK": "https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz",
+}
+
+# every file is indexed into the country bucket the matcher asks for
+TAG_COUNTRY = {"US": "US", "US-LOCAL": "US", "US-SPORT": "US",
+               "GB": "GB", "CA": "CA", "HK": "HK"}
 
 WINDOW_BACK = 6 * 3600          # keep programmes that started up to 6 h ago
 WINDOW_FWD = 36 * 3600          # and up to 36 h ahead
@@ -82,16 +99,28 @@ GROUP_COUNTRY = {
 
 def norm(name):
     n = (name or "").lower()
-    n = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", n)
+    n = re.sub(r"[()\[\]]", " ", n)      # keep the words, drop only the brackets
     n = re.sub(r"\b(hd|sd|fhd|uhd|4k|1080p|720p|plus|\+1)\b", " ", n)
     n = re.sub(r"[\s_\-]+", " ", n)
     return n.strip()
 
 
 def stamp(s):
-    """XMLTV 'YYYYMMDDHHMMSS +0000' -> epoch seconds (UTC)."""
+    """XMLTV 'YYYYMMDDHHMMSS +0000' -> epoch seconds.
+
+    calendar.timegm reads the 14 digits as UTC instead of local time, so this stays
+    correct across a DST boundary (time.mktime - time.timezone silently shifted an hour
+    twice a year). epg.pw writes +0000 on every entry, but an explicit offset is honoured
+    if one ever appears.
+    """
     try:
-        return int(time.mktime(time.strptime(s.strip()[:14], "%Y%m%d%H%M%S")) - time.timezone)
+        raw = s.strip()
+        base = calendar.timegm(time.strptime(raw[:14], "%Y%m%d%H%M%S"))
+        parts = raw.split()
+        if len(parts) > 1 and len(parts[1]) == 5:
+            sign = 1 if parts[1][0] == "+" else -1
+            base -= sign * (int(parts[1][1:3]) * 3600 + int(parts[1][3:5]) * 60)
+        return base
     except Exception:
         return 0
 
@@ -109,36 +138,76 @@ def fetch(url, dest):
     return os.path.getsize(dest)
 
 
-def build(cc, path):
+def build(cc, path, gzipped=False):
     """Stream-parse one XMLTV file into {channels: {...}, programmes: {...}}."""
     now = time.time()
     lo, hi = now - WINDOW_BACK, now + WINDOW_FWD
     names, progs = {}, {}
 
-    ctx = ET.iterparse(path, events=("end",))
-    for _, el in ctx:
-        if el.tag == "channel":
-            cid = el.get("id")
-            dn = [d.text.strip() for d in el.findall("display-name") if d.text]
-            if cid and dn:
-                names[cid] = dn
-            el.clear()
-        elif el.tag == "programme":
-            cid = el.get("channel")
-            start, stop = stamp(el.get("start", "")), stamp(el.get("stop", ""))
-            title = el.findtext("title") or ""
-            if cid and title and stop and start <= hi and stop >= lo:
-                progs.setdefault(cid, []).append([start, stop, title.strip()])
-            el.clear()
+    stream = gzip.open(path, "rb") if gzipped else open(path, "rb")
+    try:
+        ctx = ET.iterparse(stream, events=("end",))
+        for _, el in ctx:
+            if el.tag == "channel":
+                cid = el.get("id")
+                dn = [d.text.strip() for d in el.findall("display-name") if d.text]
+                if cid and dn:
+                    names[cid] = dn
+                el.clear()
+            elif el.tag == "programme":
+                cid = el.get("channel")
+                start, stop = stamp(el.get("start", "")), stamp(el.get("stop", ""))
+                title = el.findtext("title") or ""
+                if cid and title and stop and start <= hi and stop >= lo:
+                    progs.setdefault(cid, []).append([start, stop, title.strip()])
+                el.clear()
+    finally:
+        stream.close()
 
     for cid in progs:
         progs[cid].sort(key=lambda p: p[0])
     return {"country": cc, "built": int(now), "channels": names, "programmes": progs}
 
 
+def _merge(dst, src):
+    """Fold one index into another, keeping the first (better) source for a given id."""
+    for cid, names in src["channels"].items():
+        dst["channels"].setdefault(cid, names)
+    for cid, rows in src["programmes"].items():
+        if cid not in dst["programmes"]:
+            dst["programmes"][cid] = rows
+
+
 def refresh(only=None, verbose=True):
+    """epgshare01 first (real provider rips), then epg.pw as the fallback per country."""
     os.makedirs(CACHE, exist_ok=True)
     out = {}
+
+    for tag, url in SOURCES2.items():
+        base = TAG_COUNTRY.get(tag, tag)
+        if only and base not in only:
+            continue
+        path = os.path.join(CACHE, tag + ".xml.gz")
+        try:
+            size = fetch(url, path)
+        except Exception as exc:
+            if verbose:
+                print("  %-8s download failed: %s" % (tag, str(exc)[:60]))
+            continue
+        t0 = time.time()
+        idx = build(base, path, gzipped=True)
+        try:
+            os.remove(path)
+        except OSError:
+            pass
+        with open(os.path.join(CACHE, "share-" + tag + ".json"), "w", encoding="utf-8") as fh:
+            json.dump(idx, fh, ensure_ascii=False, separators=(",", ":"))
+        out[tag] = idx
+        if verbose:
+            print("  %-8s %6.1f MB -> %d channels, %d programmes (%.0fs)" % (
+                tag, size / 1e6, len(idx["channels"]),
+                sum(len(v) for v in idx["programmes"].values()), time.time() - t0))
+
     for cc, url in SOURCES.items():
         if only and cc not in only:
             continue
@@ -147,37 +216,50 @@ def refresh(only=None, verbose=True):
             size = fetch(url, path)
         except Exception as exc:
             if verbose:
-                print("  %-2s download failed: %s" % (cc, str(exc)[:60]))
+                print("  %-8s download failed: %s" % (cc, str(exc)[:60]))
             continue
         t0 = time.time()
         idx = build(cc, path)
-        os.replace(path, path + ".done") if False else None
         try:
             os.remove(path)
         except OSError:
             pass
-        with open(os.path.join(CACHE, cc + ".json"), "w", encoding="utf-8") as fh:
+        with open(os.path.join(CACHE, "pw-" + cc + ".json"), "w", encoding="utf-8") as fh:
             json.dump(idx, fh, ensure_ascii=False, separators=(",", ":"))
         out[cc] = idx
         if verbose:
-            print("  %-2s %6.1f MB -> %d channels, %d programmes (%.0fs)" % (
+            print("  %-8s %6.1f MB -> %d channels, %d programmes (%.0fs)" % (
                 cc, size / 1e6, len(idx["channels"]),
                 sum(len(v) for v in idx["programmes"].values()), time.time() - t0))
     return out
 
 
 def load():
+    """Merge every index into one bucket per country.
+
+    epgshare01 files are loaded first so their (better) values win; an id that already
+    exists keeps the first copy, and epg.pw only fills the gaps.
+    """
     idx = {}
     if not os.path.isdir(CACHE):
         return idx
-    for fn in os.listdir(CACHE):
-        if fn.endswith(".json"):
-            try:
-                with open(os.path.join(CACHE, fn), encoding="utf-8") as fh:
-                    d = json.load(fh)
-                idx[d.get("country", fn[:-5])] = d
-            except Exception:
-                continue
+
+    def priority(fn):
+        return (0 if fn.startswith("share-") else 1, fn)
+
+    for fn in sorted(os.listdir(CACHE), key=priority):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(CACHE, fn), encoding="utf-8") as fh:
+                d = json.load(fh)
+        except Exception:
+            continue
+        cc = d.get("country", fn[:-5])
+        if cc in idx:
+            _merge(idx[cc], d)
+        else:
+            idx[cc] = d
     return idx
 
 
@@ -223,7 +305,7 @@ def set_offset(name, value):
 
 # suffixes that may follow a channel name in a guide and still mean the same channel
 SAFE_SUFFIX = {"hd", "sd", "fhd", "east", "west", "eastern", "pacific", "us", "tv",
-               "canada", "canadian", "feed", "channel", "network", "international"}
+               "canada", "canadian", "feed", "channel", "network"}
 
 
 def load_map():
@@ -284,11 +366,20 @@ def guide(channels, idx=None, full=False):
                     break
         if not pick:
             for needle in _needles(name):
+                best, best_extra = None, 99.0
                 for key, cands in table.items():
                     if _strict_eq(needle, key):
-                        pick = cands[0]
-                        break
-                if pick:
+                        extra = len(key.split()) - len(needle.split())
+                        if "pacific" in key or "west" in key:
+                            extra += 0.5          # a US viewer wants the East feed
+                        elif "east" in key:
+                            extra -= 0.5
+                        if extra < best_extra:
+                            best, best_extra = cands[0], extra
+                            if extra == 0:
+                                break
+                if best:
+                    pick = best
                     break
         if not pick:
             continue
