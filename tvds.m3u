@@ -59,6 +59,9 @@ http://23.237.104.106:8080/USA_BOUNCE/index.m3u8
 #EXTINF:-1 tvg-id="Bravo" tvg-name="Bravo" group-title="US Cable",Bravo
 #EXTGRP:US Cable
 http://4.30.180.36:8420/bravo/index.m3u8?token=test
+#EXTINF:-1 tvg-id="CartoonNetwork" tvg-name="Cartoon Network" group-title="US Cable",Cartoon Network
+#EXTGRP:US Cable
+https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
 #EXTINF:-1 tvg-id="CheddarNews" tvg-name="Cheddar News" group-title="US Cable" tvg-logo="https://i.imgur.com/tuP9GW8.png",Cheddar News
 #EXTGRP:US Cable
 https://hls.livecdn.io/cheddar.com/cheddar/playlist.m3u8
@@ -68,12 +71,18 @@ http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
 #EXTINF:-1 tvg-id="CMT" tvg-name="CMT" group-title="US Cable" tvg-logo="https://i.imgur.com/S7DOpdY.png",CMT
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_CMT/index.m3u8
+#EXTINF:-1 tvg-id="CNBC" tvg-name="CNBC" group-title="US Cable",CNBC
+#EXTGRP:US Cable
+http://4.30.180.36:8420/cnbc/index.m3u8?token=test
 #EXTINF:-1 tvg-id="CNN" tvg-name="CNN" group-title="US Cable",CNN
 #EXTGRP:US Cable
 http://4.30.180.36:8420/cnn/index.m3u8?token=test
 #EXTINF:-1 tvg-id="CNNInternational" tvg-name="CNN International" group-title="US Cable",CNN International
 #EXTGRP:US Cable
 https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8
+#EXTINF:-1 tvg-id="ComedyCentral" tvg-name="Comedy Central" group-title="US Cable",Comedy Central
+#EXTGRP:US Cable
+http://4.30.180.36:8420/comedycentral/index.m3u8?token=test
 #EXTINF:-1 tvg-id="Comet" tvg-name="Comet" group-title="US Cable",Comet
 #EXTGRP:US Cable
 https://fast-channels.sinclairstoryline.com/COMET/index.m3u8
@@ -89,18 +98,42 @@ http://23.237.104.106:8080/USA_DESTINATION_AMERICA/index.m3u8
 #EXTINF:-1 tvg-id="DiscoveryChannel" tvg-name="Discovery Channel" group-title="US Cable",Discovery Channel
 #EXTGRP:US Cable
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/DISCOVERYCHANNEL/CMAF/index.m3u8
+#EXTINF:-1 tvg-id="DisneyChannel" tvg-name="Disney Channel" group-title="US Cable",Disney Channel
+#EXTGRP:US Cable
+http://4.30.180.36:8420/disneychannel/index.m3u8?token=test
+#EXTINF:-1 tvg-id="DisneyJunior" tvg-name="Disney Junior" group-title="US Cable",Disney Junior
+#EXTGRP:US Cable
+http://88.212.15.50/live/test_disney_junior/playlist.m3u8
+#EXTINF:-1 tvg-id="DisneyXD" tvg-name="Disney XD" group-title="US Cable",Disney XD
+#EXTGRP:US Cable
+http://185.227.34.179:8080/disney-xd/index.m3u8
 #EXTINF:-1 tvg-id="E" tvg-name="E!" group-title="US Cable",E!
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_E/index.m3u8
 #EXTINF:-1 tvg-id="FoodNetwork" tvg-name="Food Network" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_Network_New_Logo.png/960px-Food_Network_New_Logo.png",Food Network
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_FOOD_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="FoxBusinessNetwork" tvg-name="Fox Business Network" group-title="US Cable",Fox Business Network
+#EXTGRP:US Cable
+https://tvsen6.aynaott.com/foxbusiness/index.m3u8
+#EXTINF:-1 tvg-id="FoxNewsChannel" tvg-name="Fox News Channel" group-title="US Cable",Fox News Channel
+#EXTGRP:US Cable
+http://4.30.180.36:8420/foxnews/index.m3u8?token=test
+#EXTINF:-1 tvg-id="Freeform" tvg-name="Freeform" group-title="US Cable",Freeform
+#EXTGRP:US Cable
+http://4.30.180.36:8420/freeform/index.m3u8?token=test
+#EXTINF:-1 tvg-id="FX" tvg-name="FX" group-title="US Cable",FX
+#EXTGRP:US Cable
+http://4.30.180.36:8420/fx/index.m3u8?token=test
 #EXTINF:-1 tvg-id="Grit" tvg-name="Grit" group-title="US Cable" tvg-logo="https://provider-static.plex.tv/epg/cms/production/dbbb9bca-0b08-43b5-a0e7-715df9a6dbfd/_ChannelLogo_1500x1000.png",Grit
 #EXTGRP:US Cable
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-gritxtra-tablo/playlist.m3u8
 #EXTINF:-1 tvg-id="HallmarkChannel" tvg-name="Hallmark Channel" group-title="US Cable",Hallmark Channel
 #EXTGRP:US Cable
 http://4.30.180.36:8420/hallmark/index.m3u8?token=test
+#EXTINF:-1 tvg-id="HallmarkMoviesMysteries" tvg-name="Hallmark Movies & Mysteries" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg",Hallmark Movies & Mysteries
+#EXTGRP:US Cable
+http://41.205.93.154/HALLMARK/index.m3u8
 #EXTINF:-1 tvg-id="HBO" tvg-name="HBO" group-title="US Cable",HBO
 #EXTGRP:US Cable
 http://88.212.15.50/live/test_hbo_hd_hevc/playlist.m3u8
@@ -110,6 +143,9 @@ http://185.227.34.179:8080/hbo-2-hd/index.m3u8
 #EXTINF:-1 tvg-id="HBOFamily" tvg-name="HBO Family" group-title="US Cable",HBO Family
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_HBO_FAMILY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="HGTV" tvg-name="HGTV" group-title="US Cable",HGTV
+#EXTGRP:US Cable
+http://4.30.180.36:8420/hgtv/index.m3u8?token=test
 #EXTINF:-1 tvg-id="History" tvg-name="History" group-title="US Cable",History
 #EXTGRP:US Cable
 http://4.30.180.36:8420/history/index.m3u8?token=test
@@ -119,9 +155,15 @@ http://23.237.104.106:8080/USA_HLN/index.m3u8
 #EXTINF:-1 tvg-id="IFC" tvg-name="IFC" group-title="US Cable" tvg-logo="https://i.imgur.com/bQdkyF9.png",IFC
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_IFC/index.m3u8
+#EXTINF:-1 tvg-id="ION" tvg-name="ION" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ion_logo.svg/960px-Ion_logo.svg.png",ION
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_ION/index.m3u8
 #EXTINF:-1 tvg-id="Lifetime" tvg-name="Lifetime" group-title="US Cable",Lifetime
 #EXTGRP:US Cable
 http://4.30.180.36:8420/lifetime/index.m3u8?token=test
+#EXTINF:-1 tvg-id="MSNBC" tvg-name="MSNBC" group-title="US Cable",MSNBC
+#EXTGRP:US Cable
+http://4.30.180.36:8420/msnbc/index.m3u8?token=test
 #EXTINF:-1 tvg-id="MTV" tvg-name="MTV" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",MTV
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_MTV/index.m3u8
@@ -131,6 +173,9 @@ http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-id="NewsmaxTV" tvg-name="Newsmax TV" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png",Newsmax TV
 #EXTGRP:US Cable
 https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/index.m3u8
+#EXTINF:-1 tvg-id="NickJr" tvg-name="Nick Jr." group-title="US Cable",Nick Jr.
+#EXTGRP:US Cable
+http://88.212.15.50/live/test_nick_jr/playlist.m3u8
 #EXTINF:-1 tvg-id="OWN" tvg-name="OWN" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/OWN_2011_logo.svg/960px-OWN_2011_logo.svg.png",OWN
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_OWN/index.m3u8
@@ -140,6 +185,9 @@ http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="PBS" tvg-name="PBS" group-title="US Cable" tvg-logo="https://i.imgur.com/8c8isLj.png",PBS
 #EXTGRP:US Cable
 https://pbs.lls.cdn.pbs.org/est/index.m3u8
+#EXTINF:-1 tvg-id="PBSKids" tvg-name="PBS Kids" group-title="US Cable" tvg-logo="https://i.imgur.com/fg8c9WK.png",PBS Kids
+#EXTGRP:US Cable
+https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
 #EXTINF:-1 tvg-id="Revolt" tvg-name="Revolt" group-title="US Cable" tvg-logo="https://i.imgur.com/eaYnGpH.png",Revolt
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_REVOLT/index.m3u8
@@ -149,9 +197,15 @@ http://23.237.104.106:8080/USA_SCIENCE/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Showtime" tvg-name="Showtime" group-title="US Cable",Showtime
 #EXTGRP:US Cable
 http://4.30.180.36:8420/showtime/index.m3u8?token=test
+#EXTINF:-1 tvg-id="ShowtimeFamilyZone" tvg-name="Showtime Family Zone" group-title="US Cable" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Showtime_Family_Zone.svg/960px-Showtime_Family_Zone.svg.png",Showtime Family Zone
+#EXTGRP:US Cable
+http://23.237.104.106:8080/USA_SHOWTIME_FAMILY/index.m3u8
 #EXTINF:-1 tvg-id="Starz" tvg-name="Starz" group-title="US Cable",Starz
 #EXTGRP:US Cable
 http://4.30.180.36:8420/starz/index.m3u8?token=test
+#EXTINF:-1 tvg-id="StarzCinema" tvg-name="Starz Cinema" group-title="US Cable",Starz Cinema
+#EXTGRP:US Cable
+http://4.30.180.36:8420/starzcinema/index.m3u8?token=test
 #EXTINF:-1 tvg-id="StarzComedy" tvg-name="Starz Comedy" group-title="US Cable" tvg-logo="https://i.imgur.com/JpKvjZe.png",Starz Comedy
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
@@ -164,78 +218,27 @@ http://23.237.104.106:8080/USA_SYFY/index.m3u8
 #EXTINF:-1 tvg-id="TBS" tvg-name="TBS" group-title="US Cable",TBS
 #EXTGRP:US Cable
 http://4.30.180.36:8420/tbs/index.m3u8?token=test
-#EXTINF:-1 tvg-id="TravelChannel" tvg-name="Travel Channel" group-title="US Cable",Travel Channel
-#EXTGRP:US Cable
-http://88.212.15.50/live/test_travel_channel_hd_hevc/playlist.m3u8
-#EXTINF:-1 tvg-id="VH1" tvg-name="VH1" group-title="US Cable",VH1
-#EXTGRP:US Cable
-http://23.237.104.106:8080/USA_VH1/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="WEtv" tvg-name="WE tv" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/We_TV_logo_2014.svg/960px-We_TV_logo_2014.svg.png",WE tv
-#EXTGRP:US Cable
-http://23.237.104.106:8080/USA_WE_TV/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork" tvg-name="Cartoon Network" group-title="US Cable",Cartoon Network
-#EXTGRP:US Cable
-https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
-#EXTINF:-1 tvg-id="CNBC" tvg-name="CNBC" group-title="US Cable",CNBC
-#EXTGRP:US Cable
-http://4.30.180.36:8420/cnbc/index.m3u8?token=test
-#EXTINF:-1 tvg-id="ComedyCentral" tvg-name="Comedy Central" group-title="US Cable",Comedy Central
-#EXTGRP:US Cable
-http://4.30.180.36:8420/comedycentral/index.m3u8?token=test
-#EXTINF:-1 tvg-id="DisneyChannel" tvg-name="Disney Channel" group-title="US Cable",Disney Channel
-#EXTGRP:US Cable
-http://4.30.180.36:8420/disneychannel/index.m3u8?token=test
-#EXTINF:-1 tvg-id="FoxNewsChannel" tvg-name="Fox News Channel" group-title="US Cable",Fox News Channel
-#EXTGRP:US Cable
-http://4.30.180.36:8420/foxnews/index.m3u8?token=test
-#EXTINF:-1 tvg-id="Freeform" tvg-name="Freeform" group-title="US Cable",Freeform
-#EXTGRP:US Cable
-http://4.30.180.36:8420/freeform/index.m3u8?token=test
-#EXTINF:-1 tvg-id="HallmarkMoviesMysteries" tvg-name="Hallmark Movies & Mysteries" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg",Hallmark Movies & Mysteries
-#EXTGRP:US Cable
-http://41.205.93.154/HALLMARK/index.m3u8
-#EXTINF:-1 tvg-id="HGTV" tvg-name="HGTV" group-title="US Cable",HGTV
-#EXTGRP:US Cable
-http://4.30.180.36:8420/hgtv/index.m3u8?token=test
-#EXTINF:-1 tvg-id="ION" tvg-name="ION" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ion_logo.svg/960px-Ion_logo.svg.png",ION
-#EXTGRP:US Cable
-http://23.237.104.106:8080/USA_ION/index.m3u8
-#EXTINF:-1 tvg-id="MSNBC" tvg-name="MSNBC" group-title="US Cable",MSNBC
-#EXTGRP:US Cable
-http://4.30.180.36:8420/msnbc/index.m3u8?token=test
-#EXTINF:-1 tvg-id="PBSKids" tvg-name="PBS Kids" group-title="US Cable" tvg-logo="https://i.imgur.com/fg8c9WK.png",PBS Kids
-#EXTGRP:US Cable
-https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
-#EXTINF:-1 tvg-id="ShowtimeFamilyZone" tvg-name="Showtime Family Zone" group-title="US Cable" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Showtime_Family_Zone.svg/960px-Showtime_Family_Zone.svg.png",Showtime Family Zone
-#EXTGRP:US Cable
-http://23.237.104.106:8080/USA_SHOWTIME_FAMILY/index.m3u8
-#EXTINF:-1 tvg-id="StarzCinema" tvg-name="Starz Cinema" group-title="US Cable",Starz Cinema
-#EXTGRP:US Cable
-http://4.30.180.36:8420/starzcinema/index.m3u8?token=test
 #EXTINF:-1 tvg-id="TheWeatherChannel" tvg-name="The Weather Channel" group-title="US Cable",The Weather Channel
 #EXTGRP:US Cable
 https://a-cdn.klowdtv.com/live2/theweatherchannel_720p/playlist.m3u8
+#EXTINF:-1 tvg-id="TNT" tvg-name="TNT" group-title="US Cable",TNT
+#EXTGRP:US Cable
+http://212.5.144.156:8080/tnt/index.m3u8
+#EXTINF:-1 tvg-id="TravelChannel" tvg-name="Travel Channel" group-title="US Cable",Travel Channel
+#EXTGRP:US Cable
+http://88.212.15.50/live/test_travel_channel_hd_hevc/playlist.m3u8
 #EXTINF:-1 tvg-id="truTV" tvg-name="truTV" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png",truTV
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_TRUTV/index.m3u8
 #EXTINF:-1 tvg-id="USANetwork" tvg-name="USA Network" group-title="US Cable",USA Network
 #EXTGRP:US Cable
 http://4.30.180.36:8420/usa/index.m3u8?token=test
-#EXTINF:-1 tvg-id="DisneyJunior" tvg-name="Disney Junior" group-title="US Cable",Disney Junior
+#EXTINF:-1 tvg-id="VH1" tvg-name="VH1" group-title="US Cable",VH1
 #EXTGRP:US Cable
-http://88.212.15.50/live/test_disney_junior/playlist.m3u8
-#EXTINF:-1 tvg-id="DisneyXD" tvg-name="Disney XD" group-title="US Cable",Disney XD
+http://23.237.104.106:8080/USA_VH1/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="WEtv" tvg-name="WE tv" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/We_TV_logo_2014.svg/960px-We_TV_logo_2014.svg.png",WE tv
 #EXTGRP:US Cable
-http://185.227.34.179:8080/disney-xd/index.m3u8
-#EXTINF:-1 tvg-id="NickJr" tvg-name="Nick Jr." group-title="US Cable",Nick Jr.
-#EXTGRP:US Cable
-http://88.212.15.50/live/test_nick_jr/playlist.m3u8
-#EXTINF:-1 tvg-id="FX" tvg-name="FX" group-title="US Cable",FX
-#EXTGRP:US Cable
-http://4.30.180.36:8420/fx/index.m3u8?token=test
-#EXTINF:-1 tvg-id="FoxBusinessNetwork" tvg-name="Fox Business Network" group-title="US Cable",Fox Business Network
-#EXTGRP:US Cable
-https://tvsen6.aynaott.com/foxbusiness/index.m3u8
+http://23.237.104.106:8080/USA_WE_TV/index.m3u8
 #EXTINF:-1 tvg-id="BigTenNetwork" tvg-name="Big Ten Network" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Big_Ten_Network_Logo.svg/960px-Big_Ten_Network_Logo.svg.png",Big Ten Network
 #EXTGRP:Sports
 http://23.237.104.106:8080/USA_BTN/index.m3u8

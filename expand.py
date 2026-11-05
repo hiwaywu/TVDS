@@ -130,7 +130,7 @@ TARGETS = [
     # ---------------------------------------------------------------- US entertainment
     T(US, "TBS", ["tbs"], ["https://tvsen6.aynaott.com/tbs/index.m3u8",
                            "http://4.30.180.36:8420/tbs/index.m3u8?token=test"]),
-    T(US, "TNT", ["tnt"], ["http://212.5.144.156:8080/tnt/tracks-v1a1/mono.m3u8"]),
+    T(US, "TNT", ["tnt"], ["http://212.5.144.156:8080/tnt/index.m3u8"]),
     T(US, "truTV", ["trutv"], ["http://23.237.104.106:8080/USA_TRUTV/tracks-v1a1/mono.m3u8"]),
     T(US, "USA Network", ["usa network"], ["https://tvsen6.aynaott.com/usa/index.m3u8",
                                            "http://4.30.180.36:8420/usa/index.m3u8?token=test"]),
