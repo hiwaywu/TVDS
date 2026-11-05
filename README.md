@@ -17,6 +17,13 @@ no Android Studio).
 
 ---
 
+## Full build log
+
+[SOP_TVDS_Live_TV_Pipeline.md](SOP_TVDS_Live_TV_Pipeline.md) is the complete, re-runnable write-up:
+sourcing rules, the verification gate, audio/bitrate measurement, the proxy and its latency
+numbers, the player, the guide matching rules and their failure, packaging, publishing, and
+every bug that cost a rebuild.
+
 ## Windows PC app
 
 `release\tvapp.exe` â€” one file, 12 MB, **no Python and no browser tab**. Double-click it and a
