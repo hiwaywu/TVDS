@@ -13,7 +13,10 @@
           "audio": "AAC",
           "measured_mbps": 3.63,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 357
         },
         {
           "name": "HOY TV 77",
@@ -26,7 +29,10 @@
           "audio": "AAC",
           "measured_mbps": 3.14,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 292
         },
         {
           "name": "now News",
@@ -38,18 +44,10 @@
           "audio": "AAC",
           "measured_mbps": 4.78,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "RTHK TV 31",
-          "badge": "1080p",
-          "height": 1080,
-          "quality": "1920x1080 5.71 Mbps",
-          "url": "https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8",
-          "note": "1080p | H.264 | 5.7 Mbps | verified",
-          "audio": "?",
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 2203
         },
         {
           "name": "RTHK TV 32",
@@ -62,7 +60,10 @@
           "audio": "AAC",
           "measured_mbps": 5.67,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 835
         },
         {
           "name": "RTHK TV 33",
@@ -73,8 +74,11 @@
           "note": "1080p | H.264 | 4.2 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 4.23,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "HEVC video",
+          "load_ms": 598
         },
         {
           "name": "TVB Jade",
@@ -86,7 +90,10 @@
           "audio": "AAC",
           "measured_mbps": 4.36,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 503
         },
         {
           "name": "TVB Jade North America",
@@ -99,7 +106,10 @@
           "audio": "AAC",
           "measured_mbps": 2.96,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1594
         },
         {
           "name": "TVB News",
@@ -111,7 +121,10 @@
           "audio": "AAC",
           "measured_mbps": 3.74,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1031
         },
         {
           "name": "TVB Pearl",
@@ -123,7 +136,10 @@
           "audio": "AAC",
           "measured_mbps": 2.32,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 546
         },
         {
           "name": "ViuTV",
@@ -136,7 +152,10 @@
           "audio": "AAC",
           "measured_mbps": 4.55,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 1080p",
+          "load_ms": 1056
         },
         {
           "name": "ViuTVsix",
@@ -148,7 +167,10 @@
           "audio": "AAC",
           "measured_mbps": 5.21,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 756
         }
       ]
     },
@@ -165,7 +187,10 @@
           "audio": "AAC",
           "measured_mbps": 4.97,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 1080p",
+          "load_ms": 1412
         },
         {
           "name": "CBS 2 New York",
@@ -177,7 +202,10 @@
           "audio": "AAC",
           "measured_mbps": 3.85,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 217
         },
         {
           "name": "Fox 5 WNYW (New York)",
@@ -189,31 +217,10 @@
           "audio": "AAC",
           "measured_mbps": 5.49,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "CBS News New York",
-          "badge": "360p",
-          "height": 360,
-          "quality": "640x360 2.50 Mbps",
-          "url": "https://jmp2.uk/plu-5dc9b8223687ff000936ed79.m3u8",
-          "note": "360p | H.264 | 2.5 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 2.5,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "News 12 New York",
-          "badge": "360p",
-          "height": 360,
-          "quality": "640x360 2.50 Mbps",
-          "url": "https://jmp2.uk/plu-5fff49cfb5cd4f0007c2b0dc.m3u8",
-          "note": "360p | H.264 | 2.5 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 2.5,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 707
         }
       ]
     },
@@ -231,7 +238,10 @@
           "audio": "AAC",
           "measured_mbps": 5.86,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 963
         },
         {
           "name": "American Heroes Channel",
@@ -242,8 +252,11 @@
           "note": "1080p | H.264 | 3.9 Mbps | verified",
           "audio": "AC-3",
           "measured_mbps": 3.87,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 3736
         },
         {
           "name": "Animal Planet",
@@ -255,7 +268,10 @@
           "audio": "AAC",
           "measured_mbps": 3.98,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1385
         },
         {
           "name": "Bloomberg TV",
@@ -267,7 +283,10 @@
           "audio": "AAC",
           "measured_mbps": 6.21,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 596
         },
         {
           "name": "Bounce",
@@ -279,8 +298,11 @@
           "note": "1080p | H.264 | 4.8 Mbps | verified",
           "audio": "E-AC-3",
           "measured_mbps": 4.78,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio eac3",
+          "load_ms": 1886
         },
         {
           "name": "Bravo",
@@ -292,7 +314,10 @@
           "audio": "AAC",
           "measured_mbps": 5.53,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 858
         },
         {
           "name": "Cheddar News",
@@ -305,7 +330,10 @@
           "audio": "AAC",
           "measured_mbps": 6.3,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 639
         },
         {
           "name": "Cinemax",
@@ -317,7 +345,10 @@
           "audio": "AC-3",
           "measured_mbps": 5.96,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 757
         },
         {
           "name": "CMT",
@@ -330,7 +361,10 @@
           "audio": "AAC",
           "measured_mbps": 3.18,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 780
         },
         {
           "name": "CNN",
@@ -342,7 +376,10 @@
           "audio": "AAC",
           "measured_mbps": 4.74,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 629
         },
         {
           "name": "CNN International",
@@ -354,7 +391,10 @@
           "audio": "AAC",
           "measured_mbps": 5.66,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 575
         },
         {
           "name": "Comet",
@@ -366,7 +406,10 @@
           "audio": "AAC",
           "measured_mbps": 3.56,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 294
         },
         {
           "name": "Cooking Channel",
@@ -379,7 +422,10 @@
           "audio": "AAC",
           "measured_mbps": 8.7,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 3434
         },
         {
           "name": "Court TV",
@@ -392,7 +438,10 @@
           "audio": "AAC",
           "measured_mbps": 4.87,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 731
         },
         {
           "name": "Destination America",
@@ -405,7 +454,10 @@
           "audio": "AAC",
           "measured_mbps": 3.48,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 3985
         },
         {
           "name": "Discovery Channel",
@@ -417,7 +469,10 @@
           "audio": "AAC",
           "measured_mbps": 7.1,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 1080p",
+          "load_ms": 1380
         },
         {
           "name": "E!",
@@ -429,7 +484,10 @@
           "audio": "AAC",
           "measured_mbps": 8.64,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1949
         },
         {
           "name": "Food Network",
@@ -442,7 +500,10 @@
           "audio": "AAC",
           "measured_mbps": 3.15,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 691
         },
         {
           "name": "Grit",
@@ -455,7 +516,10 @@
           "audio": "AAC",
           "measured_mbps": 4.87,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 792
         },
         {
           "name": "Hallmark Channel",
@@ -467,7 +531,10 @@
           "audio": "AAC",
           "measured_mbps": 3.88,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1155
         },
         {
           "name": "HBO",
@@ -479,7 +546,10 @@
           "audio": "AAC",
           "measured_mbps": 3.27,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 2050
         },
         {
           "name": "HBO 2",
@@ -490,8 +560,11 @@
           "note": "1080p | H.264 | 5.1 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 5.13,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 4816
         },
         {
           "name": "HBO Family",
@@ -503,7 +576,10 @@
           "audio": "AAC",
           "measured_mbps": 0.63,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 266
         },
         {
           "name": "History",
@@ -515,7 +591,10 @@
           "audio": "AAC",
           "measured_mbps": 4.57,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 298
         },
         {
           "name": "HLN",
@@ -528,7 +607,10 @@
           "audio": "AAC",
           "measured_mbps": 2.64,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 768
         },
         {
           "name": "IFC",
@@ -540,8 +622,11 @@
           "note": "1080p | H.264 | 4.4 Mbps | verified",
           "audio": "AC-3",
           "measured_mbps": 4.41,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 664
         },
         {
           "name": "Lifetime",
@@ -552,8 +637,11 @@
           "note": "1080p | H.264 | 4.1 Mbps | verified",
           "audio": "AC-3",
           "measured_mbps": 4.14,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 316
         },
         {
           "name": "MTV",
@@ -566,7 +654,10 @@
           "audio": "AAC",
           "measured_mbps": 3.48,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 2366
         },
         {
           "name": "MTV Live",
@@ -579,7 +670,10 @@
           "audio": "AC-3",
           "measured_mbps": 4.71,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1048
         },
         {
           "name": "Newsmax TV",
@@ -592,7 +686,10 @@
           "audio": "AAC",
           "measured_mbps": 5.3,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 506
         },
         {
           "name": "OWN",
@@ -605,7 +702,10 @@
           "audio": "AAC",
           "measured_mbps": 4.0,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 2208
         },
         {
           "name": "Paramount Network",
@@ -617,8 +717,11 @@
           "note": "1080p | H.264 | 4.4 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 4.36,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 2009
         },
         {
           "name": "PBS",
@@ -631,7 +734,10 @@
           "audio": "AAC",
           "measured_mbps": 4.2,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 251
         },
         {
           "name": "Revolt",
@@ -644,7 +750,10 @@
           "audio": "AAC",
           "measured_mbps": 4.1,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1698
         },
         {
           "name": "Science Channel",
@@ -656,7 +765,10 @@
           "audio": "AAC",
           "measured_mbps": 2.55,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1567
         },
         {
           "name": "Showtime",
@@ -668,7 +780,10 @@
           "audio": "AAC",
           "measured_mbps": 3.98,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 338
         },
         {
           "name": "Starz",
@@ -680,7 +795,10 @@
           "audio": "AAC",
           "measured_mbps": 8.22,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 465
         },
         {
           "name": "Starz Comedy",
@@ -692,13 +810,16 @@
           "note": "1080p | H.264 | 5.1 Mbps | verified",
           "audio": "AC-3",
           "measured_mbps": 5.07,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 1243
         },
         {
           "name": "Starz Kids & Family",
-          "badge": "1080p",
-          "height": 1080,
+          "badge": "720p",
+          "height": 720,
           "quality": "1920x1080 0.63 Mbps",
           "url": "http://23.237.104.106:8080/USA_STARZ_FAMILY/index.m3u8",
           "logo": "https://i.imgur.com/eE9FzEP.png",
@@ -706,19 +827,10 @@
           "audio": "AAC",
           "measured_mbps": 0.63,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "Sundance TV",
-          "badge": "1080p",
-          "height": 1080,
-          "quality": "1920x1080 2.22 Mbps",
-          "url": "http://92.114.85.87:8003/play/a004/index.m3u8",
-          "note": "1080p | H.264 | 2.2 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 2.22,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1060
         },
         {
           "name": "SYFY",
@@ -731,7 +843,10 @@
           "audio": "AAC",
           "measured_mbps": 7.83,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 2240
         },
         {
           "name": "TBS",
@@ -743,19 +858,10 @@
           "audio": "AAC",
           "measured_mbps": 6.69,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "TNT",
-          "badge": "1080p",
-          "height": 1080,
-          "quality": "1920x1080 1.11 Mbps",
-          "url": "http://212.5.144.156:8080/tnt/tracks-v1a1/mono.m3u8",
-          "note": "1080p | H.264 | 1.1 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 1.11,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 542
         },
         {
           "name": "Travel Channel",
@@ -766,8 +872,11 @@
           "note": "1080p | H.264 | 3.5 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 3.5,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "HEVC video",
+          "load_ms": 1417
         },
         {
           "name": "VH1",
@@ -779,7 +888,10 @@
           "audio": "AAC",
           "measured_mbps": 4.97,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 851
         },
         {
           "name": "WE tv",
@@ -792,67 +904,10 @@
           "audio": "AAC",
           "measured_mbps": 3.65,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "A&E",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 7.86 Mbps",
-          "url": "http://23.239.31.26:8989/aande/index.m3u8",
-          "note": "720p | H.264 | 7.9 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 7.86,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "Adult Swim",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 3.95 Mbps",
-          "url": "https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_5128000.m3u8",
-          "note": "720p | H.264 | 4.0 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 3.95,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "AMC",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 6.76 Mbps",
-          "url": "http://23.239.31.26:8989/amc/index.m3u8",
-          "note": "720p | H.264 | 6.8 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 6.76,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "AXS TV",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 8.34 Mbps",
-          "url": "http://23.239.31.26:8989/axstv/index.m3u8",
-          "note": "720p | H.264 | 8.3 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 8.34,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "BBC America",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 10.51 Mbps",
-          "url": "http://23.239.31.26:8989/bbcamerica/index.m3u8",
-          "note": "720p | H.264 | 10.5 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 10.51,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 696
         },
         {
           "name": "Cartoon Network",
@@ -864,7 +919,10 @@
           "audio": "AAC",
           "measured_mbps": 0.81,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1447
         },
         {
           "name": "CNBC",
@@ -876,7 +934,10 @@
           "audio": "AAC",
           "measured_mbps": 2.56,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 287
         },
         {
           "name": "Comedy Central",
@@ -888,7 +949,10 @@
           "audio": "AAC",
           "measured_mbps": 3.84,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 255
         },
         {
           "name": "Disney Channel",
@@ -900,7 +964,10 @@
           "audio": "AAC",
           "measured_mbps": 2.99,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 226
         },
         {
           "name": "Fox News Channel",
@@ -912,7 +979,10 @@
           "audio": "AAC",
           "measured_mbps": 2.37,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 299
         },
         {
           "name": "Freeform",
@@ -924,20 +994,26 @@
           "audio": "AAC",
           "measured_mbps": 3.08,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 246
         },
         {
           "name": "Hallmark Movies & Mysteries",
-          "badge": "720p",
-          "height": 720,
+          "badge": "432p",
+          "height": 432,
           "quality": "1280x720 3.66 Mbps",
           "url": "http://41.205.93.154/HALLMARK/index.m3u8",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg",
           "note": "720p | H.264 | 3.7 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 3.66,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 432p",
+          "load_ms": 4465
         },
         {
           "name": "HGTV",
@@ -949,19 +1025,10 @@
           "audio": "AAC",
           "measured_mbps": 2.71,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "Investigation Discovery",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 2.20 Mbps",
-          "url": "http://4.30.180.36:8420/investigationdiscovery/index.m3u8?token=test",
-          "note": "720p | H.264 | 2.2 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 2.2,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 211
         },
         {
           "name": "ION",
@@ -973,8 +1040,11 @@
           "note": "720p | H.264 | 4.0 Mbps | verified",
           "audio": "AC-3",
           "measured_mbps": 4.03,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio ac3",
+          "load_ms": 991
         },
         {
           "name": "MSNBC",
@@ -986,19 +1056,10 @@
           "audio": "AAC",
           "measured_mbps": 3.48,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "National Geographic",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 0.96 Mbps",
-          "url": "http://212.5.144.156:8080/natgeo/tracks-v1a1/mono.m3u8",
-          "note": "720p | H.264 | 1.0 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 0.96,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 228
         },
         {
           "name": "PBS Kids",
@@ -1011,7 +1072,10 @@
           "audio": "AAC",
           "measured_mbps": 0.86,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 196
         },
         {
           "name": "Showtime Family Zone",
@@ -1024,7 +1088,10 @@
           "audio": "AAC",
           "measured_mbps": 5.86,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 777
         },
         {
           "name": "Starz Cinema",
@@ -1036,7 +1103,10 @@
           "audio": "AAC",
           "measured_mbps": 2.65,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 293
         },
         {
           "name": "The Weather Channel",
@@ -1048,19 +1118,10 @@
           "audio": "AAC",
           "measured_mbps": 3.89,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "TLC",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 1.81 Mbps",
-          "url": "https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8",
-          "note": "720p | H.264 | 1.8 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 1.81,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 697
         },
         {
           "name": "truTV",
@@ -1073,31 +1134,25 @@
           "audio": "AAC",
           "measured_mbps": 1.83,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 457
         },
         {
           "name": "USA Network",
-          "badge": "720p",
-          "height": 720,
+          "badge": "1080p",
+          "height": 1080,
           "quality": "1280x720 3.48 Mbps",
           "url": "http://4.30.180.36:8420/usa/index.m3u8?token=test",
           "note": "720p | H.264 | 3.5 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 3.48,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "BET",
-          "badge": "684p",
-          "height": 684,
-          "quality": "1216x684 0.73 Mbps",
-          "url": "https://jmp2.uk/plu-61c1939b8929e40007ff6382.m3u8",
-          "note": "684p | H.264 | 0.7 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 0.73,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 424
         },
         {
           "name": "Disney Junior",
@@ -1109,7 +1164,10 @@
           "audio": "AAC",
           "measured_mbps": 1.65,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 576p",
+          "load_ms": 1197
         },
         {
           "name": "Disney XD",
@@ -1121,7 +1179,10 @@
           "audio": "AAC",
           "measured_mbps": 2.05,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 576p",
+          "load_ms": 1957
         },
         {
           "name": "Nick Jr.",
@@ -1133,7 +1194,10 @@
           "audio": "AAC",
           "measured_mbps": 1.66,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 576p",
+          "load_ms": 1081
         },
         {
           "name": "FX",
@@ -1145,7 +1209,10 @@
           "audio": "AAC",
           "measured_mbps": 2.64,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 540p",
+          "load_ms": 196
         },
         {
           "name": "Fox Business Network",
@@ -1156,8 +1223,11 @@
           "note": "432p | H.264 | 0.9 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 0.9,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 432p",
+          "load_ms": 6959
         }
       ]
     },
@@ -1175,7 +1245,10 @@
           "audio": "AAC",
           "measured_mbps": 4.96,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 719
         },
         {
           "name": "CBS Sports Golazo Network",
@@ -1188,7 +1261,10 @@
           "audio": "AAC",
           "measured_mbps": 7.75,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 902
         },
         {
           "name": "CBS Sports HQ",
@@ -1200,7 +1276,10 @@
           "audio": "AAC",
           "measured_mbps": 3.69,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 942
         },
         {
           "name": "MLB Network",
@@ -1212,7 +1291,10 @@
           "audio": "AAC",
           "measured_mbps": 9.97,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 764
         },
         {
           "name": "NBA TV",
@@ -1224,7 +1306,10 @@
           "audio": "AAC",
           "measured_mbps": 6.06,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 584
         },
         {
           "name": "NHL Network",
@@ -1237,7 +1322,10 @@
           "audio": "AAC",
           "measured_mbps": 4.57,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 376
         },
         {
           "name": "Tennis Channel",
@@ -1250,20 +1338,10 @@
           "audio": "AAC",
           "measured_mbps": 5.09,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "ACC Network",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 8.32 Mbps",
-          "url": "http://23.239.31.26:8989/accnetwork/index.m3u8",
-          "logo": "https://i.imgur.com/TpCkbkT.png",
-          "note": "720p | H.264 | 8.3 Mbps | verified",
-          "audio": "MP2",
-          "measured_mbps": 8.32,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 694
         },
         {
           "name": "ESPN",
@@ -1275,7 +1353,10 @@
           "audio": "AAC",
           "measured_mbps": 3.51,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1785
         },
         {
           "name": "ESPN 2",
@@ -1287,7 +1368,10 @@
           "audio": "AAC",
           "measured_mbps": 3.47,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1628
         },
         {
           "name": "ESPNU",
@@ -1299,19 +1383,25 @@
           "audio": "AAC",
           "measured_mbps": 5.48,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 427
         },
         {
           "name": "Fox Sports 1",
-          "badge": "720p",
-          "height": 720,
+          "badge": "1080p",
+          "height": 1080,
           "quality": "1280x720 3.44 Mbps",
           "url": "http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8",
           "note": "720p | H.264 | 3.4 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 3.44,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1917
         },
         {
           "name": "Golf Channel",
@@ -1323,7 +1413,10 @@
           "audio": "AAC",
           "measured_mbps": 3.62,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1485
         },
         {
           "name": "SEC Network",
@@ -1336,7 +1429,10 @@
           "audio": "AAC",
           "measured_mbps": 5.26,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 413
         },
         {
           "name": "Fox Sports 2",
@@ -1347,26 +1443,17 @@
           "logo": "https://imgx.fubo.tv/station_logos/fs2_c.png",
           "note": "432p | H.264 | 0.9 Mbps | verified",
           "audio": "?",
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 432p",
+          "load_ms": 14119
         }
       ]
     },
     {
       "name": "News",
       "channels": [
-        {
-          "name": "TRT World",
-          "badge": "1440p",
-          "height": 1440,
-          "quality": "2560x1440 5.42 Mbps",
-          "url": "https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8",
-          "note": "1440p | H.264 | 5.4 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 5.42,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
         {
           "name": "Al Jazeera English",
           "badge": "1080p",
@@ -1377,7 +1464,10 @@
           "audio": "AAC",
           "measured_mbps": 4.05,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 529
         },
         {
           "name": "Bloomberg Originals",
@@ -1389,7 +1479,10 @@
           "audio": "AAC",
           "measured_mbps": 5.33,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 682
         },
         {
           "name": "CGTN",
@@ -1402,7 +1495,10 @@
           "audio": "AAC",
           "measured_mbps": 5.31,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1096
         },
         {
           "name": "Channel NewsAsia",
@@ -1414,7 +1510,10 @@
           "audio": "AAC",
           "measured_mbps": 4.7,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 456
         },
         {
           "name": "DW English",
@@ -1426,7 +1525,10 @@
           "audio": "AAC",
           "measured_mbps": 5.23,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 659
         },
         {
           "name": "France 24 English",
@@ -1438,7 +1540,10 @@
           "audio": "AAC",
           "measured_mbps": 4.41,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 929
         },
         {
           "name": "NBC News NOW",
@@ -1451,7 +1556,10 @@
           "audio": "AAC",
           "measured_mbps": 5.01,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 290
         },
         {
           "name": "CBS News 24/7",
@@ -1463,7 +1571,10 @@
           "audio": "AAC",
           "measured_mbps": 2.46,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 454
         },
         {
           "name": "Euronews English",
@@ -1475,7 +1586,10 @@
           "audio": "AAC",
           "measured_mbps": 3.47,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1104
         },
         {
           "name": "NDTV 24x7",
@@ -1487,19 +1601,10 @@
           "audio": "AAC",
           "measured_mbps": 2.66,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "Scripps News",
-          "badge": "720p",
-          "height": 720,
-          "quality": "1280x720 4.73 Mbps",
-          "url": "https://content.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37.m3u8",
-          "note": "720p | H.264 | 4.7 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 4.73,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 409
         },
         {
           "name": "WION",
@@ -1511,19 +1616,10 @@
           "audio": "AAC",
           "measured_mbps": 3.65,
           "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "ABC News Live",
-          "badge": "684p",
-          "height": 684,
-          "quality": "1216x684 0.57 Mbps",
-          "url": "https://jmp2.uk/plu-6508be683a0d700008c534e4.m3u8",
-          "note": "684p | H.264 | 0.6 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 0.57,
-          "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 445
         }
       ]
     },
@@ -1540,7 +1636,10 @@
           "audio": "AAC",
           "measured_mbps": 4.63,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 374
         },
         {
           "name": "BBC Home & Garden",
@@ -1552,7 +1651,10 @@
           "audio": "AAC",
           "measured_mbps": 4.5,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 531
         },
         {
           "name": "BBC News",
@@ -1564,7 +1666,10 @@
           "audio": "AAC",
           "measured_mbps": 4.65,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 516
         },
         {
           "name": "Channel 5",
@@ -1576,7 +1681,10 @@
           "audio": "AAC",
           "measured_mbps": 4.81,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 462
         },
         {
           "name": "GB News",
@@ -1588,7 +1696,10 @@
           "audio": "AAC",
           "measured_mbps": 5.44,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 875
         },
         {
           "name": "TalkTV",
@@ -1601,7 +1712,10 @@
           "audio": "AAC",
           "measured_mbps": 5.78,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 427
         },
         {
           "name": "ITV1",
@@ -1613,7 +1727,10 @@
           "audio": "AAC",
           "measured_mbps": 3.06,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 1540
         },
         {
           "name": "Sky News Weather",
@@ -1626,7 +1743,10 @@
           "audio": "AAC",
           "measured_mbps": 4.33,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 3477
         },
         {
           "name": "CBeebies",
@@ -1637,8 +1757,11 @@
           "note": "576p | H.264 | 1.9 Mbps | verified",
           "audio": "MP2",
           "measured_mbps": 1.85,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "vlc",
+          "checked_at": 1793771814,
+          "play": "vlc",
+          "play_note": "audio mp2",
+          "load_ms": 4053
         }
       ]
     },
@@ -1656,7 +1779,10 @@
           "audio": "AAC",
           "measured_mbps": 4.06,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 288
         },
         {
           "name": "Global",
@@ -1668,7 +1794,10 @@
           "audio": "AAC",
           "measured_mbps": 3.86,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 1793
         },
         {
           "name": "Love Nature",
@@ -1679,8 +1808,11 @@
           "note": "1080p | H.264 | 4.3 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 4.31,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 1080p",
+          "load_ms": 6460
         },
         {
           "name": "CityNews Calgary",
@@ -1693,7 +1825,10 @@
           "audio": "AAC",
           "measured_mbps": 3.24,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 278
         },
         {
           "name": "CityNews Toronto",
@@ -1706,7 +1841,10 @@
           "audio": "AAC",
           "measured_mbps": 3.28,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 720p",
+          "load_ms": 245
         },
         {
           "name": "CityNews Vancouver",
@@ -1719,7 +1857,10 @@
           "audio": "AAC",
           "measured_mbps": 3.25,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 720p",
+          "load_ms": 575
         },
         {
           "name": "CityNews Edmonton",
@@ -1732,7 +1873,10 @@
           "audio": "AAC",
           "measured_mbps": 2.23,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 540p",
+          "load_ms": 404
         },
         {
           "name": "CTV",
@@ -1745,7 +1889,10 @@
           "audio": "MP3",
           "measured_mbps": 1.11,
           "status": "ok",
-          "checked_at": 1793771814
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + mp3 480p",
+          "load_ms": 2257
         },
         {
           "name": "CP24",
@@ -1756,21 +1903,11 @@
           "note": "432p | H.264 | 1.1 Mbps | verified",
           "audio": "AAC",
           "measured_mbps": 1.08,
-          "status": "ok",
-          "checked_at": 1793771814
-        },
-        {
-          "name": "The Weather Network",
-          "badge": "360p",
-          "height": 360,
-          "quality": "640x360 2.50 Mbps",
-          "url": "https://jmp2.uk/plu-63da370e2e477400081cf8b6.m3u8",
-          "logo": "https://i.imgur.com/V6ZUwUY.png",
-          "note": "360p | H.264 | 2.5 Mbps | verified",
-          "audio": "AAC",
-          "measured_mbps": 2.53,
-          "status": "ok",
-          "checked_at": 1793771814
+          "status": "slow",
+          "checked_at": 1793771814,
+          "play": "ok",
+          "play_note": "h264 + aac 432p",
+          "load_ms": 5576
         }
       ]
     }

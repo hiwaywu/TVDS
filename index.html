@@ -540,9 +540,10 @@ function renderGuide(groups){
       const dead = c.status === 'dead';
       const initial = ((c.name.replace(/[^A-Za-z0-9\u4e00-\u9fff]/g, '') || '?')[0] || '?').toUpperCase();
       const sub = dead ? 'offline'
+                : (c.play === 'vlc' ? 'VLC · ' + (c.play_note || '')
                 : (c.status === '?' ? 'unverified'
                 : (e ? e.src + ' · ' + e.matched
-                     : ((c.badge || '') + ' · ' + (c.note || '').split('|')[1].trim())));
+                     : ((c.badge || '') + ' · ' + (c.note || '').split('|')[1].trim()))));
       let blocks = '';
       if (e && e.progs && !dead){
         e.progs.forEach(p => {
@@ -787,6 +788,15 @@ async function play(i){
   audioBadge(ch, '', -1);
   const useRec = false;   // recorder.py keeps its own copy, but hls.js will not consume the
                           // synthesized playlist yet - left wired for the next pass
+
+  // a feed whose picture or sound is a codec the browser cannot decode shows a black
+  // screen with no explanation; say so instead, and point at VLC
+  if (ch.play === 'vlc'){
+    overlay('This feed needs VLC', (ch.play_note || 'HEVC / AC-3') +
+            ' — the browser cannot decode it. Use the VLC button below, or pick another channel.');
+    $('#mLive').textContent = 'vlc';
+    return;
+  }
   const src = useRec
     ? '/rec/live?u=' + encodeURIComponent(ch.url) + (ch.referer ? '&r=' + encodeURIComponent(ch.referer) : '')
     : '/proxy?u=' + encodeURIComponent(ch.url) + (ch.referer ? '&r=' + encodeURIComponent(ch.referer) : '');

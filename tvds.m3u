@@ -8,9 +8,6 @@ http://r.jdshipin.com/sFw4S
 #EXTINF:-1 tvg-id="nowNews" tvg-name="now News" group-title="Hong Kong",now News
 #EXTGRP:Hong Kong
 https://fast.hidns.vip/163189/now
-#EXTINF:-1 tvg-id="RTHKTV31" tvg-name="RTHK TV 31" group-title="Hong Kong",RTHK TV 31
-#EXTGRP:Hong Kong
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 tvg-id="RTHKTV32" tvg-name="RTHK TV 32" group-title="Hong Kong" tvg-logo="https://epg.112114.xyz/logo/RTHK32.png",RTHK TV 32
 #EXTGRP:Hong Kong
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk32
@@ -44,12 +41,6 @@ https://newyo9h67ea3.airspace-cdn.cbsivideo.com/live/manifest.m3u8
 #EXTINF:-1 tvg-id="Fox5WNYWNewYork" tvg-name="Fox 5 WNYW (New York)" group-title="New York",Fox 5 WNYW (New York)
 #EXTGRP:New York
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-wnyw-lgus/playlist.m3u8
-#EXTINF:-1 tvg-id="CBSNewsNewYork" tvg-name="CBS News New York" group-title="New York",CBS News New York
-#EXTGRP:New York
-https://jmp2.uk/plu-5dc9b8223687ff000936ed79.m3u8
-#EXTINF:-1 tvg-id="News12NewYork" tvg-name="News 12 New York" group-title="New York",News 12 New York
-#EXTGRP:New York
-https://jmp2.uk/plu-5fff49cfb5cd4f0007c2b0dc.m3u8
 #EXTINF:-1 tvg-id="AccuWeatherNOW" tvg-name="AccuWeather NOW" group-title="US Cable" tvg-logo="https://i.imgur.com/M8wbVYK.png",AccuWeather NOW
 #EXTGRP:US Cable
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00684-accuweather-accuweather-plex/playlist.m3u8
@@ -167,18 +158,12 @@ http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
 #EXTINF:-1 tvg-id="StarzKidsFamily" tvg-name="Starz Kids & Family" group-title="US Cable" tvg-logo="https://i.imgur.com/eE9FzEP.png",Starz Kids & Family
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_STARZ_FAMILY/index.m3u8
-#EXTINF:-1 tvg-id="SundanceTV" tvg-name="Sundance TV" group-title="US Cable",Sundance TV
-#EXTGRP:US Cable
-http://92.114.85.87:8003/play/a004/index.m3u8
 #EXTINF:-1 tvg-id="SYFY" tvg-name="SYFY" group-title="US Cable" tvg-logo="https://i.imgur.com/4fMWhUE.png",SYFY
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_SYFY/index.m3u8
 #EXTINF:-1 tvg-id="TBS" tvg-name="TBS" group-title="US Cable",TBS
 #EXTGRP:US Cable
 http://4.30.180.36:8420/tbs/index.m3u8?token=test
-#EXTINF:-1 tvg-id="TNT" tvg-name="TNT" group-title="US Cable",TNT
-#EXTGRP:US Cable
-http://212.5.144.156:8080/tnt/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="TravelChannel" tvg-name="Travel Channel" group-title="US Cable",Travel Channel
 #EXTGRP:US Cable
 http://88.212.15.50/live/test_travel_channel_hd_hevc/playlist.m3u8
@@ -188,21 +173,6 @@ http://23.237.104.106:8080/USA_VH1/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="WEtv" tvg-name="WE tv" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/We_TV_logo_2014.svg/960px-We_TV_logo_2014.svg.png",WE tv
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_WE_TV/index.m3u8
-#EXTINF:-1 tvg-id="AE" tvg-name="A&E" group-title="US Cable",A&E
-#EXTGRP:US Cable
-http://23.239.31.26:8989/aande/index.m3u8
-#EXTINF:-1 tvg-id="AdultSwim" tvg-name="Adult Swim" group-title="US Cable",Adult Swim
-#EXTGRP:US Cable
-https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_5128000.m3u8
-#EXTINF:-1 tvg-id="AMC" tvg-name="AMC" group-title="US Cable",AMC
-#EXTGRP:US Cable
-http://23.239.31.26:8989/amc/index.m3u8
-#EXTINF:-1 tvg-id="AXSTV" tvg-name="AXS TV" group-title="US Cable",AXS TV
-#EXTGRP:US Cable
-http://23.239.31.26:8989/axstv/index.m3u8
-#EXTINF:-1 tvg-id="BBCAmerica" tvg-name="BBC America" group-title="US Cable",BBC America
-#EXTGRP:US Cable
-http://23.239.31.26:8989/bbcamerica/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork" tvg-name="Cartoon Network" group-title="US Cable",Cartoon Network
 #EXTGRP:US Cable
 https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
@@ -227,18 +197,12 @@ http://41.205.93.154/HALLMARK/index.m3u8
 #EXTINF:-1 tvg-id="HGTV" tvg-name="HGTV" group-title="US Cable",HGTV
 #EXTGRP:US Cable
 http://4.30.180.36:8420/hgtv/index.m3u8?token=test
-#EXTINF:-1 tvg-id="InvestigationDiscovery" tvg-name="Investigation Discovery" group-title="US Cable",Investigation Discovery
-#EXTGRP:US Cable
-http://4.30.180.36:8420/investigationdiscovery/index.m3u8?token=test
 #EXTINF:-1 tvg-id="ION" tvg-name="ION" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ion_logo.svg/960px-Ion_logo.svg.png",ION
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_ION/index.m3u8
 #EXTINF:-1 tvg-id="MSNBC" tvg-name="MSNBC" group-title="US Cable",MSNBC
 #EXTGRP:US Cable
 http://4.30.180.36:8420/msnbc/index.m3u8?token=test
-#EXTINF:-1 tvg-id="NationalGeographic" tvg-name="National Geographic" group-title="US Cable",National Geographic
-#EXTGRP:US Cable
-http://212.5.144.156:8080/natgeo/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="PBSKids" tvg-name="PBS Kids" group-title="US Cable" tvg-logo="https://i.imgur.com/fg8c9WK.png",PBS Kids
 #EXTGRP:US Cable
 https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
@@ -251,18 +215,12 @@ http://4.30.180.36:8420/starzcinema/index.m3u8?token=test
 #EXTINF:-1 tvg-id="TheWeatherChannel" tvg-name="The Weather Channel" group-title="US Cable",The Weather Channel
 #EXTGRP:US Cable
 https://a-cdn.klowdtv.com/live2/theweatherchannel_720p/playlist.m3u8
-#EXTINF:-1 tvg-id="TLC" tvg-name="TLC" group-title="US Cable",TLC
-#EXTGRP:US Cable
-https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
 #EXTINF:-1 tvg-id="truTV" tvg-name="truTV" group-title="US Cable" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png",truTV
 #EXTGRP:US Cable
 http://23.237.104.106:8080/USA_TRUTV/index.m3u8
 #EXTINF:-1 tvg-id="USANetwork" tvg-name="USA Network" group-title="US Cable",USA Network
 #EXTGRP:US Cable
 http://4.30.180.36:8420/usa/index.m3u8?token=test
-#EXTINF:-1 tvg-id="BET" tvg-name="BET" group-title="US Cable",BET
-#EXTGRP:US Cable
-https://jmp2.uk/plu-61c1939b8929e40007ff6382.m3u8
 #EXTINF:-1 tvg-id="DisneyJunior" tvg-name="Disney Junior" group-title="US Cable",Disney Junior
 #EXTGRP:US Cable
 http://88.212.15.50/live/test_disney_junior/playlist.m3u8
@@ -299,9 +257,6 @@ https://nhl-firetv.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TennisChannel" tvg-name="Tennis Channel" group-title="Sports" tvg-logo="https://i.imgur.com/tsljAnY.png",Tennis Channel
 #EXTGRP:Sports
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischannelnl-samsungnl/playlist.m3u8
-#EXTINF:-1 tvg-id="ACCNetwork" tvg-name="ACC Network" group-title="Sports" tvg-logo="https://i.imgur.com/TpCkbkT.png",ACC Network
-#EXTGRP:Sports
-http://23.239.31.26:8989/accnetwork/index.m3u8
 #EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" group-title="Sports",ESPN
 #EXTGRP:Sports
 http://85.237.89.160:9590/usa-s/ESPN-HD/index.m3u8
@@ -323,9 +278,6 @@ http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="FoxSports2" tvg-name="Fox Sports 2" group-title="Sports" tvg-logo="https://imgx.fubo.tv/station_logos/fs2_c.png",Fox Sports 2
 #EXTGRP:Sports
 https://tvsen7.aynascope.net/foxsports2/index.m3u8
-#EXTINF:-1 tvg-id="TRTWorld" tvg-name="TRT World" group-title="News",TRT World
-#EXTGRP:News
-https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish" tvg-name="Al Jazeera English" group-title="News",Al Jazeera English
 #EXTGRP:News
 https://amg00222-amg00222c4-amgplt0002.playout.now3.amagi.tv/aljazeera-noscte/playlist.m3u8
@@ -356,15 +308,9 @@ https://cdn-euronews.akamaized.net/live/eds/euronews-en/25002/index.m3u8
 #EXTINF:-1 tvg-id="NDTV24x7" tvg-name="NDTV 24x7" group-title="News",NDTV 24x7
 #EXTGRP:News
 https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8
-#EXTINF:-1 tvg-id="ScrippsNews" tvg-name="Scripps News" group-title="News",Scripps News
-#EXTGRP:News
-https://content.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37.m3u8
 #EXTINF:-1 tvg-id="WION" tvg-name="WION" group-title="News",WION
 #EXTGRP:News
 https://wion-klowdtv.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="ABCNewsLive" tvg-name="ABC News Live" group-title="News",ABC News Live
-#EXTGRP:News
-https://jmp2.uk/plu-6508be683a0d700008c534e4.m3u8
 #EXTINF:-1 tvg-id="BBCFood" tvg-name="BBC Food" group-title="UK",BBC Food
 #EXTGRP:UK
 https://d1e9r0b71zfwk7.cloudfront.net/playlist.m3u8
@@ -419,6 +365,3 @@ https://cdn3.wowza.com/5/UWpORHhLSEs5SkJs/calabasas/G0009_003/playlist.m3u8
 #EXTINF:-1 tvg-id="CP24" tvg-name="CP24" group-title="Canada",CP24
 #EXTGRP:Canada
 https://tvsen6.aynaott.com/cp24/index.m3u8
-#EXTINF:-1 tvg-id="TheWeatherNetwork" tvg-name="The Weather Network" group-title="Canada" tvg-logo="https://i.imgur.com/V6ZUwUY.png",The Weather Network
-#EXTGRP:Canada
-https://jmp2.uk/plu-63da370e2e477400081cf8b6.m3u8
